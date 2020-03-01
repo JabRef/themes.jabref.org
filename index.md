@@ -2,7 +2,7 @@
 
 > Customize the look of JabRef using CSS
 
-The look of JabRef can be customized by importing custom CSS files. Imported themes, as well as the two basic themes _Light_ and _Dark_, can be exported from JabRef in the form of CSS files.
+The look of JabRef 5.1 and later can be customized by importing custom CSS files. Imported themes, as well as the two basic themes _Light_ and _Dark_, can be exported from JabRef in the form of CSS files.
 
 The custom CSS theme is applied on top of the standard _Light_ theme which means that your custom CSS file does not need to contain all the properties that JabRef needs, just add the once that you want to change.
 
