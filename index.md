@@ -6,7 +6,7 @@ The look of JabRef 5.1 and later can be customized by importing custom CSS files
 
 ## User contributed themes
 
-Themes submitted by users are located in the subfolder [themes](themes/) and are either _Dark_ themes or _Light_ themes
+Themes submitted by users are located in the subfolder [themes](https://github.com/JabRef/themes.jabref.org/tree/main/themes) and are either _Dark_ themes or _Light_ themes
 
 ## Import CSS file
 
