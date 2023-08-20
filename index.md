@@ -1,4 +1,4 @@
-# Custom Themes
+# Custom JabRef Themes
 
 > Customize the look of JabRef using CSS!
 
