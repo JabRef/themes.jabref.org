@@ -1,0 +1,192 @@
+.root {
+  -jr-theme: #bd93f9;
+  -jr-accent: #ff79c6;
+  -jr-selected: -jr-accent;
+  -jr-hover: #44475a;
+
+  -jr-row-odd-background: #282a36;
+  -jr-row-even-background: #373a4b;
+  -jr-accent-alt: -jr-accent;
+
+  -jr-red: #ff5555;
+  -jr-light-red: #fc6969;
+  -jr-green: #50fa7b;
+  -jr-light-green: #6cf88f;
+  -jr-blue: #36d5f8;
+  -jr-light-blue: #8be9fd;
+  -jr-purple: #9f5efa;
+  -jr-light-purple: #bd93f9;
+  -jr-yellow: #f1fa8c;
+  -jr-orange: #ffb86c;
+}
+.root {
+  -jr-theme: #bd93f9;
+  -jr-accent: #ff79c6;
+  -jr-selected: -jr-accent;
+  -jr-hover: #44475a;
+
+  -jr-row-odd-background: #282a36;
+  -jr-row-even-background: #373a4b;
+  -jr-accent-alt: -jr-accent;
+
+  -jr-red: #ff5555;
+  -jr-light-red: #fc6969;
+  -jr-green: #50fa7b;
+  -jr-light-green: #6cf88f;
+  -jr-blue: #36d5f8;
+  -jr-light-blue: #8be9fd;
+  -jr-purple: #9f5efa;
+  -jr-light-purple: #bd93f9;
+  -jr-yellow: #f1fa8c;
+  -jr-orange: #ffb86c;
+
+  -jr-base: #282a36;
+
+  -jr-background-alt: #282a36;
+  -jr-menu-background: #44475a;
+  -jr-toolbar: -jr-menu-background;
+  -jr-sidepane-background: #44475a;
+  -jr-search-background: #44475a;
+
+  -jr-sidepane-header-background: -jr-background-alt;
+  -jr-group-hits-bg: -jr-background-alt;
+  -jr-group-hits-fg: -fx-light-text-color;
+  -fx-control-inner-background: #44475a;
+
+  -fx-control-inner-background-alt: -fx-control-inner-background;
+
+  -fx-dark-text-color: #44475a;
+  -fx-mid-text-color: #f8f8f2;
+  -fx-light-text-color: #f8f8f2;
+  -jr-separator: #6272a4;
+  -fx-outer-border: #6272a4;
+
+  -jr-icon: -fx-light-text-color;
+  -jr-icon-active: derive(-fx-light-text-color, 50%);
+  -jr-icon-background-active: -jr-hover;
+  -jr-icon-background-armed: #6272a4;
+
+  -jr-menu-foreground: -fx-light-text-color;
+  -jr-menu-item-foreground: -fx-light-text-color;
+  -jr-menu-forground-active: derive(-fx-light-text-color, 50%);
+
+  -jr-scrollbar-thumb: -fx-light-text-color;
+  -jr-scrollbar-track: derive(-fx-control-inner-background, -90%);
+
+  -fx-focused-text-base-color: -fx-dark-text-color;
+
+  -jr-tooltip-fg: derive(-fx-light-text-color, 50%);
+
+  -jr-drag-target: -jr-accent;
+  -jr-drag-target-hover: -jr-accent;
+
+  -js-summary-text-color: derive(-fx-light-text-color, 70%);
+  -js-summary-text-color-selected: derive(-fx-dark-text-color, 70%);
+}
+
+.unchanged {
+}
+
+.addition {
+  -rtfx-background-color: -jr-green;
+}
+
+.deletion {
+  -rtfx-background-color: -jr-red;
+}
+
+#previewBody {
+  background-color: #282a36; /* -fx-control-inner-background*/
+  color: #7d8591; /* -fx-mid-text-color*/
+}
+
+.custom-color-dialog {
+  -fx-background-color: -fx-control-inner-background;
+}
+
+.table-row-cell:odd {
+  -fx-background-color: #282a36;
+}
+
+.table-row-cell:even {
+  -fx-background-color: #373a4b;
+}
+
+.table-row-cell:hover,
+.tree-table-row-cell:hover {
+  -fx-background-color: -jr-hover;
+}
+
+.merge-field-value .action-icon {
+  -fx-blend-mode: none;
+  -fx-opacity: 90%;
+}
+
+.merge-header-cell {
+  -fx-border-width: 0 0 1 0;
+  -fx-border-color: -fx-outer-border;
+  -fx-background-color: -jr-row-odd-background;
+}
+
+.merge-header {
+  -fx-background-color: -jr-row-odd-background;
+}
+
+.table-view .groupColumnBackground {
+  -fx-stroke: -jr-gray-3;
+}
+
+.code-area .lineno {
+  -fx-background-color: -jr-background-alt;
+  -fx-text-fill: -fx-mid-text-color;
+}
+
+.text-unchanged {
+  -fx-fill: -fx-light-text-color;
+}
+
+.radio-button > .radio {
+  -fx-background-color: -fx-light-text-color, -fx-control-inner-background;
+}
+
+.numberColumn > .hits:any-selected {
+  -fx-background-color: derive(-jr-gray-3, 25%);
+}
+
+.numberColumn > .hits:all-selected {
+  -fx-background-color: -jr-gray-3;
+}
+
+#preferencesContainer .tab-pane > .tab-header-area > .tab-header-background {
+  -fx-background-color: -jr-background;
+}
+
+.mainToolbar .search-field .button .glyph-icon {
+  -fx-fill: derive(-fx-light-text-color, 80%);
+  -fx-text-fill: derive(-fx-light-text-color, 80%);
+  -fx-icon-color: derive(-fx-light-text-color, 80%);
+}
+
+.mainToolbar .search-field .toggle-button .glyph-icon {
+  -fx-fill: -jr-search-text;
+  -fx-text-fill: -jr-search-text;
+  -fx-icon-color: -jr-search-text;
+}
+
+.mainToolbar .search-field .toggle-button:selected .glyph-icon {
+  -fx-fill: derive(-fx-light-text-color, 80%);
+  -fx-text-fill: derive(-fx-light-text-color, 80%);
+  -fx-icon-color: derive(-fx-light-text-color, 80%);
+}
+
+.notification-bar > .pane {
+  -fx-background-color: -fx-light-text-color;
+}
+
+.rating > .container > .button {
+  -fx-icon-color: derive(-fx-light-text-color, -50%);
+}
+
+.rating > .container > .button.strong {
+  -fx-icon-color: -fx-light-text-color;
+}
