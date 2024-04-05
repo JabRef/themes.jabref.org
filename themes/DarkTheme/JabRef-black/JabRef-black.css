@@ -1,8 +1,4 @@
 .root {
-    
-    -fx-padding: 0;
-    -fx-border-color: #000000;
-    
     -jr-theme: #aaaaaa;
     -jr-accent: #555555;
     -jr-selected: -jr-accent;
@@ -104,7 +100,7 @@
     -fx-pref-height: 40;
     -fx-min-height: 40;
     -fx-max-height: 40;
-    -fx-padding: 0
+    -fx-padding: 0;
     -fx-background-radius: 0;
 }
 .menu-item {
