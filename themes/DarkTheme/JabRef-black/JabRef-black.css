@@ -1,11 +1,11 @@
 .root {
-    -jr-theme: #aaaaaa;
+    -jr-theme: #cccccc;
     -jr-accent: #555555;
     -jr-selected: -jr-accent;
     -jr-hover: #fff5;
 
-    -jr-row-odd-background: #000000;
-    -jr-row-even-background: #222222;
+    -jr-row-odd-background: #444444;
+    -jr-row-even-background: #666666;
     -jr-accent-alt: -jr-accent;
 
     -jr-red: #b71c;
@@ -19,10 +19,10 @@
     -jr-yellow: #b5b021;
     -jr-orange: #b77620;
 
-    -jr-base: #000000;
+    -jr-base: #101010;
 
-    -jr-background-alt: #000000;
-    -jr-menu-background: #000000;
+    -jr-background-alt: #101010;
+    -jr-menu-background: #101010;
     -jr-toolbar: -jr-menu-background;
     -jr-sidepane-background: #000000;
     -jr-search-background: #222222;
@@ -38,7 +38,7 @@
     -fx-mid-text-color: #888888;
     -fx-light-text-color: #bbbbbb;
     -jr-separator: #888888;
-    -fx-outer-border: #222222;
+    -fx-outer-border: #666666;
 
     -jr-icon: -fx-light-text-color;
     -jr-icon-active: derive(-fx-light-text-color, 50%);
@@ -61,7 +61,6 @@
 
     -js-summary-text-color: derive(-fx-light-text-color, 70%);
     -js-summary-text-color-selected: derive( -fx-dark-text-color, 70%);
-
 }
 
 .unchanged {
@@ -80,7 +79,7 @@
 
 #previewBody {
     background-color: #000000; /* -fx-control-inner-background*/
-    color: #ffffff; /* -fx-mid-text-color*/
+    color: #dddddd; /* -fx-mid-text-color*/
 }
 
 .custom-color-dialog {
