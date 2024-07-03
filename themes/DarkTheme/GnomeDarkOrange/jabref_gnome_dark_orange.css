@@ -1,0 +1,234 @@
+/* originally from https://github.com/JabRef/themes.jabref.org/tree/main/themes/DarkTheme/DinoGirls%20Dark%20Themes dark fuchsia purple
+modified to match gnome colours */
+.root {
+    -jr-theme: #e95420;
+    -jr-accent: #eb6536;
+    -jr-selected: -jr-accent;
+    -jr-hover: #fff1;
+
+    -jr-row-odd-background: #272727;
+    -jr-row-even-background: #2c2c2c;
+    -jr-accent-alt: -jr-accent;
+
+    -jr-red: #b71c1f;
+    -jr-light-red: #db1d2b;
+    -jr-green: #1cb631;
+    -jr-light-green: #28d93c;
+    -jr-blue: #2c2cb7;
+    -jr-light-blue: #3a3ad9;
+    -jr-purple: #b72486;
+    -jr-light-purple: #d927a8;
+    -jr-yellow: #f5cf26;
+    -jr-orange: #c47713;
+
+    -jr-base: #2c2c2c;    
+    
+    /* Some formerly blueish greys */
+    -jr-blue-gray-1: #cccccc;
+    -jr-blue-gray-2: #888888;
+    -jr-blue-gray-3: #585858;
+    -jr-blue-gray-4: #2b2b2b;
+
+    -jr-background-alt: #2c2c2c;
+    -jr-menu-background: #2c2c2c;
+    -jr-toolbar: -jr-menu-background;
+    -jr-sidepane-background: #2c2c2c;
+    -jr-search-background: #272727;
+    /*-jr-text-area-background:#ff0000;*/
+
+    -jr-sidepane-header-background: -jr-background-alt;
+    -jr-group-hits-bg: -jr-background-alt;
+    -jr-group-hits-fg: -fx-light-text-color;
+    -fx-control-inner-background: #272727;
+
+    -fx-control-inner-background-alt: -fx-control-inner-background;
+
+    -fx-dark-text-color: white;
+    -fx-mid-text-color: white;
+    -fx-light-text-color: white;
+    -js-summary-text-color: white;
+    -js-summary-text-color-selected: white;
+    -jr-separator: #181818;
+    -fx-outer-border: #181818;
+    -fx-box-border: #181818;
+
+    -jr-icon: -fx-light-text-color;
+    -jr-icon-active: -fx-light-text-color;
+    -jr-icon-background-active: -jr-hover;
+    -jr-icon-background-armed: #fff2;
+
+    -jr-menu-foreground: -fx-light-text-color;
+    -jr-menu-item-foreground: -fx-light-text-color;
+    -jr-menu-forground-active: derive(-fx-light-text-color, 50%);
+
+    -jr-scrollbar-thumb: -fx-light-text-color;
+    -jr-scrollbar-track: derive(-fx-control-inner-background, -90%);
+
+    -fx-focused-text-base-color: -fx-dark-text-color;
+
+    -jr-tooltip-fg: derive(-fx-light-text-color, 50%);
+    -jr-tooltip-bg: #3d3d3dcc;
+
+    -jr-drag-target: -jr-accent;
+    -jr-drag-target-hover: -jr-accent;
+
+    -js-summary-text-color: derive(-fx-light-text-color, 50%);
+    -js-summary-text-color-selected: derive( -fx-dark-text-color, 50%);
+    
+    -fx-default-button: -jr-accent;
+    -fx-background: #2c2c2c;
+}
+
+.unchanged {
+
+}
+
+.addition {
+    -fx-text-background-color: black;
+    -rtfx-background-color: #2c2c2c;
+}
+
+.deletion {
+    -fx-text-background-color: black;
+    -rtfx-background-color: #FFEECC;
+}
+
+#previewBody {
+    background-color: #272727; /* -fx-control-inner-background*/
+    color: white; /* -fx-mid-text-color*/
+}
+
+.custom-color-dialog {
+    -fx-background-color: -fx-control-inner-background;
+}
+
+.table-row-cell:odd{
+    -fx-background-color:-jr-row-odd-background;
+}
+
+.table-row-cell:even{
+    -fx-background-color: -jr-row-even-background;
+}
+
+.table-row-cell:hover,
+.tree-table-row-cell:hover {
+    -fx-background-color: -jr-hover;
+}
+
+.merge-field-value .action-icon {
+    -fx-blend-mode: none;
+    -fx-opacity: 50%;
+}
+
+.merge-header-cell {
+    -fx-border-width: 0 0 1 0;
+    -fx-border-color: -fx-outer-border;
+    -fx-background-color: -jr-row-odd-background;
+}
+
+.table-view .groupColumnBackground {
+    -fx-stroke: -jr-gray-3;
+}
+
+.code-area .lineno {
+    -fx-background-color: -jr-background-alt;
+    -fx-text-fill: -fx-mid-text-color;
+}
+
+.text-unchanged {
+    -fx-fill: -fx-light-text-color;
+}
+
+.radio-button > .radio {
+    -fx-background-color: -fx-light-text-color, -fx-control-inner-background;
+}
+
+.numberColumn > .hits:any-selected {
+    -fx-background-color: derive(-jr-gray-3, 25%);
+}
+
+.numberColumn > .hits:all-selected {
+    -fx-background-color: -jr-gray-3;
+}
+
+#preferencesContainer .tab-pane > .tab-header-area > .tab-header-background {
+    -fx-background-color: -jr-background;
+}
+
+.mainToolbar .search-field .button .glyph-icon {
+    -fx-fill: derive(-fx-light-text-color, 80%);
+    -fx-text-fill: derive(-fx-light-text-color, 80%);
+    -fx-icon-color: derive(-fx-light-text-color, 80%);
+}
+
+.mainToolbar .search-field .toggle-button .glyph-icon {
+    -fx-fill: -jr-search-text;
+    -fx-text-fill: -jr-search-text;
+    -fx-icon-color:-jr-search-text;
+}
+
+.mainToolbar .search-field .toggle-button:selected .glyph-icon {
+    -fx-fill: derive(-fx-light-text-color, 80%);
+    -fx-text-fill: derive(-fx-light-text-color, 80%);
+    -fx-icon-color: derive(-fx-light-text-color, 80%);
+}
+
+.notification-bar > .pane {
+    -fx-background-color: -fx-light-text-color;
+}
+
+.rating > .container > .button {
+    -fx-icon-color: derive(-fx-light-text-color, -50%);
+}
+
+.rating > .container > .button.strong {
+    -fx-icon-color: -fx-light-text-color;
+}
+
+
+.file-row-text {
+    -fx-text-fill: -fx-light-text-color;
+}
+
+.titled-pane > .title {
+    -fx-background-color: #3d3d3d;
+}
+
+.text-input {
+    -fx-background-color: -fx-outer-border, #3d3d3d;
+}
+
+.text-input:focused {
+    -fx-background-color: -jr-accent, #3d3d3d;
+}
+
+.text-area {
+    -fx-background-color: -fx-outer-border, #3d3d3d;
+}
+
+.text-area .content {
+    -fx-background-color: -fx-outer-border, #3d3d3d;
+}
+
+.text-area:focused .content {
+    -fx-background-color: -jr-accent, #3d3d3d;
+}
+
+.combo-box-base:editable > .text-field,
+.date-picker > .text-field {
+    -fx-background-color: -fx-outer-border, #3d3d3d;
+}
+
+.combo-box-base:editable:focused > .text-field,
+.combo-box-base:editable > .text-field:focused,
+.date-picker > .text-field:focused {
+    -fx-background-color: -jr-accent, #3d3d3d;
+}
+
+.date-picker:focused > .text-field {
+    -fx-background-color: #3d3d3d;
+}
+
+.bibEntry .summary {
+    -fx-text-fill: blue;
+}
