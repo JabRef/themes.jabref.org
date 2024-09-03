@@ -4,8 +4,8 @@
     -jr-selected: -jr-accent;
     -jr-hover: #fff5;
 
-    -jr-row-odd-background: #444444;
-    -jr-row-even-background: #666666;
+    -jr-row-odd-background: #101010;
+    -jr-row-even-background: #080808;
     -jr-accent-alt: -jr-accent;
 
     -jr-red: #b71c;
@@ -34,7 +34,7 @@
 
     -fx-control-inner-background-alt: -fx-control-inner-background;
 
-    -fx-dark-text-color: black;
+    -fx-dark-text-color: white;
     -fx-mid-text-color: #888888;
     -fx-light-text-color: #bbbbbb;
     -jr-separator: #888888;
