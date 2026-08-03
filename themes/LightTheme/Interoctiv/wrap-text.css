@@ -1,10 +1,10 @@
 /* Enable text wrapping and set alignment in the main table. */
-.notification-pane .table-cell {
+.main-table .table-cell {
     -fx-wrap-text: true;
     -fx-alignment: baseline-left
 }
 
 /* Increase cell height to fit two lines. */
-.notification-pane .table-row-cell {
+.main-table .table-row-cell {
     -fx-cell-size: 4.3em
 }
