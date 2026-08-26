@@ -8,11 +8,17 @@ JabRef ships two themes, _JabRef_ and _Primer_, each with a light and a dark var
 
 ## User contributed themes
 
-Themes submitted by users are located in the subfolder [themes](https://github.com/JabRef/themes.jabref.org/tree/main/themes). They are sorted into _Dark_ and _Light_ themes; select the matching color scheme in JabRef when using them.
+Themes submitted by users are located in the subfolder [themes](https://github.com/JabRef/themes.jabref.org/tree/main/themes). They are sorted into _Dark_ and _Light_ themes; select the matching color scheme in JabRef when using them. Themes that cover both color schemes in one file (via `@media (prefers-color-scheme: …)`) live directly in `themes/`.
 
 ## Gallery
 
 All screenshots were taken with JabRef 6 and the theme's CSS file selected as custom theme, on the matching color scheme.
+
+### Both color schemes
+
+| Theme | Dark | Light |
+| --- | --- | --- |
+| [Everforest](https://github.com/JabRef/themes.jabref.org/blob/main/themes/Everforest) | ![Everforest dark](themes/Everforest/everforest-dark.png) | ![Everforest light](themes/Everforest/everforest-light.png) |
 
 ### Dark themes
 
