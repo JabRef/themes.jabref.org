@@ -70,6 +70,7 @@
 
         -color-badge-bg: #475258;
         -color-badge-fg: #D3C6AA;
+        -color-badge-selected-fg: #2D353B;
 
         -color-scrim: rgba(35, 42, 46, 0.8);
         -color-shadow: rgba(0, 0, 0, 0.6);
@@ -144,6 +145,7 @@
 
         -color-badge-bg: #E0DCC7;
         -color-badge-fg: #5C6A72;
+        -color-badge-selected-fg: #2D353B;
 
         -color-scrim: rgba(92, 106, 114, 0.6);
         -color-shadow: rgba(0, 0, 0, 0.3);
