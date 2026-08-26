@@ -2,9 +2,9 @@
 
 > Customize the look of JabRef using CSS!
 
-JabRef ships two themes, _JabRef_ and _Primer_, each with a light and a dark variant. On top of the theme you can load a custom CSS file that overrides only what you want to change. This page and the [user contributed themes](https://github.com/JabRef/themes.jabref.org/tree/main/themes) target the theme model introduced with JabRef 7 ([JabRef/jabref#15798](https://github.com/JabRef/jabref/pull/15798)).
+JabRef ships two themes, _JabRef_ and _Primer_, each with a light and a dark variant. On top of the theme you can load a custom CSS file that overrides only what you want to change. This page and the [user contributed themes](https://github.com/JabRef/themes.jabref.org/tree/main/themes) target the theme model introduced with JabRef 6 ([JabRef/jabref#15798](https://github.com/JabRef/jabref/pull/15798)).
 
-**JabRef 6 and earlier:** the previous versions of the themes, based on the old `-jr-*` variables, are available [in the repository history](https://github.com/JabRef/themes.jabref.org/tree/0a139ff7da4ae356b293f81bd6a38659a7d7fc39/themes).
+**JabRef 5.x:** the previous versions of the themes, based on the old `-jr-*` variables, are available [in the repository history](https://github.com/JabRef/themes.jabref.org/tree/0a139ff7da4ae356b293f81bd6a38659a7d7fc39/themes).
 
 ## User contributed themes
 
@@ -12,7 +12,7 @@ Themes submitted by users are located in the subfolder [themes](https://github.c
 
 ## Gallery
 
-All screenshots were taken with JabRef 7 and the theme's CSS file selected as custom theme, on the matching color scheme.
+All screenshots were taken with JabRef 6 and the theme's CSS file selected as custom theme, on the matching color scheme.
 
 ### Dark themes
 
@@ -95,11 +95,11 @@ Override it for one color scheme only. The media query follows the color scheme 
 
 Anything else (fonts, sizes, individual controls) can be styled with regular JavaFX CSS; [`jabref-base.css`](https://github.com/JabRef/jabref/blob/main/jabgui/src/main/resources/org/jabref/gui/theme/internal/jabref-base.css) shows the style classes JabRef uses.
 
-### Migrating a theme from JabRef 6 or earlier
+### Migrating a theme from JabRef 5.x
 
 The old `-jr-*` variables no longer exist and are silently ignored. The most common ones map as follows:
 
-| JabRef ≤ 6                                  | JabRef 7                                     |
+| JabRef 5.x                                  | JabRef 6                                     |
 | ------------------------------------------- | -------------------------------------------- |
 | `-jr-theme`                                 | `-color-accent`, `-color-link`               |
 | `-jr-accent`                                | `-color-accent-subtle`, `-color-selection`   |
