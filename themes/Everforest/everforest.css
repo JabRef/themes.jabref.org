@@ -1,0 +1,154 @@
+/*
+ * Everforest theme for JabRef (https://github.com/sainnhe/everforest, medium contrast).
+ * Supports both color schemes: select "Follow system", "Light", or "Dark" in JabRef.
+ */
+
+@media (prefers-color-scheme: dark) {
+    .root {
+        -color-bg-primary: #232A2E;      /* bg_dim */
+        -color-bg-secondary: #2D353B;    /* bg0 */
+        -color-bg-tertiary: #343F44;     /* bg1 */
+        -color-bg-overlay: #2D353B;
+        -color-bg-alt: #333C42;
+        -color-bg-search: #3D484D;       /* bg2 */
+        -color-bg-sidepane: #2D353B;
+
+        -color-fg-default: #D3C6AA;      /* fg */
+        -color-fg-muted: #9DA9A0;        /* grey2 */
+        -color-fg-subtle: #859289;       /* grey1 */
+        -color-fg-emphasis: #D3C6AA;
+        -color-fg-menu-active: #D3C6AA;
+
+        -color-border-default: #475258;  /* bg3 */
+        -color-border-muted: #3D484D;
+
+        -color-accent: #A7C080;          /* green */
+        -color-accent-subtle: #425047;   /* bg_green */
+
+        -color-button: transparent;
+        -color-button-hover: rgba(211, 198, 170, 0.10);
+        -color-button-pressed: rgba(211, 198, 170, 0.20);
+        -color-button-border: #475258;
+        -color-button-default: #425047;
+
+        -color-selection: #543A48;       /* bg_visual */
+        -color-selection-inactive: #3D484D;
+
+        -color-overlay-hover: rgba(211, 198, 170, 0.08);
+        -color-overlay-armed: rgba(211, 198, 170, 0.16);
+
+        -color-success: #A7C080;
+        -color-success-emphasis: #83C092;
+        -color-warning: #DBBC7F;
+        -color-warning-subtle: rgba(219, 188, 127, 0.4);
+        -color-danger: #E67E80;
+        -color-danger-emphasis: #E69875;
+        -color-danger-subtle: rgba(230, 126, 128, 0.4);
+        -color-info: rgba(127, 187, 179, 0.66);
+        -color-info-subtle: rgba(58, 81, 93, 0.5);
+
+        -color-link: #7FBBB3;            /* blue */
+        -color-link-hover: #83C092;
+
+        -color-syntax-keyword: #E67E80;
+        -color-syntax-tag: #E69875;
+        -color-syntax-attribute: #D699B6;
+        -color-syntax-string: #A7C080;
+        -color-syntax-comment: #859289;
+        -color-syntax-punctuation: #9DA9A0;
+        -color-search-highlight-bg: #4D4C43;
+        -color-search-highlight-fg: #DBBC7F;
+
+        -color-scrollbar-thumb: #56635F;
+        -color-scrollbar-track: #232A2E;
+
+        -color-tooltip-bg: #3D484D;
+        -color-tooltip-fg: #D3C6AA;
+
+        -color-drag-target: #3A515D;
+        -color-drag-target-hover: #7FBBB3;
+
+        -color-badge-bg: #475258;
+        -color-badge-fg: #D3C6AA;
+        -color-badge-selected-fg: #2D353B;
+
+        -color-scrim: rgba(35, 42, 46, 0.8);
+        -color-shadow: rgba(0, 0, 0, 0.6);
+        -color-shadow-subtle: rgba(0, 0, 0, 0.3);
+    }
+}
+
+@media (prefers-color-scheme: light) {
+    .root {
+        -color-bg-primary: #EFEBD4;      /* bg_dim */
+        -color-bg-secondary: #FDF6E3;    /* bg0 */
+        -color-bg-tertiary: #F4F0D9;     /* bg1 */
+        -color-bg-overlay: #FDF6E3;
+        -color-bg-alt: #F4F0D9;
+        -color-bg-search: #FDF6E3;
+        -color-bg-sidepane: #F4F0D9;
+
+        -color-fg-default: #5C6A72;      /* fg */
+        -color-fg-muted: #829181;        /* grey2 */
+        -color-fg-subtle: #939F91;       /* grey1 */
+        -color-fg-emphasis: #FDF6E3;
+        -color-fg-menu-active: #5C6A72;
+
+        -color-border-default: #E0DCC7;  /* bg4 */
+        -color-border-muted: #E6E2CC;
+
+        -color-accent: #8DA101;          /* green */
+        -color-accent-subtle: #F0F1D2;   /* bg_green */
+
+        -color-button: transparent;
+        -color-button-hover: rgba(92, 106, 114, 0.10);
+        -color-button-pressed: rgba(92, 106, 114, 0.20);
+        -color-button-border: #E0DCC7;
+        -color-button-default: #F0F1D2;
+
+        -color-selection: #EAEDC8;       /* bg_visual */
+        -color-selection-inactive: #E6E2CC;
+
+        -color-overlay-hover: rgba(92, 106, 114, 0.08);
+        -color-overlay-armed: rgba(92, 106, 114, 0.16);
+
+        -color-success: #8DA101;
+        -color-success-emphasis: #35A77C;
+        -color-warning: #DFA000;
+        -color-warning-subtle: rgba(223, 160, 0, 0.3);
+        -color-danger: #F85552;
+        -color-danger-emphasis: #F57D26;
+        -color-danger-subtle: rgba(248, 85, 82, 0.3);
+        -color-info: rgba(58, 148, 197, 0.66);
+        -color-info-subtle: rgba(233, 240, 233, 0.8);
+
+        -color-link: #3A94C5;            /* blue */
+        -color-link-hover: #35A77C;
+
+        -color-syntax-keyword: #F85552;
+        -color-syntax-tag: #F57D26;
+        -color-syntax-attribute: #DF69BA;
+        -color-syntax-string: #8DA101;
+        -color-syntax-comment: #939F91;
+        -color-syntax-punctuation: #829181;
+        -color-search-highlight-bg: #FAEDCD;
+        -color-search-highlight-fg: #DFA000;
+
+        -color-scrollbar-thumb: #BDC3AF;
+        -color-scrollbar-track: #EFEBD4;
+
+        -color-tooltip-bg: #F4F0D9;
+        -color-tooltip-fg: #5C6A72;
+
+        -color-drag-target: #E9F0E9;
+        -color-drag-target-hover: #3A94C5;
+
+        -color-badge-bg: #E0DCC7;
+        -color-badge-fg: #5C6A72;
+        -color-badge-selected-fg: #2D353B;
+
+        -color-scrim: rgba(92, 106, 114, 0.6);
+        -color-shadow: rgba(0, 0, 0, 0.3);
+        -color-shadow-subtle: rgba(0, 0, 0, 0.1);
+    }
+}

@@ -1,234 +1,38 @@
 .root {
-    -jr-theme: #cccccc;
-    -jr-accent: #555555;
-    -jr-selected: -jr-accent;
-    -jr-hover: #fff5;
-
-    -jr-row-odd-background: #101010;
-    -jr-row-even-background: #080808;
-    -jr-accent-alt: -jr-accent;
-
-    -jr-red: #b71c;
-    -jr-light-red: #db1d2b;
-    -jr-green: #1cb631;
-    -jr-light-green: #28d93c;
-    -jr-blue: #2c2cb7;
-    -jr-light-blue: #ff0000;
-    -jr-purple: #b72486;
-    -jr-light-purple: #d927a8;
-    -jr-yellow: #b5b021;
-    -jr-orange: #b77620;
-
-    -jr-base: #101010;
-
-    -jr-background-alt: #101010;
-    -jr-menu-background: #101010;
-    -jr-toolbar: -jr-menu-background;
-    -jr-sidepane-background: #000000;
-    -jr-search-background: #222222;
-
-    -jr-sidepane-header-background: -jr-background-alt;
-    -jr-group-hits-bg: -jr-background-alt;
-    -jr-group-hits-fg: -fx-light-text-color;
-    -fx-control-inner-background: #010101;
-
-    -fx-control-inner-background-alt: -fx-control-inner-background;
-
-    -fx-dark-text-color: white;
-    -fx-mid-text-color: #888888;
-    -fx-light-text-color: #bbbbbb;
-    -jr-separator: #888888;
-    -fx-outer-border: #666666;
-
-    -jr-icon: -fx-light-text-color;
-    -jr-icon-active: derive(-fx-light-text-color, 50%);
-    -jr-icon-background-active: -jr-hover;
-    -jr-icon-background-armed: #fff2;
-
-    -jr-menu-foreground: -fx-light-text-color;
-    -jr-menu-item-foreground: -fx-light-text-color;
-    -jr-menu-forground-active: derive(-fx-light-text-color, 80%);
-
-    -jr-scrollbar-thumb: derive(-fx-light-text-color, -50%);
-    -jr-scrollbar-track: derive(-fx-control-inner-background, -90%);
-
-    -fx-focused-text-base-color: -fx-dark-text-color;
-
-    -jr-tooltip-fg: derive(-fx-light-text-color, 50%);
-
-    -jr-drag-target: -jr-accent;
-    -jr-drag-target-hover: -jr-accent;
-
-    -js-summary-text-color: derive(-fx-light-text-color, 70%);
-    -js-summary-text-color-selected: derive( -fx-dark-text-color, 70%);
-}
-
-.unchanged {
-
-}
-
-.addition {
-    -fx-text-background-color: black;
-    -rtfx-background-color: #FDAF56;
-}
-
-.deletion {
-    -fx-text-background-color: black;
-    -rtfx-background-color: #FFEECC;
-}
-
-#previewBody {
-    background-color: #000000; /* -fx-control-inner-background*/
-    color: #dddddd; /* -fx-mid-text-color*/
-}
-
-.custom-color-dialog {
-    -fx-background-color: -fx-control-inner-background;
-}
-
-.table-view .cell{
-    -fx-cell-size: 24; /* default is 24 */
-    -fx-padding: 1 0 0 0; /* top, right, bottom, and left */
-    }
-
-.tree-table-view .cell{
-    -fx-cell-size: 24;
-    -fx-padding: 1 0 0 0;
-}
-.mainToolbar {
-    -fx-pref-height: 40;
-    -fx-min-height: 40;
-    -fx-max-height: 40;
-    -fx-padding: 0;
-    -fx-background-radius: 0;
-}
-.menu-item {
-    -fx-border-insets: 0;
-    -fx-background-radius: 0;
-    -fx-padding: 5 10 5 10;
-}
-.table-view {
-    -fx-table-cell-border-color: #222222;
-    -fx-border-width: 1;
-    -fx-padding: 0 0 0 0;
-    -fx-border-insets: 0;
-}
-.mainMenu {
-    -fx-background-color: -jr-menu-background;
-    -fx-background-insets: 10;
-    -fx-pref-height: 40;
-    -fx-min-height: 40;
-    -fx-padding: 0 0 0 0;
-    -fx-background-radius: 0;
-}
-.column-header-background {
-    -fx-pref-height: 30;
-    -fx-min-height: 30;
-}
-.tab-header-area {
-    -fx-pref-height: 40;
-    -fx-min-height: 40;
-}
-.headers-region {
-    -fx-pref-height: 35;
-    -fx-min-height: 35;
-}
-.table-view .column-header > .label {
-    -fx-padding: 0 0 0 0;
-}
-
-.table-row-cell:odd{
-    -fx-background-color:#000000;
-}
-
-.table-row-cell:even{
-    -fx-background-color: #111111;
-}
-
-.table-row-cell:hover,
-.tree-table-row-cell:hover {
-    -fx-background-color: -jr-hover;
-}
-
-.merge-field-value .action-icon {
-    -fx-blend-mode: none;
-    -fx-opacity: 90%;
-}
-
-.merge-header-cell {
-    -fx-border-width: 0 0 1 0;
-    -fx-border-color: -fx-outer-border;
-    -fx-background-color: -jr-row-odd-background;
-}
-
-.merge-header {
-    -fx-background-color: -jr-row-odd-background;
-}
-
-.table-view .groupColumnBackground {
-    -fx-stroke: -jr-gray-3;
-}
-
-.code-area .lineno {
-    -fx-background-color: -jr-background-alt;
-    -fx-text-fill: -fx-mid-text-color;
-}
-
-.text-unchanged {
-    -fx-fill: -fx-light-text-color;
-}
-
-.radio-button > .radio {
-    -fx-background-color: -fx-light-text-color, -fx-control-inner-background;
-}
-
-.numberColumn > .hits:any-selected {
-    -fx-background-color: derive(-jr-gray-3, 25%);
-}
-
-.numberColumn > .hits:all-selected {
-    -fx-background-color: -jr-gray-3;
-}
-
-#preferencesContainer .tab-pane > .tab-header-area > .tab-header-background {
-    -fx-background-color: -jr-background;
-}
-
-.mainToolbar .search-field .button .glyph-icon {
-    -fx-fill: derive(-fx-light-text-color, 80%);
-    -fx-text-fill: derive(-fx-light-text-color, 80%);
-    -fx-icon-color: derive(-fx-light-text-color, 80%);
-}
-
-.mainToolbar .search-field .toggle-button .glyph-icon {
-    -fx-fill: -jr-search-text;
-    -fx-text-fill: -jr-search-text;
-    -fx-icon-color:-jr-search-text;
-}
-
-.mainToolbar .search-field .toggle-button:selected .glyph-icon {
-    -fx-fill: derive(-fx-light-text-color, 80%);
-    -fx-text-fill: derive(-fx-light-text-color, 80%);
-    -fx-icon-color: derive(-fx-light-text-color, 80%);
-}
-
-.notification-bar > .pane {
-    -fx-background-color: -fx-light-text-color;
-}
-
-.rating > .container > .button {
-    -fx-icon-color: derive(-fx-light-text-color, -50%);
-}
-
-.rating > .container > .button.strong {
-    -fx-icon-color: -fx-light-text-color;
-}
-
-.file-row-text {
-    -fx-text-fill: -fx-light-text-color;
-}
-
-.context-menu {
-    -fx-border-color: #222222;
-    -fx-border-width: 2;
+    -color-bg-primary: #101010;
+    -color-bg-secondary: #101010;
+    -color-bg-tertiary: #101010;
+    -color-bg-overlay: #101010;
+    -color-bg-alt: #080808;
+    -color-bg-search: #222222;
+    -color-bg-sidepane: #000000;
+    -color-fg-default: #bbbbbb;
+    -color-fg-muted: #888888;
+    -color-fg-emphasis: #bbbbbb;
+    -color-fg-menu-active: derive(#bbbbbb, 80%);
+    -color-border-default: #888888;
+    -color-button-border: #888888;
+    -color-accent: #cccccc;
+    -color-link: #cccccc;
+    -color-accent-subtle: #555555;
+    -color-selection: #555555;
+    -color-button-default: derive(#555555, 50%);
+    -color-button-hover: #fff5;
+    -color-button-pressed: #fff2;
+    -color-overlay-hover: #fff5;
+    -color-overlay-armed: #fff2;
+    -color-success: #1cb631;
+    -color-success-emphasis: #28d93c;
+    -color-warning: #b77620;
+    -color-danger: #db1d2b;
+    -color-danger-emphasis: #b71c;
+    -color-syntax-keyword: #b72486;
+    -color-scrollbar-thumb: derive(#bbbbbb, -50%);
+    -color-scrollbar-track: derive(#010101, -90%);
+    -color-tooltip-bg: #555555;
+    -color-tooltip-fg: derive(#bbbbbb, 50%);
+    -color-drag-target: #555555;
+    -color-drag-target-hover: #555555;
+    -color-badge-bg: #101010;
+    -color-badge-fg: #bbbbbb;
 }
