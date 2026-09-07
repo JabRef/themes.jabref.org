@@ -1,10 +1,26 @@
-/* Enable text wrapping and set alignment in the main table. */
-.main-table .table-cell {
-    -fx-wrap-text: true;
-    -fx-alignment: baseline-left
+/*
+  NOTE: The required size depends on font family,
+  even though the value is expressed in em.
+  Adjust as needed for your system font.
+*/
+.main-table .table-row-cell {
+    -fx-cell-size: 4.3em;
 }
 
-/* Increase cell height to fit two lines. */
-.main-table .table-row-cell {
-    -fx-cell-size: 4.3em
+.main-table .table-cell {
+    -fx-wrap-text: true;
 }
+
+.main-table .table-cell.column-icon {
+    -fx-translate-y: -1em;
+}
+
+.main-table .table-cell .rating {
+    -fx-translate-y: 1em;
+}
+
+/* Prevent truncation of ratings. */
+.main-table .rating .container {
+    -fx-spacing: 1px;
+}
+
