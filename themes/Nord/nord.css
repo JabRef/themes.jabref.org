@@ -118,8 +118,8 @@
 
         /* Aurora is too pale for text on Snow Storm (nord14 1.8:1, nord13 1.4:1), so the status
            colors are darkened variants: >= 3:1 as text on every light surface. Success is also
-           the pill behind -color-badge-selected-fg, hence Snow Storm text there. */
-        -color-success: #55853F;
+           the pill behind -color-badge-selected-fg, so it is dark enough for 4.5:1 Snow Storm text. */
+        -color-success: #457232;
         -color-success-emphasis: #3E8A6E;
         -color-warning: #A8720F;
         -color-warning-subtle: rgba(168, 114, 15, 0.3);
@@ -133,10 +133,11 @@
         -color-link: #3D6A9C;
         -color-link-hover: #2F578A;
 
-        -color-syntax-keyword: #5E81AC;  /* nord10 */
-        -color-syntax-tag: #81A1C1;      /* nord9 */
-        -color-syntax-attribute: #B48EAD;/* nord15 */
-        -color-syntax-string: #55853F;
+        /* Frost and Aurora darkened until each role reads at >= 4.5:1 on Snow Storm. */
+        -color-syntax-keyword: #3D6A9C;
+        -color-syntax-tag: #4D6B8A;
+        -color-syntax-attribute: #7F5679;
+        -color-syntax-string: #457232;
         -color-syntax-comment: #4C566A;
         -color-syntax-punctuation: #434C5E;
 
