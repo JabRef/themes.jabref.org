@@ -116,23 +116,27 @@
         -color-overlay-hover: rgba(46, 52, 64, 0.08);
         -color-overlay-armed: rgba(46, 52, 64, 0.16);
 
-        -color-success: #A3BE8C;         /* nord14 */
-        -color-success-emphasis: #8FBCBB;
-        -color-warning: #EBCB8B;         /* nord13 */
-        -color-warning-subtle: rgba(235, 203, 139, 0.4);
+        /* Aurora is too pale for text on Snow Storm (nord14 1.8:1, nord13 1.4:1), so the status
+           colors are darkened variants: >= 3:1 as text on every light surface. Success is also
+           the pill behind -color-badge-selected-fg, hence Snow Storm text there. */
+        -color-success: #55853F;
+        -color-success-emphasis: #3E8A6E;
+        -color-warning: #A8720F;
+        -color-warning-subtle: rgba(168, 114, 15, 0.3);
         -color-danger: #BF616A;          /* nord11 */
-        -color-danger-emphasis: #D08770;
+        -color-danger-emphasis: #A24E57;
         -color-danger-subtle: rgba(191, 97, 106, 0.3);
         -color-info: rgba(94, 129, 172, 0.66);
         -color-info-subtle: rgba(136, 192, 208, 0.3);
 
-        -color-link: #5E81AC;
-        -color-link-hover: #81A1C1;
+        /* nord10 reaches only 3.5:1 on Snow Storm; darkened to >= 4.5:1 for link text. */
+        -color-link: #3D6A9C;
+        -color-link-hover: #2F578A;
 
         -color-syntax-keyword: #5E81AC;  /* nord10 */
         -color-syntax-tag: #81A1C1;      /* nord9 */
         -color-syntax-attribute: #B48EAD;/* nord15 */
-        -color-syntax-string: #A3BE8C;
+        -color-syntax-string: #55853F;
         -color-syntax-comment: #4C566A;
         -color-syntax-punctuation: #434C5E;
 
@@ -145,7 +149,7 @@
         -color-drag-target-hover: #5E81AC;
 
         -color-badge-bg: #81A1C1;        /* nord9: stands out on the nord4 side pane, dark text stays readable */
-        -color-badge-selected-fg: #2E3440;
+        -color-badge-selected-fg: #ECEFF4;
 
         -color-scrim: rgba(46, 52, 64, 0.6);
         -color-shadow: rgba(0, 0, 0, 0.3);
