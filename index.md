@@ -22,6 +22,7 @@ The DinoGirls collection pairs each dark hue with the light hue closest to it, s
 | ---------------------------------- | --------------------------------------------- | ----------------------------------------------- |
 | [Chocolate Honey][chocolate-honey] | ![Chocolate Honey dark][chocolate-honey-dark] | ![Chocolate Honey light][chocolate-honey-light] |
 | [Everforest][everforest]           | ![Everforest dark][everforest-dark]           | ![Everforest light][everforest-light]           |
+| [Nord][nord]                       | ![Nord dark][nord-dark]                       | ![Nord light][nord-light]                       |
 
 [chocolate-honey]: https://github.com/JabRef/themes.jabref.org/blob/main/themes/ChocolateHoney
 [chocolate-honey-dark]: themes/ChocolateHoney/chocolate-honey-dark.png
@@ -29,6 +30,9 @@ The DinoGirls collection pairs each dark hue with the light hue closest to it, s
 [everforest]: https://github.com/JabRef/themes.jabref.org/blob/main/themes/Everforest
 [everforest-dark]: themes/Everforest/everforest-dark.png
 [everforest-light]: themes/Everforest/everforest-light.png
+[nord]: https://github.com/JabRef/themes.jabref.org/blob/main/themes/Nord
+[nord-dark]: themes/Nord/nord-dark.png
+[nord-light]: themes/Nord/nord-light.png
 
 #### DinoGirls Themes
 
