@@ -22,6 +22,7 @@ The DinoGirls collection pairs each dark hue with the light hue closest to it, s
 
 | Theme | Dark | Light |
 | --- | --- | --- |
+| [Chocolate Honey](https://github.com/JabRef/themes.jabref.org/blob/main/themes/ChocolateHoney) | ![Chocolate Honey dark](themes/ChocolateHoney/chocolate-honey-dark.png) | ![Chocolate Honey light](themes/ChocolateHoney/chocolate-honey-light.png) |
 | [Everforest](https://github.com/JabRef/themes.jabref.org/blob/main/themes/Everforest) | ![Everforest dark](themes/Everforest/everforest-dark.png) | ![Everforest light](themes/Everforest/everforest-light.png) |
 | [chocolatebrown-darksalmon-contrasttext](https://github.com/JabRef/themes.jabref.org/blob/main/themes/DinoGirls%20Themes/chocolatebrown-darksalmon-contrasttext.css) (DinoGirls Themes) | ![chocolatebrown-darksalmon-contrasttext dark](themes/DinoGirls%20Themes/chocolatebrown-darksalmon-contrasttext-dark.png) | ![chocolatebrown-darksalmon-contrasttext light](themes/DinoGirls%20Themes/chocolatebrown-darksalmon-contrasttext-light.png) |
 | [chocolatebrown-darksalmon-greytext](https://github.com/JabRef/themes.jabref.org/blob/main/themes/DinoGirls%20Themes/chocolatebrown-darksalmon-greytext.css) (DinoGirls Themes) | ![chocolatebrown-darksalmon-greytext dark](themes/DinoGirls%20Themes/chocolatebrown-darksalmon-greytext-dark.png) | ![chocolatebrown-darksalmon-greytext light](themes/DinoGirls%20Themes/chocolatebrown-darksalmon-greytext-light.png) |
