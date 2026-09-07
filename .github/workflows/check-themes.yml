@@ -1,0 +1,28 @@
+name: Check themes
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  parse:
+    name: Parse every theme with JavaFX
+    runs-on: ubuntu-latest
+    env:
+      JAVAFX_VERSION: "26"
+    steps:
+      - uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8 # v5.0.0
+      - uses: actions/setup-java@dd06d9cba3e5552c54d9f8ea23572deb30010f7c # v6.0.0
+        with:
+          distribution: temurin
+          java-version: 25
+      - name: Download JavaFX
+        run: |
+          for module in base graphics; do
+            curl -fsSL -O "https://repo1.maven.org/maven2/org/openjfx/javafx-$module/$JAVAFX_VERSION/javafx-$module-$JAVAFX_VERSION-linux.jar"
+          done
+      - name: Parse themes
+        run: |
+          java -cp "javafx-base-$JAVAFX_VERSION-linux.jar:javafx-graphics-$JAVAFX_VERSION-linux.jar" \
+            .github/CheckThemes.java themes
