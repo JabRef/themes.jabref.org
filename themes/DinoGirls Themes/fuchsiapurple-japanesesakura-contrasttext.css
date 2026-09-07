@@ -59,6 +59,7 @@
         -color-link: #FFB7C5;
         -color-accent-subtle: #FFB7C5;
         -color-selection: #FFB7C5;
+        -color-button: transparent;
         -color-button-default: derive(#FFB7C5, 50%);
         -color-button-hover: #FFF0F3;
         -color-button-pressed: #0002;
