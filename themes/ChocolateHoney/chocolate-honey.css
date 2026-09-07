@@ -1,0 +1,159 @@
+/*
+ * Chocolate Honey theme for JabRef.
+ * Light: cream paper, dark-chocolate ink, honey accents. Dark: chocolate surfaces, cream ink, honey accents.
+ * One file covers both color schemes: select "Follow system", "Light", or "Dark" in JabRef.
+ *
+ * Contrast contract (WCAG 2 ratios, both schemes, every surface):
+ *   -color-fg-default >= 7:1, -color-fg-muted >= 4.5:1, -color-fg-subtle >= 3:1,
+ *   -color-accent / -color-link as text >= 4.5:1, status colors as text >= 3:1,
+ *   -color-fg-emphasis >= 4.5:1 on selection, badge and default button.
+ * Honey is too light to read as text on cream, so the light accent is a darkened honey
+ * (#855700); the pure honey only appears as fills (selection, badge, default button).
+ */
+
+@media (prefers-color-scheme: light) {
+    .root {
+        -color-bg-primary: #EFE6D8;
+        -color-bg-secondary: #FBF6EC;
+        -color-bg-tertiary: #F5EDDF;
+        -color-bg-overlay: #FBF6EC;
+        -color-bg-alt: #F3EBDC;
+        -color-bg-search: #FFFBF2;
+        -color-bg-sidepane: #E8DCC8;
+
+        -color-fg-default: #2B1B12;
+        -color-fg-muted: #5E4633;
+        -color-fg-subtle: #7E6652;
+        /* Dark, not white: it is also drawn on -color-overlay-hover, i.e. on the plain surface. */
+        -color-fg-emphasis: #2B1B12;
+
+        -color-border-default: #D9CBB4;
+        -color-border-muted: #E5DAC6;
+
+        -color-accent: #855700;
+        -color-accent-subtle: #F2D68A;
+
+        -color-button: transparent;
+        -color-button-hover: rgba(43, 27, 18, 0.08);
+        -color-button-pressed: rgba(43, 27, 18, 0.16);
+        -color-button-border: #D9CBB4;
+        -color-button-default: #F0CF74;
+
+        -color-selection: #F3D27A;
+        -color-selection-inactive: #E6DAC4;
+
+        -color-overlay-hover: rgba(43, 27, 18, 0.06);
+        -color-overlay-armed: rgba(43, 27, 18, 0.12);
+
+        -color-success: #468C3A;
+        /* Both a text color and the fill behind dark text (duplicate marker): mid green. */
+        -color-success-emphasis: #3C8C40;
+        -color-warning: #A8650A;
+        -color-warning-subtle: rgba(168, 101, 10, 0.3);
+        -color-danger: #B3261E;
+        -color-danger-emphasis: #8E1B14;
+        -color-danger-subtle: rgba(179, 38, 30, 0.25);
+        -color-info: rgba(58, 110, 165, 0.66);
+        -color-info-subtle: rgba(242, 214, 138, 0.3);
+
+        -color-link: #855700;
+        -color-link-hover: #5C3B00;
+
+        -color-syntax-keyword: #7A3E9D;
+        -color-syntax-tag: #B3261E;
+        -color-syntax-attribute: #855700;
+        -color-syntax-string: #3E7D2E;
+        -color-syntax-comment: #7E6652;
+        -color-syntax-punctuation: #5E4633;
+
+        -color-scrollbar-thumb: #C9B79C;
+        -color-scrollbar-track: #EFE6D8;
+
+        -color-tooltip-bg: #F5E6BF;
+
+        -color-drag-target: #E3B94A;
+        -color-drag-target-hover: #F3D27A;
+
+        /* Honey pill with chocolate text. The selected-text color must read on this pill
+           (a group containing a selected entry) and on the green -color-success pill
+           (all entries selected), so the green is kept light enough for chocolate text. */
+        -color-badge-bg: #E0B34A;
+        -color-badge-selected-fg: #2B1B12;
+
+        -color-scrim: rgba(43, 27, 18, 0.6);
+        -color-shadow: rgba(43, 27, 18, 0.35);
+        -color-shadow-subtle: rgba(43, 27, 18, 0.12);
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    .root {
+        -color-bg-primary: #16100C;
+        -color-bg-secondary: #2A1F18;
+        -color-bg-tertiary: #201712;
+        -color-bg-overlay: #2A1F18;
+        -color-bg-alt: #221912;
+        -color-bg-search: #33261E;
+        -color-bg-sidepane: #1C1410;
+
+        -color-fg-default: #F2E6D3;
+        -color-fg-muted: #C9B59B;
+        -color-fg-subtle: #9A8570;
+        -color-fg-emphasis: #F8EEDD;
+
+        -color-border-default: #4A3A2F;
+        -color-border-muted: #3A2C24;
+
+        -color-accent: #E9B44C;
+        -color-accent-subtle: #5A4322;
+
+        -color-button: transparent;
+        -color-button-hover: rgba(242, 230, 211, 0.10);
+        -color-button-pressed: rgba(242, 230, 211, 0.20);
+        -color-button-border: #4A3A2F;
+        -color-button-default: #5A4322;
+
+        -color-selection: #5E4626;
+        -color-selection-inactive: #3E3028;
+
+        -color-overlay-hover: rgba(242, 230, 211, 0.07);
+        -color-overlay-armed: rgba(242, 230, 211, 0.14);
+
+        /* Dark enough for cream text: it is also the pill behind -color-badge-selected-fg. */
+        -color-success: #457F3A;
+        -color-success-emphasis: #549C44;
+        /* Also the fill behind cream text in invalid cells, hence darker than a pure icon amber. */
+        -color-warning: #B5701C;
+        -color-warning-subtle: rgba(181, 112, 28, 0.35);
+        -color-danger: #EC6F62;
+        -color-danger-emphasis: #F58F84;
+        -color-danger-subtle: rgba(236, 111, 98, 0.3);
+        -color-info: rgba(120, 170, 220, 0.66);
+        -color-info-subtle: rgba(90, 67, 34, 0.4);
+
+        -color-link: #E9B44C;
+        -color-link-hover: #F5CD7A;
+
+        -color-syntax-keyword: #CE93D8;
+        -color-syntax-tag: #F08A7A;
+        -color-syntax-attribute: #E9B44C;
+        -color-syntax-string: #9AD46F;
+        -color-syntax-comment: #9A8570;
+        -color-syntax-punctuation: #C9B59B;
+
+        -color-scrollbar-thumb: #6B5645;
+        -color-scrollbar-track: #16100C;
+
+        -color-tooltip-bg: #3E2E24;
+
+        -color-drag-target: #5A4322;
+        -color-drag-target-hover: #E9B44C;
+
+        -color-badge-bg: #4A3728;
+        -color-badge-selected-fg: #F8EEDD;
+
+        -color-scrim: rgba(22, 16, 12, 0.8);
+        -color-shadow: rgba(0, 0, 0, 0.7);
+        -color-shadow-subtle: rgba(0, 0, 0, 0.35);
+    }
+}
