@@ -89,7 +89,7 @@ Anything else (fonts, sizes, individual controls) can be styled with regular Jav
 
 ### Migrating a theme from JabRef 5.x
 
-The old `-jr-*` variables no longer exist and are silently ignored. The most common ones map as follows:
+The old `-jr-*` variables no longer exist and are silently ignored. Every variable the previous themes set maps as follows:
 
 | JabRef 5.x                                  | JabRef 6                                     |
 | ------------------------------------------- | -------------------------------------------- |
@@ -110,6 +110,19 @@ The old `-jr-*` variables no longer exist and are silently ignored. The most com
 | `-jr-tooltip-bg` / `-jr-tooltip-fg`         | `-color-tooltip-bg` / `-color-fg-default`    |
 | `-jr-drag-target` / `-jr-drag-target-hover` | `-color-drag-target` / `-color-drag-target-hover` |
 | `-jr-group-hits-bg` / `-jr-group-hits-fg`   | `-color-badge-bg` / `-color-fg-emphasis`     |
+| `-jr-selected`                              | `-color-selection`                           |
+| `-jr-accent-alt` / `-jr-transparent-accent` | `-color-accent-subtle` / `-color-selection-inactive` |
+| `-jr-checked`                               | `-color-accent`                              |
+| `-jr-text-area-background`                  | `-color-bg-search`                           |
+| `-jr-sidepane-header-background`            | `-color-bg-sidepane`                         |
+| `-jr-theme-text`, `-jr-search-text`, `-jr-head-fg`, `-jr-sidepane-header-color`, `-jr-menu-foreground`, `-jr-menu-item-foreground`, `-jr-menu-forground-active` | `-color-fg-default`, or `-color-fg-emphasis` where the text sits on an accent-colored surface |
+| `-jr-icon` / `-jr-icon-active`              | `-color-fg-default` / `-color-accent`        |
+| `-jr-icon-background`                       | `-color-button`                              |
+| `-jr-icon-background-active`, `-jr-menu-background-active` | `-color-overlay-hover`         |
+| `-jr-icon-background-armed`                 | `-color-overlay-armed`                       |
+| `-jr-warn` / `-jr-error` / `-jr-info`       | `-color-warning` / `-color-danger` / `-color-info` |
+| `-jr-white`, `-jr-black`, `-jr-blue`, `-jr-light-blue`, `-jr-purple`, `-jr-light-purple`, `-jr-yellow`, `-jr-gray-0`, `-jr-gray-1`, `-jr-gray-2`, `-jr-gray-3`, `-jr-blue-gray-1`, `-jr-blue-gray-2`, `-jr-blue-gray-3`, `-jr-blue-gray-4` | Raw palette entries with no successor. Set the token of the element you colored with them. |
+| `-jr-header-height`                         | Not a color. Style the element directly, for example `-fx-pref-height`. |
 
 Old themes were complete copies of JabRef's stylesheet. That is no longer needed: keep only the variables you change.
 
