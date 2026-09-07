@@ -51,6 +51,7 @@ def ancestors(path):
 
 MAP = mapping()
 problems = 0
+checked = 0
 for f in sorted(pathlib.Path(REPO, "themes").rglob("*.css")):
     rel = str(f.relative_to(REPO))
     now = f.read_text()
@@ -59,6 +60,7 @@ for f in sorted(pathlib.Path(REPO, "themes").rglob("*.css")):
         if before is None:
             print(f"-- {rel}{' [' + block + ']' if block else ''}: no pre-port version, skipped")
             continue
+        checked += 1
         have = declared(now, block)
         missing = {}
         for name in declared(before):
@@ -72,5 +74,9 @@ for f in sorted(pathlib.Path(REPO, "themes").rglob("*.css")):
             print(f"FAIL {rel}{' [' + block + ']' if block else ''}")
             for name, wanted in sorted(missing.items()):
                 print(f"       {name} -> {' or '.join(sorted(wanted))}")
-print(f"\n{problems} theme block(s) incomplete." if problems else "\nEvery theme carries all migrated tokens.")
+# A shallow clone has no pre-port commit, and every theme would be "skipped" -- a green
+# run that checked nothing. Say so instead.
+if not checked:
+    sys.exit(f"Found no pre-port theme at {BEFORE}; is this a shallow clone?")
+print(f"\n{problems} theme block(s) incomplete." if problems else f"\nAll {checked} theme blocks carry their migrated tokens.")
 sys.exit(1 if problems else 0)
