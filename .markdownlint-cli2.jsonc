@@ -1,0 +1,11 @@
+{
+  // Tables are read in the source as often as rendered, so their columns line up.
+  "config": {
+    "default": false,
+    "MD060": { "style": "aligned" },
+    // The gallery uses reference links; a typo in a label renders as literal text.
+    "MD052": true,
+    "MD053": true
+  },
+  "globs": ["**/*.md"]
+}

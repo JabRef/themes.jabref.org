@@ -4,8 +4,8 @@ Dark theme for JabRef that tries to mimic the native appearance of GNOME apps (i
 Meanwhile, only the orange accent is implemented, but other accents can be obtained by replacing:
 
 ```
-    -jr-theme: #e95420;
-    -jr-accent: #eb6536;
+    -color-accent: #e95420;
+    -color-accent-subtle: #eb6536;
 ```
 
 with the appropriate colours in `jabref_gnome_dark_orange.css`.

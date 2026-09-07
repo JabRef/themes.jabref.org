@@ -1,0 +1,82 @@
+/*
+ * DinoGirls theme collection: chocolatebrown (dark) / darksalmon (light), contrasttext.
+ * Covers both color schemes: select "Follow system", "Light", or "Dark" in JabRef.
+ */
+
+@media (prefers-color-scheme: dark) {
+    .root {
+        -color-bg-primary: #151924;
+        -color-bg-secondary: #272b38;
+        -color-bg-tertiary: #141824;
+        -color-bg-overlay: #151924;
+        -color-bg-alt: #272b38;
+        -color-bg-search: #2c2e3b;
+        -color-bg-sidepane: #212330;
+        -color-fg-default: white;
+        -color-fg-muted: white;
+        -color-fg-emphasis: white;
+        -color-border-default: #333744;
+        -color-button-border: #424758;
+        -color-accent: #7B3F00;
+        -color-link: #7B3F00;
+        -color-accent-subtle: #3F000F;
+        -color-selection: #3F000F;
+        -color-button-default: derive(#3F000F, 50%);
+        -color-button-hover: #fff1;
+        -color-button-pressed: #fff2;
+        -color-overlay-hover: #fff1;
+        -color-overlay-armed: #fff2;
+        -color-success: #1cb631;
+        -color-success-emphasis: #28d93c;
+        -color-warning: #b77620;
+        -color-danger: #db1d2b;
+        -color-danger-emphasis: #b71c1f;
+        -color-syntax-keyword: #b72486;
+        -color-scrollbar-thumb: white;
+        -color-scrollbar-track: derive(#272b38, -90%);
+        -color-tooltip-bg: #3F000F;
+        -color-drag-target: #3F000F;
+        -color-drag-target-hover: #3F000F;
+        -color-badge-bg: #151924;
+    }
+}
+
+@media (prefers-color-scheme: light) {
+    .root {
+        -color-bg-primary: derive(#ebebeb, 26.4%);
+        -color-bg-secondary: derive(derive(#ebebeb, 95%), -6%);
+        -color-bg-tertiary: derive(#ebebeb, 46.4%);
+        -color-bg-overlay: derive(derive(#ebebeb, 95%), -6%);
+        -color-bg-alt: derive(#ebebeb, 95%);
+        -color-bg-search: derive(#ebebeb, 80%);
+        -color-bg-sidepane: #dddddd;
+        -color-fg-default: #000;
+        -color-fg-muted: #000;
+        -color-fg-emphasis: #ffffff;
+        -color-border-default: derive(#ebebeb, -5%);
+        -color-button-border: derive(#ebebeb, -5%);
+        -color-accent: #E9967A;
+        -color-link: #E9967A;
+        -color-accent-subtle: #E9967A;
+        -color-selection: #E9967A;
+        -color-button: transparent;
+        -color-button-default: derive(#E9967A, 50%);
+        -color-button-hover: #E9C7BB;
+        -color-button-pressed: #0002;
+        -color-overlay-hover: #0001;
+        -color-overlay-armed: #0002;
+        -color-success: #10ac84;
+        -color-success-emphasis: #1dd1a1;
+        -color-warning: #ff9f43;
+        -color-danger: #ff6b6b;
+        -color-danger-emphasis: #ee5253;
+        -color-info-subtle: rgba(163, 183, 230, 0.16);
+        -color-syntax-keyword: #7559C2;
+        -color-scrollbar-thumb: derive(derive(#ebebeb, -5%), -30%);
+        -color-scrollbar-track: derive(derive(#ebebeb, 95%), -10%);
+        -color-tooltip-bg: #E9967A;
+        -color-drag-target: #7559C2;
+        -color-drag-target-hover: derive(#7559C2, 80%);
+        -color-badge-bg: derive(#dddddd, -50%);
+    }
+}
