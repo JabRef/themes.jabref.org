@@ -1,3 +1,8 @@
+///usr/bin/env jbang "$0" "$@" ; exit $?
+//JAVA 25
+//DEPS org.openjfx:javafx-base:26:${os.detected.jfxname}
+//DEPS org.openjfx:javafx-graphics:26:${os.detected.jfxname}
+
 import javafx.css.CssParser;
 import javafx.css.Stylesheet;
 

@@ -9,26 +9,34 @@ jobs:
   parse:
     name: Parse themes with JavaFX
     runs-on: ubuntu-latest
-    env:
-      JAVAFX_VERSION: "26"
     steps:
       - uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8 # v5.0.0
         with:
           # The audit reads the pre-port themes out of the repository history.
           fetch-depth: 0
-      - uses: actions/setup-java@dd06d9cba3e5552c54d9f8ea23572deb30010f7c # v6.0.0
+      - name: Generate JBang cache key
+        id: cache-key
+        shell: bash
+        run: echo "cache_key=jbang-checkthemes-$(date +%Y-%m)" >> $GITHUB_OUTPUT
+      - name: Cache JBang
+        uses: actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6
         with:
-          distribution: temurin
-          java-version: 25
-      - name: Download JavaFX
-        run: |
-          for module in base graphics; do
-            curl -fsSL -O "https://repo1.maven.org/maven2/org/openjfx/javafx-$module/$JAVAFX_VERSION/javafx-$module-$JAVAFX_VERSION-linux.jar"
-          done
+          path: ~/.jbang
+          key: ${{ steps.cache-key.outputs.cache_key }}
+          restore-keys:
+            jbang-checkthemes-
+      - name: Resolve //DEPS into the cached directory
+        # JBang resolves script dependencies into ~/.m2, which is not cached here.
+        run: echo "JBANG_REPO=$HOME/.jbang/repository" >> "$GITHUB_ENV"
+      - uses: actions/setup-java@dd06d9cba3e5552c54d9f8ea23572deb30010f7c # v6
+        with:
+          distribution: 'corretto'
+          java-version: '25'
+      - name: Setup JBang
+        # Pinned to a commit for deterministic CI; comment tracks the tag.
+        uses: jbangdev/setup-jbang@2b1b465a7b75f4222b81426f23a01e013aa7b95c # v0.1.1
       - name: Parse themes
-        run: |
-          java -cp "javafx-base-$JAVAFX_VERSION-linux.jar:javafx-graphics-$JAVAFX_VERSION-linux.jar" \
-            .github/CheckThemes.java themes
+        run: jbang .github/CheckThemes.java themes
       - name: Audit against the pre-port themes
         run: python3 .github/audit-migration.py
 
@@ -38,4 +46,6 @@ jobs:
     steps:
       - uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8 # v5.0.0
       - name: Check table alignment
-        run: npx -y markdownlint-cli2@0.23.2
+        uses: DavidAnson/markdownlint-cli2-action@21c1be1b93ad9ed58fa840aacc3f279cde2a72ff # v24.2.0
+        with:
+          globs: '**/*.md'
