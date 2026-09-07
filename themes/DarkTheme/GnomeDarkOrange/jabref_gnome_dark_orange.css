@@ -9,7 +9,6 @@
     -color-fg-default: white;
     -color-fg-muted: white;
     -color-fg-emphasis: white;
-    -color-fg-menu-active: derive(white, 50%);
     -color-border-default: #181818;
     -color-button-border: #181818;
     -color-accent: #e95420;
@@ -30,9 +29,7 @@
     -color-scrollbar-thumb: white;
     -color-scrollbar-track: derive(#272727, -90%);
     -color-tooltip-bg: #3d3d3dcc;
-    -color-tooltip-fg: derive(white, 50%);
     -color-drag-target: #eb6536;
     -color-drag-target-hover: #eb6536;
     -color-badge-bg: #2c2c2c;
-    -color-badge-fg: white;
 }

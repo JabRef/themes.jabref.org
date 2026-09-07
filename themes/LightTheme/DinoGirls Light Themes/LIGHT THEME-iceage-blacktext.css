@@ -9,7 +9,6 @@
     -color-fg-default: #000;
     -color-fg-muted: #000;
     -color-fg-emphasis: #ffffff;
-    -color-fg-menu-active: #000;
     -color-border-default: derive(#ebebeb, -5%);
     -color-button-border: derive(#ebebeb, -5%);
     -color-accent: #89CFF0;
@@ -31,9 +30,7 @@
     -color-scrollbar-thumb: derive(derive(#ebebeb, -5%), -30%);
     -color-scrollbar-track: derive(derive(#ebebeb, 95%), -10%);
     -color-tooltip-bg: #89CFF0;
-    -color-tooltip-fg: #000;
     -color-drag-target: #7559C2;
     -color-drag-target-hover: derive(#7559C2, 80%);
     -color-badge-bg: derive(#dddddd, -50%);
-    -color-badge-fg: ladder( derive(#dddddd, -50%), #ffffff 45%, #000 46%, #000 59%, #000 60% );
 }

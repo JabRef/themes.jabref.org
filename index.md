@@ -121,9 +121,9 @@ The old `-jr-*` variables no longer exist and are silently ignored. The most com
 | `-jr-orange`                                | `-color-warning`                             |
 | `-jr-light-red` / `-jr-red`                 | `-color-danger` / `-color-danger-emphasis`   |
 | `-jr-scrollbar-thumb` / `-jr-scrollbar-track` | `-color-scrollbar-thumb` / `-color-scrollbar-track` |
-| `-jr-tooltip-bg` / `-jr-tooltip-fg`         | `-color-tooltip-bg` / `-color-tooltip-fg`    |
+| `-jr-tooltip-bg` / `-jr-tooltip-fg`         | `-color-tooltip-bg` / `-color-fg-default`    |
 | `-jr-drag-target` / `-jr-drag-target-hover` | `-color-drag-target` / `-color-drag-target-hover` |
-| `-jr-group-hits-bg` / `-jr-group-hits-fg`   | `-color-badge-bg` / `-color-badge-fg`        |
+| `-jr-group-hits-bg` / `-jr-group-hits-fg`   | `-color-badge-bg` / `-color-fg-emphasis`     |
 
 Old themes were complete copies of JabRef's stylesheet. That is no longer needed: keep only the variables you change.
 
