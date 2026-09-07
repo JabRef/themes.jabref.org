@@ -102,7 +102,10 @@ The old `-jr-*` variables no longer exist and are silently ignored. Every variab
 | `-jr-search-background`                     | `-color-bg-search`                           |
 | `-jr-sidepane-background`                   | `-color-bg-sidepane`                         |
 | `-jr-separator`                             | `-color-border-default`                      |
-| `-fx-light-text-color` / `-fx-dark-text-color` / `-fx-mid-text-color` | `-color-fg-default`, `-color-fg-emphasis`, `-color-fg-muted` |
+| `-fx-light-text-color` / `-fx-dark-text-color` / `-fx-mid-text-color` | `-color-fg-emphasis` / `-color-fg-default` / `-color-fg-muted`. In a dark theme the readable body color is the old `-fx-light-text-color`, so give `-color-fg-default` that value as well. |
+| `-fx-control-inner-background` / `-fx-control-inner-background-alt` | `-color-bg-secondary` / `-color-bg-alt`  |
+| `-fx-outer-border`                          | `-color-border-default`, `-color-button-border` |
+| `-fx-focused-text-base-color`               | `-color-fg-emphasis`                         |
 | `-jr-green` / `-jr-light-green`             | `-color-success` / `-color-success-emphasis` |
 | `-jr-orange`                                | `-color-warning`                             |
 | `-jr-light-red` / `-jr-red`                 | `-color-danger` / `-color-danger-emphasis`   |
