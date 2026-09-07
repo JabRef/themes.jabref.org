@@ -1,7 +1,9 @@
 .root {
     -color-bg-primary: #151924;
+    -color-bg-secondary: #272b38;
     -color-bg-tertiary: #141824;
     -color-bg-overlay: #151924;
+    -color-bg-alt: #272b38;
     -color-bg-search: #2c2e3b;
     -color-bg-sidepane: #212330;
     -color-fg-default: white;
