@@ -1,0 +1,8 @@
+{
+  // Tables are read in the source as often as rendered, so their columns line up.
+  "config": {
+    "default": false,
+    "MD060": { "style": "aligned" }
+  },
+  "globs": ["**/*.md"]
+}

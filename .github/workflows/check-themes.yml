@@ -26,3 +26,11 @@ jobs:
         run: |
           java -cp "javafx-base-$JAVAFX_VERSION-linux.jar:javafx-graphics-$JAVAFX_VERSION-linux.jar" \
             .github/CheckThemes.java themes
+
+  markdown:
+    name: Lint Markdown
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8 # v5.0.0
+      - name: Check table alignment
+        run: npx -y markdownlint-cli2@0.23.2

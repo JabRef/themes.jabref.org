@@ -16,6 +16,8 @@ All screenshots were taken with JabRef 6 and the theme's CSS file selected as cu
 
 The DinoGirls collection pairs each dark hue with the light hue closest to it, so one file serves both color schemes. The _blackandwhite_ and _canaryyellow_ hues have no light counterpart and stay dark-only.
 
+<!-- markdownlint-disable MD060 -->
+
 ### Both color schemes
 
 | Theme | Dark | Light |
@@ -54,6 +56,8 @@ The DinoGirls collection pairs each dark hue with the light hue closest to it, s
 | Theme | Preview |
 | --- | --- |
 | [Interoctiv](https://github.com/JabRef/themes.jabref.org/blob/main/themes/LightTheme/Interoctiv) | ![Interoctiv](themes/LightTheme/Interoctiv/wrap-text.png) |
+
+<!-- markdownlint-enable MD060 -->
 
 ## Use a custom theme
 
