@@ -1,0 +1,159 @@
+/*
+ * Nord theme for JabRef (https://www.nordtheme.com/, MIT license).
+ * Supports both color schemes: select "Follow system", "Light", or "Dark" in JabRef.
+ *
+ * Palette, as named on nordtheme.com:
+ *   Polar Night  nord0 #2E3440  nord1 #3B4252  nord2 #434C5E  nord3 #4C566A
+ *   Snow Storm   nord4 #D8DEE9  nord5 #E5E9F0  nord6 #ECEFF4
+ *   Frost        nord7 #8FBCBB  nord8 #88C0D0  nord9 #81A1C1  nord10 #5E81AC
+ *   Aurora       nord11 #BF616A nord12 #D08770 nord13 #EBCB8B nord14 #A3BE8C nord15 #B48EAD
+ * The light scheme is the usual Nord "light" convention (Snow Storm surfaces, Polar Night text);
+ * Frost is too pale for text on Snow Storm, so the light accent uses nord10.
+ */
+
+@media (prefers-color-scheme: dark) {
+    .root {
+        -color-bg-primary: #2E3440;      /* nord0 */
+        -color-bg-secondary: #3B4252;    /* nord1 */
+        -color-bg-tertiary: #2E3440;
+        -color-bg-overlay: #3B4252;
+        -color-bg-alt: #363E4E;
+        -color-bg-search: #434C5E;       /* nord2 */
+        -color-bg-sidepane: #3B4252;
+
+        -color-fg-default: #ECEFF4;      /* nord6 */
+        -color-fg-muted: #D8DEE9;        /* nord4 */
+        -color-fg-subtle: #7B88A1;
+        -color-fg-emphasis: #ECEFF4;
+
+        -color-border-default: #4C566A;  /* nord3 */
+        -color-border-muted: #434C5E;
+
+        -color-accent: #88C0D0;          /* nord8 */
+        -color-accent-subtle: #5E81AC;   /* nord10 */
+
+        -color-button: transparent;
+        -color-button-hover: rgba(236, 239, 244, 0.10);
+        -color-button-pressed: rgba(236, 239, 244, 0.20);
+        -color-button-border: #4C566A;
+        -color-button-default: #5E81AC;
+
+        -color-selection: #5E81AC;       /* nord10 */
+        -color-selection-inactive: #434C5E;
+
+        -color-overlay-hover: rgba(236, 239, 244, 0.08);
+        -color-overlay-armed: rgba(236, 239, 244, 0.16);
+
+        -color-success: #A3BE8C;         /* nord14 */
+        -color-success-emphasis: #8FBCBB;
+        -color-warning: #EBCB8B;         /* nord13 */
+        -color-warning-subtle: rgba(235, 203, 139, 0.4);
+        -color-danger: #BF616A;          /* nord11 */
+        -color-danger-emphasis: #D08770;
+        -color-danger-subtle: rgba(191, 97, 106, 0.4);
+        -color-info: rgba(136, 192, 208, 0.66);
+        -color-info-subtle: rgba(94, 129, 172, 0.4);
+
+        -color-link: #88C0D0;
+        -color-link-hover: #8FBCBB;
+
+        -color-syntax-keyword: #81A1C1;  /* nord9 */
+        -color-syntax-tag: #8FBCBB;      /* nord7 */
+        -color-syntax-attribute: #B48EAD;/* nord15 */
+        -color-syntax-string: #A3BE8C;
+        -color-syntax-comment: #616E88;  /* brightened nord3, as in Nord's own editor ports */
+        -color-syntax-punctuation: #D8DEE9;
+
+        -color-scrollbar-thumb: #4C566A;
+        -color-scrollbar-track: #2E3440;
+
+        -color-tooltip-bg: #434C5E;
+
+        -color-drag-target: #5E81AC;
+        -color-drag-target-hover: #88C0D0;
+
+        -color-badge-bg: #4C566A;
+        -color-badge-selected-fg: #2E3440;
+
+        -color-scrim: rgba(46, 52, 64, 0.8);
+        -color-shadow: rgba(0, 0, 0, 0.6);
+        -color-shadow-subtle: rgba(0, 0, 0, 0.3);
+    }
+}
+
+@media (prefers-color-scheme: light) {
+    .root {
+        -color-bg-primary: #E5E9F0;      /* nord5 */
+        -color-bg-secondary: #ECEFF4;    /* nord6 */
+        -color-bg-tertiary: #E5E9F0;
+        -color-bg-overlay: #ECEFF4;
+        -color-bg-alt: #E5E9F0;
+        -color-bg-search: #ECEFF4;
+        -color-bg-sidepane: #D8DEE9;     /* nord4 */
+
+        -color-fg-default: #2E3440;      /* nord0 */
+        -color-fg-muted: #434C5E;        /* nord2 */
+        -color-fg-subtle: #4C566A;       /* nord3 */
+        /* Dark, not Snow Storm: it is also drawn on the pale default button, selection and
+           hover overlay, i.e. effectively on the plain surface. */
+        -color-fg-emphasis: #2E3440;
+
+        -color-border-default: #D8DEE9;
+        -color-border-muted: #E5E9F0;
+
+        -color-accent: #5E81AC;          /* nord10 */
+        -color-accent-subtle: #C8D6E8;
+
+        -color-button: transparent;
+        -color-button-hover: rgba(46, 52, 64, 0.10);
+        -color-button-pressed: rgba(46, 52, 64, 0.20);
+        -color-button-border: #D8DEE9;
+        -color-button-default: #C8D6E8;
+
+        -color-selection: #C8D6E8;
+        -color-selection-inactive: #D8DEE9;
+
+        -color-overlay-hover: rgba(46, 52, 64, 0.08);
+        -color-overlay-armed: rgba(46, 52, 64, 0.16);
+
+        /* Aurora is too pale for text on Snow Storm (nord14 1.8:1, nord13 1.4:1), so the status
+           colors are darkened variants: >= 3:1 as text on every light surface. Success is also
+           the pill behind -color-badge-selected-fg, so it is dark enough for 4.5:1 Snow Storm text. */
+        -color-success: #457232;
+        -color-success-emphasis: #3E8A6E;
+        -color-warning: #A8720F;
+        -color-warning-subtle: rgba(168, 114, 15, 0.3);
+        -color-danger: #BF616A;          /* nord11 */
+        -color-danger-emphasis: #A24E57;
+        -color-danger-subtle: rgba(191, 97, 106, 0.3);
+        -color-info: rgba(94, 129, 172, 0.66);
+        -color-info-subtle: rgba(136, 192, 208, 0.3);
+
+        /* nord10 reaches only 3.5:1 on Snow Storm; darkened to >= 4.5:1 for link text. */
+        -color-link: #3D6A9C;
+        -color-link-hover: #2F578A;
+
+        /* Frost and Aurora darkened until each role reads at >= 4.5:1 on Snow Storm. */
+        -color-syntax-keyword: #3D6A9C;
+        -color-syntax-tag: #4D6B8A;
+        -color-syntax-attribute: #7F5679;
+        -color-syntax-string: #457232;
+        -color-syntax-comment: #4C566A;
+        -color-syntax-punctuation: #434C5E;
+
+        -color-scrollbar-thumb: #D8DEE9;
+        -color-scrollbar-track: #E5E9F0;
+
+        -color-tooltip-bg: #E5E9F0;
+
+        -color-drag-target: #C8D6E8;
+        -color-drag-target-hover: #5E81AC;
+
+        -color-badge-bg: #81A1C1;        /* nord9: stands out on the nord4 side pane, dark text stays readable */
+        -color-badge-selected-fg: #ECEFF4;
+
+        -color-scrim: rgba(46, 52, 64, 0.6);
+        -color-shadow: rgba(0, 0, 0, 0.3);
+        -color-shadow-subtle: rgba(0, 0, 0, 0.1);
+    }
+}
