@@ -7,7 +7,7 @@ on:
 
 jobs:
   parse:
-    name: Parse every theme with JavaFX
+    name: Parse themes with JavaFX
     runs-on: ubuntu-latest
     env:
       JAVAFX_VERSION: "26"
