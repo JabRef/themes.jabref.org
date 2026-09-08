@@ -228,6 +228,3 @@ Old themes were complete copies of JabRef's stylesheet. That is no longer needed
 | `{} biblatex source` tab         | `.code-area`       |
 | text in `{} biblatex source` tab | `.code-area .text` |
 
-## Known bugs
-
-* [#8523](https://github.com/JabRef/jabref/issues/8523): On Windows 10, it is not possible to use fonts that were installed user-wide in the CSS, only system-wide fonts are working. A workaround to use fonts that are not installed system-wide is to include the font file via [`@font-face`](https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face).
