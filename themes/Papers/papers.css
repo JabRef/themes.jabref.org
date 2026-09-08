@@ -79,8 +79,6 @@
         -color-drag-target: #1B72E8;
         -color-drag-target-hover: #CFE1FA;
 
-        -color-cell-border: transparent;
-
         -color-badge-bg: #DCDCDC;
         /* Dark, not white: JabRef paints this on -color-success (a group whose entries are all
            selected) *and* on derive(-color-success, 70%) (some selected), a much brighter green
@@ -158,8 +156,6 @@
 
         -color-drag-target: #5FA3FF;
         -color-drag-target-hover: #26405E;
-
-        -color-cell-border: transparent;
 
         -color-badge-bg: #35353B;
         /* See the light scheme: this lands on -color-success and on derive(-color-success, 70%). */
