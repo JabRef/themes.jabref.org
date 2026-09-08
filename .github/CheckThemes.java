@@ -16,11 +16,18 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
 import java.util.TreeSet;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 /// Checks every theme against the CSS parser JavaFX itself uses, so a theme that JabRef
 /// would silently ignore -- a syntax error, a media query it cannot read, or a color token
 /// JabRef no longer knows -- fails here instead of in a user's JabRef.
 public class CheckThemes {
+    private static final Pattern TOKEN_READ = Pattern.compile("(-color-[a-z0-9-]*[a-z0-9])(?!\\s*:)");
+
+    /// Raw color ramps a theme may lay out for its own use, as the Primer theme does with AtlantaFX's.
+    private static final Pattern PALETTE_RAMP = Pattern.compile("-color-(?:base|accent|success|warning|danger)-[0-9]|-color-(?:dark|light)");
+
     /// JabRef's own stylesheets on `main`, which between them declare every `-color-*` token
     /// a theme can meaningfully override.
     private static final List<String> TOKEN_SOURCES = List.of(
@@ -55,6 +62,11 @@ public class CheckThemes {
             Set<String> unknown = new TreeSet<>();
             collectTokens(stylesheet, unknown);
             unknown.removeAll(knownTokens);
+            // A theme may bring a vocabulary of its own -- the Primer theme carries AtlantaFX's --
+            // as long as it reads those tokens itself. What stays is a token nothing can ever read:
+            // a typo, or a leftover of a theme written against another JabRef version.
+            unknown.removeAll(tokensRead(Files.readString(file)));
+            unknown.removeIf(token -> PALETTE_RAMP.matcher(token).matches());
             ok &= unknown.isEmpty();
 
             if (!ok) {
@@ -78,6 +90,16 @@ public class CheckThemes {
                 into.add(declaration.getProperty());
             }
         }));
+    }
+
+    /// Every `-color-*` token the stylesheet reads, i.e. mentioned somewhere other than left of a colon.
+    private static Set<String> tokensRead(String css) {
+        Set<String> read = new TreeSet<>();
+        Matcher matcher = TOKEN_READ.matcher(css.replaceAll("(?s)/\\*.*?\\*/", " "));
+        while (matcher.find()) {
+            read.add(matcher.group(1));
+        }
+        return read;
     }
 
     private static String fetch(String url) throws Exception {

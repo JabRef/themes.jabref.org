@@ -24,6 +24,7 @@ All screenshots were taken with JabRef 6 and the theme's CSS file selected as cu
 | [Everforest][everforest]           | ![Everforest dark][everforest-dark]           | ![Everforest light][everforest-light]           |
 | [Nord][nord]                       | ![Nord dark][nord-dark]                       | ![Nord light][nord-light]                       |
 | [Papers][papers]                   | ![Papers dark][papers-dark]                   | ![Papers light][papers-light]                   |
+| [Primer][primer]                   | ![Primer dark][primer-dark]                   | ![Primer light][primer-light]                   |
 
 [chocolate-honey]: https://github.com/JabRef/themes.jabref.org/blob/main/themes/ChocolateHoney
 [chocolate-honey-dark]: themes/ChocolateHoney/chocolate-honey-dark.png
@@ -37,6 +38,9 @@ All screenshots were taken with JabRef 6 and the theme's CSS file selected as cu
 [papers]: https://github.com/JabRef/themes.jabref.org/blob/main/themes/Papers
 [papers-dark]: themes/Papers/papers-dark.png
 [papers-light]: themes/Papers/papers-light.png
+[primer]: https://github.com/JabRef/themes.jabref.org/blob/main/themes/Primer
+[primer-dark]: themes/Primer/primer-dark.png
+[primer-light]: themes/Primer/primer-light.png
 
 #### Dino Girl's themes
 
