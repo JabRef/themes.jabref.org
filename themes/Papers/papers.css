@@ -1,0 +1,255 @@
+/*
+ * Papers theme for JabRef.
+ *
+ * A dense, low-chrome reading-list look in the spirit of the Papers reference manager:
+ * neutral grey chrome, a white spreadsheet-like entry table with hairline column rules
+ * and a saturated blue selection. The point is to fit many more entries on screen, so
+ * this theme also shrinks the paddings that JabRef spends on breathing room -- the font
+ * size is untouched (change it in Preferences > General if you want smaller text).
+ *
+ * One file covers both color schemes: select "Follow system", "Light" or "Dark" in JabRef.
+ *
+ * Contrast contract (WCAG 2 ratios, both schemes, on every surface the token can land on):
+ *   -color-fg-default >= 7:1, -color-fg-muted >= 4.5:1, -color-fg-subtle >= 3:1,
+ *   -color-accent / -color-link as text >= 4.5:1, status colors as text >= 3:1,
+ *   -color-fg-emphasis >= 4.5:1 on the badge, the default button and the hover overlay.
+ * -color-fg-emphasis is drawn on -color-overlay-hover (a selected icon button), i.e. on the
+ * plain surface, so in light mode it is dark, not white. The selected table row needs no
+ * token: JavaFX derives its text color from -color-selection, so the blue carries white text.
+ */
+
+@media (prefers-color-scheme: light) {
+    .root {
+        -color-bg-primary: #E8E8E8;
+        -color-bg-secondary: #FFFFFF;
+        -color-bg-tertiary: #F7F7F7;
+        -color-bg-overlay: #FFFFFF;
+        -color-bg-alt: #F5F5F5;
+        -color-bg-search: #FFFFFF;
+        -color-bg-sidepane: #EAEAEA;
+
+        -color-fg-default: #1A1A1A;
+        -color-fg-muted: #4A4A4A;
+        -color-fg-subtle: #6E6E6E;
+        -color-fg-emphasis: #1A1A1A;
+
+        -color-border-default: #CFCFCF;
+        -color-border-muted: #E3E3E3;
+
+        -color-accent: #0B62CE;
+        -color-accent-subtle: #CFE1FA;
+
+        -color-button: transparent;
+        -color-button-hover: rgba(0, 0, 0, 0.07);
+        -color-button-pressed: rgba(0, 0, 0, 0.15);
+        -color-button-border: #C4C4C4;
+        -color-button-default: #CFE1FA;
+
+        -color-selection: #1B72E8;
+        -color-selection-inactive: #D7D7D7;
+
+        -color-overlay-hover: rgba(0, 0, 0, 0.06);
+        -color-overlay-armed: rgba(0, 0, 0, 0.12);
+
+        -color-success: #3A9440;
+        -color-success-emphasis: #2F8036;
+        -color-warning: #9A5B00;
+        -color-warning-subtle: rgba(154, 91, 0, 0.28);
+        -color-danger: #C42B1C;
+        -color-danger-emphasis: #9B1C11;
+        -color-danger-subtle: rgba(196, 43, 28, 0.22);
+        -color-info: rgba(27, 114, 232, 0.66);
+        -color-info-subtle: rgba(207, 225, 250, 0.5);
+
+        -color-link: #0B62CE;
+        -color-link-hover: #08498F;
+
+        -color-syntax-keyword: #7A3E9D;
+        -color-syntax-tag: #C42B1C;
+        -color-syntax-attribute: #0B62CE;
+        -color-syntax-string: #2E7D32;
+        -color-syntax-comment: #6E6E6E;
+        -color-syntax-punctuation: #4A4A4A;
+
+        -color-scrollbar-thumb: #B6B6B6;
+        -color-scrollbar-track: #F0F0F0;
+
+        -color-tooltip-bg: #F2F2F2;
+
+        -color-drag-target: #1B72E8;
+        -color-drag-target-hover: #CFE1FA;
+
+        -color-badge-bg: #DCDCDC;
+        /* Dark, not white: JabRef paints this on -color-success (a group whose entries are all
+           selected) *and* on derive(-color-success, 70%) (some selected), a much brighter green
+           on which white would only reach 1.9:1. That keeps -color-success mid-lightness. */
+        -color-badge-selected-fg: #1A1A1A;
+
+        -color-scrim: rgba(0, 0, 0, 0.4);
+        -color-shadow: rgba(0, 0, 0, 0.25);
+        -color-shadow-subtle: rgba(0, 0, 0, 0.08);
+    }
+
+    /* The only place -color-fg-emphasis lands on the accent fill itself. */
+    .walkthrough-continue-button {
+        -fx-text-fill: #FFFFFF;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    .root {
+        -color-bg-primary: #1B1B1D;
+        -color-bg-secondary: #242427;
+        -color-bg-tertiary: #1F1F22;
+        -color-bg-overlay: #2A2A2E;
+        -color-bg-alt: #292A2D;
+        -color-bg-search: #2A2A2E;
+        -color-bg-sidepane: #171719;
+
+        -color-fg-default: #ECECEE;
+        -color-fg-muted: #ADADB4;
+        -color-fg-subtle: #8B8B92;
+        -color-fg-emphasis: #FFFFFF;
+
+        -color-border-default: #3C3C42;
+        -color-border-muted: #303035;
+
+        -color-accent: #5FA3FF;
+        -color-accent-subtle: #26405E;
+
+        -color-button: transparent;
+        -color-button-hover: rgba(255, 255, 255, 0.09);
+        -color-button-pressed: rgba(255, 255, 255, 0.18);
+        -color-button-border: #3C3C42;
+        -color-button-default: #26405E;
+
+        -color-selection: #2563C7;
+        -color-selection-inactive: #34343A;
+
+        -color-overlay-hover: rgba(255, 255, 255, 0.08);
+        -color-overlay-armed: rgba(255, 255, 255, 0.16);
+
+        -color-success: #4CAF50;
+        -color-success-emphasis: #3F9A43;
+        -color-warning: #D08A2C;
+        -color-warning-subtle: rgba(208, 138, 44, 0.4);
+        -color-danger: #E5645A;
+        -color-danger-emphasis: #C0392B;
+        -color-danger-subtle: rgba(229, 100, 90, 0.35);
+        -color-info: rgba(95, 163, 255, 0.6);
+        -color-info-subtle: rgba(38, 64, 94, 0.5);
+
+        -color-link: #5FA3FF;
+        -color-link-hover: #96C4FF;
+
+        -color-syntax-keyword: #C792EA;
+        -color-syntax-tag: #E5645A;
+        -color-syntax-attribute: #5FA3FF;
+        -color-syntax-string: #8BD189;
+        -color-syntax-comment: #8B8B92;
+        -color-syntax-punctuation: #ADADB4;
+
+        -color-scrollbar-thumb: #55555C;
+        -color-scrollbar-track: #1B1B1D;
+
+        -color-tooltip-bg: #34343A;
+
+        -color-drag-target: #5FA3FF;
+        -color-drag-target-hover: #26405E;
+
+        -color-badge-bg: #35353B;
+        /* See the light scheme: this lands on -color-success and on derive(-color-success, 70%). */
+        -color-badge-selected-fg: #0D1F0E;
+
+        -color-scrim: rgba(0, 0, 0, 0.7);
+        -color-shadow: rgba(0, 0, 0, 0.7);
+        -color-shadow-subtle: rgba(0, 0, 0, 0.35);
+    }
+
+    /* The only place -color-fg-emphasis lands on the accent fill itself. */
+    .walkthrough-continue-button {
+        -fx-text-fill: #10233D;
+    }
+}
+
+/*
+ * Density. Colors above are per scheme, the geometry below is shared.
+ * All values stay in em, so they still follow the font size set in JabRef's preferences.
+ */
+
+/* The spacing utilities JabRef applies from FXML: the single biggest source of white space. */
+.padding-4 { -fx-padding: 0.166em; }
+.padding-8 { -fx-padding: 0.333em; }
+.padding-12 { -fx-padding: 0.5em; }
+.padding-0-12 { -fx-padding: 0 0.5em; }
+.padding-4-0 { -fx-padding: 0.166em 0; }
+.padding-4-8 { -fx-padding: 0.166em 0.333em; }
+.padding-4-12 { -fx-padding: 0.166em 0.5em; }
+.padding-top-12 { -fx-padding: 0.5em 0 0 0; }
+.padding-left-12 { -fx-padding: 0 0 0 0.5em; }
+.gap-8 { -fx-hgap: 0.333em; -fx-vgap: 0.333em; }
+.gap-12 { -fx-hgap: 0.5em; -fx-vgap: 0.5em; }
+
+/* Entry table and group tree: tight rows with hairline column rules, like a spreadsheet. */
+.table-cell,
+.tree-table-cell {
+    -fx-padding: 0.083em 0.5em;
+}
+
+.table-cell .glyph-icon,
+.tree-table-cell .glyph-icon {
+    -fx-padding: 0.083em 0.333em;
+}
+
+.main-table .table-row-cell {
+    -fx-table-cell-border-color: -color-border-muted;
+}
+
+.column-header,
+.table-view .filler,
+.tree-table-view .filler {
+    -fx-size: 2em;
+    -fx-font-weight: normal;
+}
+
+.column-header > .label {
+    -fx-padding: 0 0.5em;
+    -fx-text-fill: -color-fg-muted;
+}
+
+/* Toolbar, tabs and side pane headers give up their generous insets as well. */
+.tool-bar {
+    -fx-padding: 0.166em 0.333em;
+}
+
+.tab-pane > .tab-header-area {
+    -fx-padding: 0;
+}
+
+.tab-pane > .tab-header-area > .headers-region > .tab {
+    -fx-padding: 0.25em 0.75em;
+}
+
+.list-cell,
+.tree-cell {
+    -fx-padding: 0.083em 0.5em;
+}
+
+/* The group tree sets its own cell padding, so it needs its own rule. */
+#groupTree > .virtual-flow > .clipped-container > .sheet > .tree-table-row-cell > .tree-table-cell {
+    -fx-padding: 0.166em 0;
+}
+
+.sidePaneComponentHeader {
+    -fx-pref-height: 2.2em;
+}
+
+/* Buttons and field editors: JabRef's defaults are 0.5em/0.333em vertical. */
+.button {
+    -fx-padding: 0.25em 0.667em;
+}
+
+.text-input {
+    -fx-padding: 0.166em 0.417em;
+}
+
