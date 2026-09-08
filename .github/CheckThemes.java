@@ -23,7 +23,7 @@ import java.util.regex.Pattern;
 /// would silently ignore -- a syntax error, a media query it cannot read, or a color token
 /// JabRef no longer knows -- fails here instead of in a user's JabRef.
 public class CheckThemes {
-    private static final Pattern TOKEN_READ = Pattern.compile("(-color-[a-z0-9-]*[a-z0-9])(?!\\s*:)");
+    private static final Pattern TOKEN_READ = Pattern.compile("(-color-[a-z0-9-]*[a-z0-9])(?![a-z0-9-])(?!\\s*:)");
 
     /// Raw color ramps a theme may lay out for its own use, as the Primer theme does with AtlantaFX's.
     private static final Pattern PALETTE_RAMP = Pattern.compile("-color-(?:base|accent|success|warning|danger)-[0-9]|-color-(?:dark|light)");

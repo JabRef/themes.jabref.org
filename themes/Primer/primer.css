@@ -3846,7 +3846,6 @@ Text {
     -fx-background-insets: 0, 1px;
 }
 .text-input .context-menu {
-    -fx-font-size: 14px;
     -fx-font-weight: normal;
 }
 .text-input .context-menu .menu-item {
