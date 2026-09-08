@@ -14,7 +14,7 @@ Themes submitted by users are located in the subfolder [themes](https://github.c
 
 All screenshots were taken with JabRef 6 and the theme's CSS file selected as custom theme, on the matching color scheme.
 
-The DinoGirls collection pairs each dark hue with the light hue closest to it, so one file serves both color schemes. The _blackandwhite_ and _canaryyellow_ hues have no light counterpart and stay dark-only.
+[Dino Girl's themes](https://discourse.jabref.org/t/dino-girls-jabref-themes/3937) pair each dark hue with the light hue closest to it, so one file serves both color schemes. The _blackandwhite_ and _canaryyellow_ hues have no light counterpart and stay dark-only.
 
 ### Both color schemes
 
@@ -38,7 +38,7 @@ The DinoGirls collection pairs each dark hue with the light hue closest to it, s
 [papers-dark]: themes/Papers/papers-dark.png
 [papers-light]: themes/Papers/papers-light.png
 
-#### DinoGirls Themes
+#### Dino Girl's themes
 
 | Theme                                                                                  | Dark                                                                                              | Light                                                                                               |
 | -------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- |
@@ -110,14 +110,14 @@ The DinoGirls collection pairs each dark hue with the light hue closest to it, s
 
 ### Dark themes
 
-| Theme                                                                                            | Preview                                                                           |
-| ------------------------------------------------------------------------------------------------ | --------------------------------------------------------------------------------- |
-| [DARK THEME-blackandwhite-greytext][dark-theme-blackandwhite-greytext] (DinoGirls Dark Themes)   | ![DARK THEME-blackandwhite-greytext][dark-theme-blackandwhite-greytext-preview]   |
-| [DARK THEME-blackandwhite-whitetext][dark-theme-blackandwhite-whitetext] (DinoGirls Dark Themes) | ![DARK THEME-blackandwhite-whitetext][dark-theme-blackandwhite-whitetext-preview] |
-| [DARK THEME-canaryyellow-greytext][dark-theme-canaryyellow-greytext] (DinoGirls Dark Themes)     | ![DARK THEME-canaryyellow-greytext][dark-theme-canaryyellow-greytext-preview]     |
-| [Dracula][dracula]                                                                               | ![Dracula][dracula-preview]                                                       |
-| [GnomeDarkOrange][gnomedarkorange]                                                               | ![GnomeDarkOrange][gnomedarkorange-preview]                                       |
-| [JabRef-black][jabref-black]                                                                     | ![JabRef-black][jabref-black-preview]                                             |
+| Theme                                                                                              | Preview                                                                           |
+| -------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
+| [DARK THEME-blackandwhite-greytext][dark-theme-blackandwhite-greytext] (Dino Girl's dark themes)   | ![DARK THEME-blackandwhite-greytext][dark-theme-blackandwhite-greytext-preview]   |
+| [DARK THEME-blackandwhite-whitetext][dark-theme-blackandwhite-whitetext] (Dino Girl's dark themes) | ![DARK THEME-blackandwhite-whitetext][dark-theme-blackandwhite-whitetext-preview] |
+| [DARK THEME-canaryyellow-greytext][dark-theme-canaryyellow-greytext] (Dino Girl's dark themes)     | ![DARK THEME-canaryyellow-greytext][dark-theme-canaryyellow-greytext-preview]     |
+| [Dracula][dracula]                                                                                 | ![Dracula][dracula-preview]                                                       |
+| [GnomeDarkOrange][gnomedarkorange]                                                                 | ![GnomeDarkOrange][gnomedarkorange-preview]                                       |
+| [JabRef-black][jabref-black]                                                                       | ![JabRef-black][jabref-black-preview]                                             |
 
 [dark-theme-blackandwhite-greytext]: https://github.com/JabRef/themes.jabref.org/blob/main/themes/DarkTheme/DinoGirls%20Dark%20Themes/DARK%20THEME-blackandwhite-greytext.css
 [dark-theme-blackandwhite-greytext-preview]: themes/DarkTheme/DinoGirls%20Dark%20Themes/DARK%20THEME-blackandwhite-greytext.png
