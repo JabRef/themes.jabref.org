@@ -190,7 +190,7 @@
 .gap-8 { -fx-hgap: 0.333em; -fx-vgap: 0.333em; }
 .gap-12 { -fx-hgap: 0.5em; -fx-vgap: 0.5em; }
 
-/* Entry table and group tree: tight rows with hairline column rules, like a spreadsheet. */
+/* Entry table and group tree: tight, gridless rows. */
 .table-cell,
 .tree-table-cell {
     -fx-padding: 0.083em 0.5em;
