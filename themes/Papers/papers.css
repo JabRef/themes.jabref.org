@@ -2,10 +2,10 @@
  * Papers theme for JabRef.
  *
  * A dense, low-chrome reading-list look in the spirit of the Papers reference manager:
- * neutral grey chrome, a white spreadsheet-like entry table with hairline column rules
- * and a saturated blue selection. The point is to fit many more entries on screen, so
- * this theme also shrinks the paddings that JabRef spends on breathing room -- the font
- * size is untouched (change it in Preferences > General if you want smaller text).
+ * neutral grey chrome, a gridless entry table and a saturated blue selection. The point is
+ * to fit many more entries on screen, so this theme also shrinks the paddings that JabRef
+ * spends on breathing room -- the font size is untouched (change it in Preferences > General
+ * if you want smaller text).
  *
  * One file covers both color schemes: select "Follow system", "Light" or "Dark" in JabRef.
  *
@@ -78,6 +78,8 @@
 
         -color-drag-target: #1B72E8;
         -color-drag-target-hover: #CFE1FA;
+
+        -color-cell-border: transparent;
 
         -color-badge-bg: #DCDCDC;
         /* Dark, not white: JabRef paints this on -color-success (a group whose entries are all
@@ -157,6 +159,8 @@
         -color-drag-target: #5FA3FF;
         -color-drag-target-hover: #26405E;
 
+        -color-cell-border: transparent;
+
         -color-badge-bg: #35353B;
         /* See the light scheme: this lands on -color-success and on derive(-color-success, 70%). */
         -color-badge-selected-fg: #0D1F0E;
@@ -201,8 +205,20 @@
     -fx-padding: 0.083em 0.333em;
 }
 
+/* The ranking column is a fixed 80px, so the five stars have to fit into it at any UI font
+   size -- an em-sized glyph is clipped as soon as the font grows. Hence px, not em. */
+.rating > .container {
+    -fx-spacing: 1;
+}
+
+.rating > .container > .button {
+    -fx-font-size: 12px;
+    -fx-pref-width: 13;
+}
+
+/* No grid: Papers separates rows by spacing and striping, not by rules. */
 .main-table .table-row-cell {
-    -fx-table-cell-border-color: -color-border-muted;
+    -fx-table-cell-border-color: transparent;
 }
 
 .column-header,
@@ -220,6 +236,14 @@
 /* Toolbar, tabs and side pane headers give up their generous insets as well. */
 .tool-bar {
     -fx-padding: 0.166em 0.333em;
+}
+
+/* The main toolbar draws its icons at 1.7em; that is a lot of chrome for a dense theme.
+   JabRef adds its base stylesheet after the custom theme, so its `!important` wins a tie --
+   the extra `.root` buys the specificity needed to override it. */
+.root .mainToolbar .glyph-icon,
+.root .mainToolbar .ikonli-font-icon {
+    -fx-font-size: 1.25em !important;
 }
 
 .tab-pane > .tab-header-area {
