@@ -2,7 +2,7 @@
 
 > Customize the look of JabRef using CSS!
 
-JabRef ships two themes, _JabRef_ and _Primer_, each with a light and a dark variant. On top of the theme you can load a custom CSS file that overrides only what you want to change. This page and the [user contributed themes](https://github.com/JabRef/themes.jabref.org/tree/main/themes) target the theme model introduced with JabRef 6 ([JabRef/jabref#15798](https://github.com/JabRef/jabref/pull/15798)).
+JabRef ships two themes, _JabRef_ and _Primer_, each with a light and a dark variant; both live in this repository, JabRef bundles them from here. On top of the theme you can load a custom CSS file that overrides only what you want to change. This page and the [user contributed themes](https://github.com/JabRef/themes.jabref.org/tree/main/themes) target the theme model introduced with JabRef 6 ([JabRef/jabref#15798](https://github.com/JabRef/jabref/pull/15798)).
 
 **JabRef 5.x:** the previous versions of the themes, based on the old `-jr-*` variables, are available [in the repository history](https://github.com/JabRef/themes.jabref.org/tree/0a139ff7da4ae356b293f81bd6a38659a7d7fc39/themes).
 
@@ -22,6 +22,7 @@ All screenshots were taken with JabRef 6 and the theme's CSS file selected as cu
 | ---------------------------------- | --------------------------------------------- | ----------------------------------------------- |
 | [Chocolate Honey][chocolate-honey] | ![Chocolate Honey dark][chocolate-honey-dark] | ![Chocolate Honey light][chocolate-honey-light] |
 | [Everforest][everforest]           | ![Everforest dark][everforest-dark]           | ![Everforest light][everforest-light]           |
+| [JabRef][jabref]                   | ![JabRef dark][jabref-dark]                   | ![JabRef light][jabref-light]                   |
 | [Nord][nord]                       | ![Nord dark][nord-dark]                       | ![Nord light][nord-light]                       |
 | [Papers][papers]                   | ![Papers dark][papers-dark]                   | ![Papers light][papers-light]                   |
 | [Primer][primer]                   | ![Primer dark][primer-dark]                   | ![Primer light][primer-light]                   |
@@ -32,6 +33,9 @@ All screenshots were taken with JabRef 6 and the theme's CSS file selected as cu
 [everforest]: https://github.com/JabRef/themes.jabref.org/blob/main/themes/Everforest
 [everforest-dark]: themes/Everforest/everforest-dark.png
 [everforest-light]: themes/Everforest/everforest-light.png
+[jabref]: https://github.com/JabRef/themes.jabref.org/blob/main/themes/JabRef
+[jabref-dark]: themes/JabRef/jabref-theme-dark.png
+[jabref-light]: themes/JabRef/jabref-theme-light.png
 [nord]: https://github.com/JabRef/themes.jabref.org/blob/main/themes/Nord
 [nord-dark]: themes/Nord/nord-dark.png
 [nord-light]: themes/Nord/nord-light.png

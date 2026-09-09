@@ -28,17 +28,15 @@ public class CheckThemes {
     /// Raw color ramps a theme may lay out for its own use, as the Primer theme does with AtlantaFX's.
     private static final Pattern PALETTE_RAMP = Pattern.compile("-color-(?:base|accent|success|warning|danger)-[0-9]|-color-(?:dark|light)");
 
-    /// JabRef's own stylesheets on `main`, which between them declare every `-color-*` token
-    /// a theme can meaningfully override.
-    private static final List<String> TOKEN_SOURCES = List.of(
-            "https://raw.githubusercontent.com/JabRef/jabref/main/jabgui/src/main/resources/org/jabref/gui/theme/jabref-theme.css",
-            "https://raw.githubusercontent.com/JabRef/jabref/main/jabgui/src/main/resources/org/jabref/gui/theme/internal/jabref-base.css");
+    /// The JabRef theme lives here and declares the token contract; JabRef's base stylesheet on
+    /// `main` reads it. Between them they name every `-color-*` token a theme can meaningfully override.
+    private static final String JABREF_THEME = "JabRef/jabref-theme.css";
+    private static final String JABREF_BASE_CSS = "https://raw.githubusercontent.com/JabRef/jabref/main/jabgui/src/main/resources/org/jabref/gui/theme/internal/jabref-base.css";
 
     public static void main(String[] args) throws Exception {
         Set<String> knownTokens = new TreeSet<>();
-        for (String source : TOKEN_SOURCES) {
-            collectTokens(new CssParser().parse(fetch(source)), knownTokens);
-        }
+        collectTokens(new CssParser().parse(Path.of(args[0], JABREF_THEME).toUri().toURL()), knownTokens);
+        collectTokens(new CssParser().parse(fetch(JABREF_BASE_CSS)), knownTokens);
         System.out.println("JabRef declares " + knownTokens.size() + " color tokens.");
 
         List<Path> files = new ArrayList<>();
