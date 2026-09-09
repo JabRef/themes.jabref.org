@@ -15,7 +15,7 @@
         -color-fg-default: #9aa3af;
         -color-fg-muted: #7d8591;
         -color-fg-emphasis: #9aa3af;
-        -color-border-default: #333744;
+        -color-border-light: #333744;
         -color-accent: #1982C4;
         -color-link: #1982C4;
         -color-accent-subtle: #156CA2;
@@ -52,7 +52,7 @@
         -color-fg-default: #000;
         -color-fg-muted: #7d8591;
         -color-fg-emphasis: #ffffff;
-        -color-border-default: derive(#ebebeb, -5%);
+        -color-border-light: derive(#ebebeb, -5%);
         -color-accent: #89CFF0;
         -color-link: #89CFF0;
         -color-accent-subtle: #89CFF0;

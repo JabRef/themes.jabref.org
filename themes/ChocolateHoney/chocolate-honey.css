@@ -27,7 +27,7 @@
         /* Dark, not white: it is also drawn on -color-overlay-hover, i.e. on the plain surface. */
         -color-fg-emphasis: #2B1B12;
 
-        -color-border-default: #D9CBB4;
+        -color-border-light: #D9CBB4;
         -color-border-muted: #E5DAC6;
 
         -color-accent: #855700;
@@ -100,7 +100,7 @@
         -color-fg-subtle: #9A8570;
         -color-fg-emphasis: #F8EEDD;
 
-        -color-border-default: #4A3A2F;
+        -color-border-light: #4A3A2F;
         -color-border-muted: #3A2C24;
 
         -color-accent: #E9B44C;

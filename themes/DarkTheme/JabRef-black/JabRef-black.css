@@ -9,7 +9,15 @@
     -color-fg-default: #bbbbbb;
     -color-fg-muted: #888888;
     -color-fg-emphasis: #bbbbbb;
+<<<<<<< HEAD
     -color-border-default: #888888;
+||||||| 6146a54
+    -color-border-default: #888888;
+    -color-button-border: #666666;
+=======
+    -color-border-light: #888888;
+    -color-button-border: #666666;
+>>>>>>> origin/border-tokens
     -color-accent: #cccccc;
     -color-link: #cccccc;
     -color-accent-subtle: #555555;

@@ -18,7 +18,7 @@
         -color-fg-subtle: #859289;       /* grey1 */
         -color-fg-emphasis: #D3C6AA;
 
-        -color-border-default: #475258;  /* bg3 */
+        -color-border-light: #475258;  /* bg3 */
         -color-border-muted: #3D484D;
 
         -color-accent: #A7C080;          /* green */
@@ -87,7 +87,7 @@
         -color-fg-subtle: #939F91;       /* grey1 */
         -color-fg-emphasis: #FDF6E3;
 
-        -color-border-default: #E0DCC7;  /* bg4 */
+        -color-border-light: #E0DCC7;  /* bg4 */
         -color-border-muted: #E6E2CC;
 
         -color-accent: #8DA101;          /* green */

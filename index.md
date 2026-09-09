@@ -6,6 +6,8 @@ JabRef ships two themes, _JabRef_ and _Primer_, each with a light and a dark var
 
 **JabRef 5.x:** the previous versions of the themes, based on the old `-jr-*` variables, are available [in the repository history](https://github.com/JabRef/themes.jabref.org/tree/0a139ff7da4ae356b293f81bd6a38659a7d7fc39/themes).
 
+The [style guide](styleguide.md) states the few rules behind the tokens.
+
 ## User contributed themes
 
 Themes submitted by users are located in the subfolder [themes](https://github.com/JabRef/themes.jabref.org/tree/main/themes). Themes that cover both color schemes in one file (via `@media (prefers-color-scheme: …)`) live directly in `themes/` and work with any color scheme. The _Dark_ and _Light_ subfolders hold the themes that only cover one scheme; select the matching color scheme in JabRef when using those.
@@ -195,10 +197,10 @@ The old `-jr-*` variables no longer exist and are silently ignored. Every variab
 | `-jr-row-odd-background` / `-jr-row-even-background`                  | `-color-bg-secondary` / `-color-bg-alt`                        |
 | `-jr-search-background`                                               | `-color-bg-search`                                             |
 | `-jr-sidepane-background`                                             | `-color-bg-sidepane`                                           |
-| `-jr-separator`                                                       | `-color-border-default`                                        |
+| `-jr-separator`                                                       | `-color-border-light`                                        |
 | `-fx-light-text-color` / `-fx-dark-text-color` / `-fx-mid-text-color` | `-color-fg-emphasis` / `-color-fg-default` / `-color-fg-muted` |
 | `-fx-control-inner-background` / `-fx-control-inner-background-alt`   | `-color-bg-secondary` / `-color-bg-alt`                        |
-| `-fx-outer-border`                                                    | `-color-border-default`, `-color-button-border`                |
+| `-fx-outer-border`                                                    | `-color-border-light`, `-color-button-border`                |
 | `-fx-focused-text-base-color`                                         | `-color-fg-emphasis`                                           |
 | `-jr-green` / `-jr-light-green`                                       | `-color-success` / `-color-success-emphasis`                   |
 | `-jr-orange`                                                          | `-color-warning`                                               |
