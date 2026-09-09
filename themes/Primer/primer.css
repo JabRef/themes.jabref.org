@@ -140,6 +140,7 @@
         -color-button: -color-bg-subtle;
         -color-button-hover: -color-base-6;
         -color-button-pressed: -color-base-5;
+        -color-button-border: -color-border-default;
         -color-button-default: -color-accent-emphasis;
 
         /* Selection and interaction overlays */
@@ -322,6 +323,7 @@
         -color-button: -color-bg-subtle;
         -color-button-hover: -color-base-6;
         -color-button-pressed: -color-base-5;
+        -color-button-border: -color-border-default;
         -color-button-default: -color-accent-emphasis;
 
         /* Selection and interaction overlays */
@@ -453,6 +455,7 @@ Text {
 .button {
     -color-button-bg: -color-bg-subtle;
     -color-button-fg: -color-fg-default;
+    -color-button-border: -color-border-default;
     -color-button-bg-hover: -color-base-6;
     -color-button-fg-hover: -color-button-fg;
     -color-button-border-hover: -color-button-border;
@@ -531,6 +534,7 @@ Text {
 .button:default {
     -color-button-bg: -color-accent-emphasis;
     -color-button-fg: -color-fg-emphasis;
+    -color-button-border: -color-accent-emphasis;
     -color-button-bg-hover: -color-accent-emphasis;
     -color-button-fg-hover: -color-fg-emphasis;
     -color-button-border-hover: -color-accent-emphasis;
@@ -2363,6 +2367,7 @@ Text {
 .split-menu-button {
     -color-button-bg: -color-bg-subtle;
     -color-button-fg: -color-fg-default;
+    -color-button-border: -color-border-default;
     -color-button-bg-hover: -color-base-6;
     -color-button-fg-hover: -color-button-fg;
     -color-button-border-hover: -color-button-border;
@@ -2509,6 +2514,7 @@ Text {
 .split-menu-button.flat {
     -color-button-bg: transparent;
     -color-button-fg: -color-fg-default;
+    -color-button-border: transparent;
     -color-button-bg-hover: -color-bg-subtle;
     -color-button-fg-hover: -color-button-fg;
     -color-button-border-hover: -color-bg-subtle;
@@ -3962,6 +3968,7 @@ Text {
 .toggle-button {
     -color-button-bg: -color-bg-subtle;
     -color-button-fg: -color-fg-default;
+    -color-button-border: -color-border-default;
     -color-button-bg-hover: -color-base-6;
     -color-button-fg-hover: -color-button-fg;
     -color-button-border-hover: -color-button-border;
@@ -4033,6 +4040,7 @@ Text {
 .toggle-button.flat {
     -color-button-bg: transparent;
     -color-button-fg: -color-fg-default;
+    -color-button-border: transparent;
     -color-button-bg-hover: -color-bg-subtle;
     -color-button-fg-hover: -color-button-fg;
     -color-button-border-hover: -color-bg-subtle;
