@@ -16,7 +16,6 @@
         -color-fg-muted: white;
         -color-fg-emphasis: white;
         -color-border-default: #333744;
-        -color-button-border: #424758;
         -color-accent: #E60026;
         -color-link: #E60026;
         -color-accent-subtle: #B11226;
@@ -54,7 +53,6 @@
         -color-fg-muted: #000;
         -color-fg-emphasis: #ffffff;
         -color-border-default: derive(#ebebeb, -5%);
-        -color-button-border: derive(#ebebeb, -5%);
         -color-accent: #C83F49;
         -color-link: #C83F49;
         -color-accent-subtle: #FC5A8D;

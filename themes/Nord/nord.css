@@ -35,7 +35,6 @@
         -color-button: transparent;
         -color-button-hover: rgba(236, 239, 244, 0.10);
         -color-button-pressed: rgba(236, 239, 244, 0.20);
-        -color-button-border: #4C566A;
         -color-button-default: #5E81AC;
 
         -color-selection: #5E81AC;       /* nord10 */
@@ -107,7 +106,6 @@
         -color-button: transparent;
         -color-button-hover: rgba(46, 52, 64, 0.10);
         -color-button-pressed: rgba(46, 52, 64, 0.20);
-        -color-button-border: #D8DEE9;
         -color-button-default: #C8D6E8;
 
         -color-selection: #C8D6E8;

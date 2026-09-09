@@ -36,7 +36,6 @@
         -color-button: transparent;
         -color-button-hover: rgba(43, 27, 18, 0.08);
         -color-button-pressed: rgba(43, 27, 18, 0.16);
-        -color-button-border: #D9CBB4;
         -color-button-default: #F0CF74;
 
         -color-selection: #F3D27A;
@@ -110,7 +109,6 @@
         -color-button: transparent;
         -color-button-hover: rgba(242, 230, 211, 0.10);
         -color-button-pressed: rgba(242, 230, 211, 0.20);
-        -color-button-border: #4A3A2F;
         -color-button-default: #5A4322;
 
         -color-selection: #5E4626;
