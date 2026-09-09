@@ -26,7 +26,7 @@
         -color-fg-subtle: #7B88A1;
         -color-fg-emphasis: #ECEFF4;
 
-        -color-border-default: #4C566A;  /* nord3 */
+        -color-border-light: #4C566A;  /* nord3 */
         -color-border-muted: #434C5E;
 
         -color-accent: #88C0D0;          /* nord8 */
@@ -97,7 +97,7 @@
            hover overlay, i.e. effectively on the plain surface. */
         -color-fg-emphasis: #2E3440;
 
-        -color-border-default: #D8DEE9;
+        -color-border-light: #D8DEE9;
         -color-border-muted: #E5E9F0;
 
         -color-accent: #5E81AC;          /* nord10 */
