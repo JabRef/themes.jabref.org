@@ -47,7 +47,8 @@
         -color-overlay-armed: rgba(18, 48, 63, 0.12);
 
         /* Pine. Also the pill behind -color-badge-selected-fg (a group with selected entries),
-           so it stays light enough for dark text. */
+           and JabRef derives a much paler green from it for a partially selected group -- so the
+           badge text is near-black in both schemes, as in JabRef's own themes. */
         -color-success: #438E48;
         -color-success-emphasis: #3F8A46;
         -color-warning: #A9660C;
@@ -77,7 +78,7 @@
         -color-drag-target-hover: #B2DBE8;
 
         -color-badge-bg: #A9D8E6;
-        -color-badge-selected-fg: #08202C;
+        -color-badge-selected-fg: #05161C;
 
         -color-scrim: rgba(9, 26, 35, 0.6);
         -color-shadow: rgba(9, 26, 35, 0.35);
@@ -117,8 +118,9 @@
         -color-overlay-hover: rgba(239, 229, 211, 0.07);
         -color-overlay-armed: rgba(239, 229, 211, 0.14);
 
-        /* Dark enough for sand-colored text: it is also the pill behind -color-badge-selected-fg. */
-        -color-success: #418440;
+        /* Light enough for the near-black badge text, on the pill and on the paler green
+           JabRef derives from it for a partially selected group. */
+        -color-success: #4A9245;
         -color-success-emphasis: #52A24C;
         /* Also the fill behind sand text in invalid cells, hence darker than a pure icon amber. */
         -color-warning: #B4741E;
@@ -148,7 +150,7 @@
         -color-drag-target-hover: #59C6DC;
 
         -color-badge-bg: #234350;
-        -color-badge-selected-fg: #F8F2E6;
+        -color-badge-selected-fg: #05161C;
 
         -color-scrim: rgba(6, 16, 21, 0.8);
         -color-shadow: rgba(0, 0, 0, 0.7);
