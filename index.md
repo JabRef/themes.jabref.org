@@ -2,7 +2,7 @@
 
 > Customize the look of JabRef using CSS!
 
-JabRef bundles every theme in this repository that covers both color schemes, its own _JabRef_ theme included; they appear in the theme selection without downloading anything. On top of the theme you can load a custom CSS file that overrides only what you want to change. This page and the [user contributed themes](https://github.com/JabRef/themes.jabref.org/tree/main/themes) target the theme model introduced with JabRef 6 ([JabRef/jabref#15798](https://github.com/JabRef/jabref/pull/15798)).
+JabRef bundles every theme in this repository that covers both color schemes, its own _JabRef_ theme included; they appear in the theme selection without downloading anything. On top of the theme you can load a custom CSS file that overrides only what you want to change. This page and the [themes](https://github.com/JabRef/themes.jabref.org/tree/main/themes) target the theme model introduced with JabRef 6 ([JabRef/jabref#15798](https://github.com/JabRef/jabref/pull/15798)).
 
 **JabRef 5.x:** the previous versions of the themes, based on the old `-jr-*` variables, are available [in the repository history](https://github.com/JabRef/themes.jabref.org/tree/0a139ff7da4ae356b293f81bd6a38659a7d7fc39/themes).
 
