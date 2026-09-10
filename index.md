@@ -2,13 +2,15 @@
 
 > Customize the look of JabRef using CSS!
 
-JabRef ships two themes, _JabRef_ and _Primer_, each with a light and a dark variant. On top of the theme you can load a custom CSS file that overrides only what you want to change. This page and the [user contributed themes](https://github.com/JabRef/themes.jabref.org/tree/main/themes) target the theme model introduced with JabRef 6 ([JabRef/jabref#15798](https://github.com/JabRef/jabref/pull/15798)).
+JabRef bundles every theme in this repository that covers both color schemes, its own _JabRef_ theme included; they appear in the theme selection without downloading anything. On top of the theme you can load a custom CSS file that overrides only what you want to change. This page and the [themes](themes/) target the theme model introduced with JabRef 6 ([JabRef/jabref#15798](https://github.com/JabRef/jabref/pull/15798)).
 
 **JabRef 5.x:** the previous versions of the themes, based on the old `-jr-*` variables, are available [in the repository history](https://github.com/JabRef/themes.jabref.org/tree/0a139ff7da4ae356b293f81bd6a38659a7d7fc39/themes).
 
-## User contributed themes
+The [style guide](styleguide.md) states the few rules behind the tokens.
 
-Themes submitted by users are located in the subfolder [themes](https://github.com/JabRef/themes.jabref.org/tree/main/themes). Themes that cover both color schemes in one file (via `@media (prefers-color-scheme: …)`) live directly in `themes/` and work with any color scheme. The _Dark_ and _Light_ subfolders hold the themes that only cover one scheme; select the matching color scheme in JabRef when using those.
+## Themes
+
+All themes, JabRef's own and the contributed ones, are located in the subfolder [themes](themes/). Themes that cover both color schemes in one file (via `@media (prefers-color-scheme: …)`) live directly in `themes/` and work with any color scheme. The _Dark_ and _Light_ subfolders hold the themes that only cover one scheme; select the matching color scheme in JabRef when using those.
 
 ## Gallery
 
@@ -22,23 +24,27 @@ All screenshots were taken with JabRef 6 and the theme's CSS file selected as cu
 | ---------------------------------- | --------------------------------------------- | ----------------------------------------------- |
 | [Chocolate Honey][chocolate-honey] | ![Chocolate Honey dark][chocolate-honey-dark] | ![Chocolate Honey light][chocolate-honey-light] |
 | [Everforest][everforest]           | ![Everforest dark][everforest-dark]           | ![Everforest light][everforest-light]           |
+| [JabRef][jabref]                   | ![JabRef dark][jabref-dark]                   | ![JabRef light][jabref-light]                   |
 | [Nord][nord]                       | ![Nord dark][nord-dark]                       | ![Nord light][nord-light]                       |
 | [Papers][papers]                   | ![Papers dark][papers-dark]                   | ![Papers light][papers-light]                   |
 | [Primer][primer]                   | ![Primer dark][primer-dark]                   | ![Primer light][primer-light]                   |
 
-[chocolate-honey]: https://github.com/JabRef/themes.jabref.org/blob/main/themes/ChocolateHoney
+[chocolate-honey]: themes/ChocolateHoney/README.md
 [chocolate-honey-dark]: themes/ChocolateHoney/chocolate-honey-dark.png
 [chocolate-honey-light]: themes/ChocolateHoney/chocolate-honey-light.png
-[everforest]: https://github.com/JabRef/themes.jabref.org/blob/main/themes/Everforest
+[everforest]: themes/Everforest/README.md
 [everforest-dark]: themes/Everforest/everforest-dark.png
 [everforest-light]: themes/Everforest/everforest-light.png
-[nord]: https://github.com/JabRef/themes.jabref.org/blob/main/themes/Nord
+[jabref]: themes/JabRef/README.md
+[jabref-dark]: themes/JabRef/jabref-theme-dark.png
+[jabref-light]: themes/JabRef/jabref-theme-light.png
+[nord]: themes/Nord/README.md
 [nord-dark]: themes/Nord/nord-dark.png
 [nord-light]: themes/Nord/nord-light.png
-[papers]: https://github.com/JabRef/themes.jabref.org/blob/main/themes/Papers
+[papers]: themes/Papers/README.md
 [papers-dark]: themes/Papers/papers-dark.png
 [papers-light]: themes/Papers/papers-light.png
-[primer]: https://github.com/JabRef/themes.jabref.org/blob/main/themes/Primer
+[primer]: themes/Primer/README.md
 [primer-dark]: themes/Primer/primer-dark.png
 [primer-light]: themes/Primer/primer-light.png
 
@@ -63,52 +69,52 @@ All screenshots were taken with JabRef 6 and the theme's CSS file selected as cu
 | [winered-icedstrawberry-contrasttext][winered-icedstrawberry-contrasttext]             | ![winered-icedstrawberry-contrasttext dark][winered-icedstrawberry-contrasttext-dark]             | ![winered-icedstrawberry-contrasttext light][winered-icedstrawberry-contrasttext-light]             |
 | [winered-icedstrawberry-greytext][winered-icedstrawberry-greytext]                     | ![winered-icedstrawberry-greytext dark][winered-icedstrawberry-greytext-dark]                     | ![winered-icedstrawberry-greytext light][winered-icedstrawberry-greytext-light]                     |
 
-[chocolatebrown-darksalmon-contrasttext]: https://github.com/JabRef/themes.jabref.org/blob/main/themes/DinoGirls%20Themes/chocolatebrown-darksalmon-contrasttext.css
+[chocolatebrown-darksalmon-contrasttext]: themes/DinoGirls%20Themes/chocolatebrown-darksalmon-contrasttext.css
 [chocolatebrown-darksalmon-contrasttext-dark]: themes/DinoGirls%20Themes/chocolatebrown-darksalmon-contrasttext-dark.png
 [chocolatebrown-darksalmon-contrasttext-light]: themes/DinoGirls%20Themes/chocolatebrown-darksalmon-contrasttext-light.png
-[chocolatebrown-darksalmon-greytext]: https://github.com/JabRef/themes.jabref.org/blob/main/themes/DinoGirls%20Themes/chocolatebrown-darksalmon-greytext.css
+[chocolatebrown-darksalmon-greytext]: themes/DinoGirls%20Themes/chocolatebrown-darksalmon-greytext.css
 [chocolatebrown-darksalmon-greytext-dark]: themes/DinoGirls%20Themes/chocolatebrown-darksalmon-greytext-dark.png
 [chocolatebrown-darksalmon-greytext-light]: themes/DinoGirls%20Themes/chocolatebrown-darksalmon-greytext-light.png
-[fuchsiapurple-japanesesakura-contrasttext]: https://github.com/JabRef/themes.jabref.org/blob/main/themes/DinoGirls%20Themes/fuchsiapurple-japanesesakura-contrasttext.css
+[fuchsiapurple-japanesesakura-contrasttext]: themes/DinoGirls%20Themes/fuchsiapurple-japanesesakura-contrasttext.css
 [fuchsiapurple-japanesesakura-contrasttext-dark]: themes/DinoGirls%20Themes/fuchsiapurple-japanesesakura-contrasttext-dark.png
 [fuchsiapurple-japanesesakura-contrasttext-light]: themes/DinoGirls%20Themes/fuchsiapurple-japanesesakura-contrasttext-light.png
-[fuchsiapurple-japanesesakura-greytext]: https://github.com/JabRef/themes.jabref.org/blob/main/themes/DinoGirls%20Themes/fuchsiapurple-japanesesakura-greytext.css
+[fuchsiapurple-japanesesakura-greytext]: themes/DinoGirls%20Themes/fuchsiapurple-japanesesakura-greytext.css
 [fuchsiapurple-japanesesakura-greytext-dark]: themes/DinoGirls%20Themes/fuchsiapurple-japanesesakura-greytext-dark.png
 [fuchsiapurple-japanesesakura-greytext-light]: themes/DinoGirls%20Themes/fuchsiapurple-japanesesakura-greytext-light.png
-[jabrefdark-jabreflight-contrasttext]: https://github.com/JabRef/themes.jabref.org/blob/main/themes/DinoGirls%20Themes/jabrefdark-jabreflight-contrasttext.css
+[jabrefdark-jabreflight-contrasttext]: themes/DinoGirls%20Themes/jabrefdark-jabreflight-contrasttext.css
 [jabrefdark-jabreflight-contrasttext-dark]: themes/DinoGirls%20Themes/jabrefdark-jabreflight-contrasttext-dark.png
 [jabrefdark-jabreflight-contrasttext-light]: themes/DinoGirls%20Themes/jabrefdark-jabreflight-contrasttext-light.png
-[jabrefdark-jabreflight-greytext]: https://github.com/JabRef/themes.jabref.org/blob/main/themes/DinoGirls%20Themes/jabrefdark-jabreflight-greytext.css
+[jabrefdark-jabreflight-greytext]: themes/DinoGirls%20Themes/jabrefdark-jabreflight-greytext.css
 [jabrefdark-jabreflight-greytext-dark]: themes/DinoGirls%20Themes/jabrefdark-jabreflight-greytext-dark.png
 [jabrefdark-jabreflight-greytext-light]: themes/DinoGirls%20Themes/jabrefdark-jabreflight-greytext-light.png
-[lightblue-iceage-contrasttext]: https://github.com/JabRef/themes.jabref.org/blob/main/themes/DinoGirls%20Themes/lightblue-iceage-contrasttext.css
+[lightblue-iceage-contrasttext]: themes/DinoGirls%20Themes/lightblue-iceage-contrasttext.css
 [lightblue-iceage-contrasttext-dark]: themes/DinoGirls%20Themes/lightblue-iceage-contrasttext-dark.png
 [lightblue-iceage-contrasttext-light]: themes/DinoGirls%20Themes/lightblue-iceage-contrasttext-light.png
-[lightblue-iceage-greytext]: https://github.com/JabRef/themes.jabref.org/blob/main/themes/DinoGirls%20Themes/lightblue-iceage-greytext.css
+[lightblue-iceage-greytext]: themes/DinoGirls%20Themes/lightblue-iceage-greytext.css
 [lightblue-iceage-greytext-dark]: themes/DinoGirls%20Themes/lightblue-iceage-greytext-dark.png
 [lightblue-iceage-greytext-light]: themes/DinoGirls%20Themes/lightblue-iceage-greytext-light.png
-[lightseagreen-limegreen-contrasttext]: https://github.com/JabRef/themes.jabref.org/blob/main/themes/DinoGirls%20Themes/lightseagreen-limegreen-contrasttext.css
+[lightseagreen-limegreen-contrasttext]: themes/DinoGirls%20Themes/lightseagreen-limegreen-contrasttext.css
 [lightseagreen-limegreen-contrasttext-dark]: themes/DinoGirls%20Themes/lightseagreen-limegreen-contrasttext-dark.png
 [lightseagreen-limegreen-contrasttext-light]: themes/DinoGirls%20Themes/lightseagreen-limegreen-contrasttext-light.png
-[lightseagreen-limegreen-greytext]: https://github.com/JabRef/themes.jabref.org/blob/main/themes/DinoGirls%20Themes/lightseagreen-limegreen-greytext.css
+[lightseagreen-limegreen-greytext]: themes/DinoGirls%20Themes/lightseagreen-limegreen-greytext.css
 [lightseagreen-limegreen-greytext-dark]: themes/DinoGirls%20Themes/lightseagreen-limegreen-greytext-dark.png
 [lightseagreen-limegreen-greytext-light]: themes/DinoGirls%20Themes/lightseagreen-limegreen-greytext-light.png
-[prehistoricamber-peachorange-contrasttext]: https://github.com/JabRef/themes.jabref.org/blob/main/themes/DinoGirls%20Themes/prehistoricamber-peachorange-contrasttext.css
+[prehistoricamber-peachorange-contrasttext]: themes/DinoGirls%20Themes/prehistoricamber-peachorange-contrasttext.css
 [prehistoricamber-peachorange-contrasttext-dark]: themes/DinoGirls%20Themes/prehistoricamber-peachorange-contrasttext-dark.png
 [prehistoricamber-peachorange-contrasttext-light]: themes/DinoGirls%20Themes/prehistoricamber-peachorange-contrasttext-light.png
-[prehistoricamber-peachorange-greytext]: https://github.com/JabRef/themes.jabref.org/blob/main/themes/DinoGirls%20Themes/prehistoricamber-peachorange-greytext.css
+[prehistoricamber-peachorange-greytext]: themes/DinoGirls%20Themes/prehistoricamber-peachorange-greytext.css
 [prehistoricamber-peachorange-greytext-dark]: themes/DinoGirls%20Themes/prehistoricamber-peachorange-greytext-dark.png
 [prehistoricamber-peachorange-greytext-light]: themes/DinoGirls%20Themes/prehistoricamber-peachorange-greytext-light.png
-[twilightlavender-neon-contrasttext]: https://github.com/JabRef/themes.jabref.org/blob/main/themes/DinoGirls%20Themes/twilightlavender-neon-contrasttext.css
+[twilightlavender-neon-contrasttext]: themes/DinoGirls%20Themes/twilightlavender-neon-contrasttext.css
 [twilightlavender-neon-contrasttext-dark]: themes/DinoGirls%20Themes/twilightlavender-neon-contrasttext-dark.png
 [twilightlavender-neon-contrasttext-light]: themes/DinoGirls%20Themes/twilightlavender-neon-contrasttext-light.png
-[twilightlavender-neon-greytext]: https://github.com/JabRef/themes.jabref.org/blob/main/themes/DinoGirls%20Themes/twilightlavender-neon-greytext.css
+[twilightlavender-neon-greytext]: themes/DinoGirls%20Themes/twilightlavender-neon-greytext.css
 [twilightlavender-neon-greytext-dark]: themes/DinoGirls%20Themes/twilightlavender-neon-greytext-dark.png
 [twilightlavender-neon-greytext-light]: themes/DinoGirls%20Themes/twilightlavender-neon-greytext-light.png
-[winered-icedstrawberry-contrasttext]: https://github.com/JabRef/themes.jabref.org/blob/main/themes/DinoGirls%20Themes/winered-icedstrawberry-contrasttext.css
+[winered-icedstrawberry-contrasttext]: themes/DinoGirls%20Themes/winered-icedstrawberry-contrasttext.css
 [winered-icedstrawberry-contrasttext-dark]: themes/DinoGirls%20Themes/winered-icedstrawberry-contrasttext-dark.png
 [winered-icedstrawberry-contrasttext-light]: themes/DinoGirls%20Themes/winered-icedstrawberry-contrasttext-light.png
-[winered-icedstrawberry-greytext]: https://github.com/JabRef/themes.jabref.org/blob/main/themes/DinoGirls%20Themes/winered-icedstrawberry-greytext.css
+[winered-icedstrawberry-greytext]: themes/DinoGirls%20Themes/winered-icedstrawberry-greytext.css
 [winered-icedstrawberry-greytext-dark]: themes/DinoGirls%20Themes/winered-icedstrawberry-greytext-dark.png
 [winered-icedstrawberry-greytext-light]: themes/DinoGirls%20Themes/winered-icedstrawberry-greytext-light.png
 
@@ -123,17 +129,17 @@ All screenshots were taken with JabRef 6 and the theme's CSS file selected as cu
 | [GnomeDarkOrange][gnomedarkorange]                                                                 | ![GnomeDarkOrange][gnomedarkorange-preview]                                       |
 | [JabRef-black][jabref-black]                                                                       | ![JabRef-black][jabref-black-preview]                                             |
 
-[dark-theme-blackandwhite-greytext]: https://github.com/JabRef/themes.jabref.org/blob/main/themes/DarkTheme/DinoGirls%20Dark%20Themes/DARK%20THEME-blackandwhite-greytext.css
+[dark-theme-blackandwhite-greytext]: themes/DarkTheme/DinoGirls%20Dark%20Themes/DARK%20THEME-blackandwhite-greytext.css
 [dark-theme-blackandwhite-greytext-preview]: themes/DarkTheme/DinoGirls%20Dark%20Themes/DARK%20THEME-blackandwhite-greytext.png
-[dark-theme-blackandwhite-whitetext]: https://github.com/JabRef/themes.jabref.org/blob/main/themes/DarkTheme/DinoGirls%20Dark%20Themes/DARK%20THEME-blackandwhite-whitetext.css
+[dark-theme-blackandwhite-whitetext]: themes/DarkTheme/DinoGirls%20Dark%20Themes/DARK%20THEME-blackandwhite-whitetext.css
 [dark-theme-blackandwhite-whitetext-preview]: themes/DarkTheme/DinoGirls%20Dark%20Themes/DARK%20THEME-blackandwhite-whitetext.png
-[dark-theme-canaryyellow-greytext]: https://github.com/JabRef/themes.jabref.org/blob/main/themes/DarkTheme/DinoGirls%20Dark%20Themes/DARK%20THEME-canaryyellow-greytext.css
+[dark-theme-canaryyellow-greytext]: themes/DarkTheme/DinoGirls%20Dark%20Themes/DARK%20THEME-canaryyellow-greytext.css
 [dark-theme-canaryyellow-greytext-preview]: themes/DarkTheme/DinoGirls%20Dark%20Themes/DARK%20THEME-canaryyellow-greytext.png
-[dracula]: https://github.com/JabRef/themes.jabref.org/blob/main/themes/DarkTheme/Dracula
+[dracula]: themes/DarkTheme/Dracula/README.md
 [dracula-preview]: themes/DarkTheme/Dracula/screenshots/preview.png
-[gnomedarkorange]: https://github.com/JabRef/themes.jabref.org/blob/main/themes/DarkTheme/GnomeDarkOrange
+[gnomedarkorange]: themes/DarkTheme/GnomeDarkOrange/README.md
 [gnomedarkorange-preview]: themes/DarkTheme/GnomeDarkOrange/jabref_gnome_dark_orange.png
-[jabref-black]: https://github.com/JabRef/themes.jabref.org/blob/main/themes/DarkTheme/JabRef-black
+[jabref-black]: themes/DarkTheme/JabRef-black/README.md
 [jabref-black-preview]: themes/DarkTheme/JabRef-black/preview.png
 
 ### Light themes
@@ -142,7 +148,7 @@ All screenshots were taken with JabRef 6 and the theme's CSS file selected as cu
 | ------------------------ | --------------------------------- |
 | [Interoctiv][interoctiv] | ![Interoctiv][interoctiv-preview] |
 
-[interoctiv]: https://github.com/JabRef/themes.jabref.org/blob/main/themes/LightTheme/Interoctiv
+[interoctiv]: themes/LightTheme/Interoctiv/README.md
 [interoctiv-preview]: themes/LightTheme/Interoctiv/wrap-text.png
 
 ## Use a custom theme
@@ -155,7 +161,7 @@ The custom CSS is applied on top of the selected theme and color scheme. Changes
 
 ## Creating a new theme
 
-All colors of a theme are `-color-*` variables, for example `-color-accent`, `-color-bg-primary`, `-color-fg-default`, or `-color-selection`. The complete list, with a comment on what each one is used for, is in [`jabref-theme.css`](https://github.com/JabRef/jabref/blob/main/jabgui/src/main/resources/org/jabref/gui/theme/jabref-theme.css) (and [`primer-theme.css`](https://github.com/JabRef/jabref/blob/main/jabgui/src/main/resources/org/jabref/gui/theme/primer-theme.css) for the second theme). The rest of JabRef's styling only uses these variables, so overriding them is all that is needed to re-color the whole UI.
+All colors of a theme are `-color-*` variables, for example `-color-accent`, `-color-bg-primary`, `-color-fg-default`, or `-color-selection`. The complete list, with a comment on what each one is used for, is in [`jabref-theme.css`](themes/JabRef/jabref-theme.css) (and [`primer.css`](themes/Primer/primer.css) for the second theme). The rest of JabRef's styling only uses these variables, so overriding them is all that is needed to re-color the whole UI.
 
 Override a variable for both color schemes:
 
@@ -191,10 +197,10 @@ The old `-jr-*` variables no longer exist and are silently ignored. Every variab
 | `-jr-row-odd-background` / `-jr-row-even-background`                  | `-color-bg-secondary` / `-color-bg-alt`                        |
 | `-jr-search-background`                                               | `-color-bg-search`                                             |
 | `-jr-sidepane-background`                                             | `-color-bg-sidepane`                                           |
-| `-jr-separator`                                                       | `-color-border-default`                                        |
+| `-jr-separator`                                                       | `-color-border-muted`                                          |
 | `-fx-light-text-color` / `-fx-dark-text-color` / `-fx-mid-text-color` | `-color-fg-emphasis` / `-color-fg-default` / `-color-fg-muted` |
 | `-fx-control-inner-background` / `-fx-control-inner-background-alt`   | `-color-bg-secondary` / `-color-bg-alt`                        |
-| `-fx-outer-border`                                                    | `-color-border-default`, `-color-button-border`                |
+| `-fx-outer-border`                                                    | `-color-border-light`                                          |
 | `-fx-focused-text-base-color`                                         | `-color-fg-emphasis`                                           |
 | `-jr-green` / `-jr-light-green`                                       | `-color-success` / `-color-success-emphasis`                   |
 | `-jr-orange`                                                          | `-color-warning`                                               |
