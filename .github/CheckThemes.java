@@ -6,10 +6,6 @@
 import javafx.css.CssParser;
 import javafx.css.Stylesheet;
 
-import java.net.URI;
-import java.net.http.HttpClient;
-import java.net.http.HttpRequest;
-import java.net.http.HttpResponse;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.ArrayList;
@@ -28,15 +24,13 @@ public class CheckThemes {
     /// Raw color ramps a theme may lay out for its own use, as the Primer theme does with AtlantaFX's.
     private static final Pattern PALETTE_RAMP = Pattern.compile("-color-(?:base|accent|success|warning|danger)-[0-9]|-color-(?:dark|light)");
 
-    /// The JabRef theme lives here and declares the token contract; JabRef's base stylesheet on
-    /// `main` reads it. Between them they name every `-color-*` token a theme can meaningfully override.
+    /// The JabRef theme declares the complete token contract, so it names every `-color-*` token a
+    /// theme can meaningfully override. JabRef's base stylesheet only reads tokens, never declares one.
     private static final String JABREF_THEME = "JabRef/jabref-theme.css";
-    private static final String JABREF_BASE_CSS = "https://raw.githubusercontent.com/JabRef/jabref/main/jabgui/src/main/resources/org/jabref/gui/theme/internal/jabref-base.css";
 
     public static void main(String[] args) throws Exception {
         Set<String> knownTokens = new TreeSet<>();
         collectTokens(new CssParser().parse(Path.of(args[0], JABREF_THEME).toUri().toURL()), knownTokens);
-        collectTokens(new CssParser().parse(fetch(JABREF_BASE_CSS)), knownTokens);
         System.out.println("JabRef declares " + knownTokens.size() + " color tokens.");
 
         List<Path> files = new ArrayList<>();
@@ -100,12 +94,4 @@ public class CheckThemes {
         return read;
     }
 
-    private static String fetch(String url) throws Exception {
-        HttpResponse<String> response = HttpClient.newHttpClient()
-                .send(HttpRequest.newBuilder(URI.create(url)).build(), HttpResponse.BodyHandlers.ofString());
-        if (response.statusCode() != 200) {
-            throw new IllegalStateException("HTTP " + response.statusCode() + " for " + url);
-        }
-        return response.body();
-    }
 }
