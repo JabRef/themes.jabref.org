@@ -32,8 +32,8 @@
         -color-fg-emphasis: #FFFFFF;
 
         /* Borders */
-        -color-border-light: #B6B6B6;
-        -color-border-strong: #808080;
+        -color-border-light: #DDDDDD;
+        -color-border-strong: #B6B6B6;
         -color-border-muted: #DFDFDF;
 
         /* Accent -- the JabRef brand color and its tint */
@@ -121,8 +121,8 @@
         -color-fg-emphasis: #E5E7EA;
 
         /* Borders */
-        -color-border-light: #3C4050;
-        -color-border-strong: #6B7280;
+        -color-border-light: #424758;
+        -color-border-strong: #3C4050;
         -color-border-muted: #333744;
 
         /* Accent -- the JabRef brand color and its tint */
