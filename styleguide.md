@@ -4,8 +4,8 @@ Short rules behind the JabRef theme; the CSS carries no reasoning.
 
 ## Borders
 
-- `-color-border-light`: the frame of buttons, text fields and surfaces.
-- `-color-border-strong`: the check box square only. The 2px frame *is* the control, so it has to read on its own.
+- `-color-border-light`: the frame of buttons, text fields and surfaces. It sits back; the content is what the reader looks at.
+- `-color-border-strong`: the check box square. The 2px frame *is* the control, so it has to read on its own.
 - `-color-border-muted`: separators and dividers.
 - Tabs draw no frame. The selected tab is marked by its accent line and background, hovering tints the others (Firefox, IntelliJ).
 
