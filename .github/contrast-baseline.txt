@@ -1,25 +1,25 @@
-# How many contrast shortfalls each theme still carries, as reported by check-contrast.py.
-# A theme that is not listed has to have none, so a new theme starts clean and an existing
-# one can only improve. Lower a number when a theme gets better; the check says when.
-ChocolateHoney/chocolate-honey 2
-DinoGirls Themes/chocolatebrown-darksalmon-contrasttext 58
-DinoGirls Themes/chocolatebrown-darksalmon-greytext 71
-DinoGirls Themes/fuchsiapurple-japanesesakura-contrasttext 59
-DinoGirls Themes/fuchsiapurple-japanesesakura-greytext 76
-DinoGirls Themes/jabrefdark-jabreflight-contrasttext 45
-DinoGirls Themes/jabrefdark-jabreflight-greytext 62
-DinoGirls Themes/lightblue-iceage-contrasttext 59
-DinoGirls Themes/lightblue-iceage-greytext 75
-DinoGirls Themes/lightseagreen-limegreen-contrasttext 46
-DinoGirls Themes/lightseagreen-limegreen-greytext 60
-DinoGirls Themes/prehistoricamber-peachorange-contrasttext 47
-DinoGirls Themes/prehistoricamber-peachorange-greytext 63
-DinoGirls Themes/twilightlavender-neon-contrasttext 59
-DinoGirls Themes/twilightlavender-neon-greytext 75
-DinoGirls Themes/winered-icedstrawberry-contrasttext 57
-DinoGirls Themes/winered-icedstrawberry-greytext 71
-Everforest/everforest 76
-JabRef/jabref-theme 50
-Nord/nord 26
-Papers/papers 2
-Primer/primer 26
+# How many contrast shortfalls each theme still carries, as reported by check-contrast.py, and
+# a fingerprint of which ones they are. A theme that is not listed has to have none, so a new
+# theme starts clean and an existing one can only improve. The check prints the line to write.
+ChocolateHoney/chocolate-honey 2 7dcd5a11
+DinoGirls Themes/chocolatebrown-darksalmon-contrasttext 58 2fd474ec
+DinoGirls Themes/chocolatebrown-darksalmon-greytext 71 1a39f48f
+DinoGirls Themes/fuchsiapurple-japanesesakura-contrasttext 59 f890f391
+DinoGirls Themes/fuchsiapurple-japanesesakura-greytext 76 1192bc25
+DinoGirls Themes/jabrefdark-jabreflight-contrasttext 45 8b2f0cca
+DinoGirls Themes/jabrefdark-jabreflight-greytext 62 22184d0a
+DinoGirls Themes/lightblue-iceage-contrasttext 59 7abd426a
+DinoGirls Themes/lightblue-iceage-greytext 75 78b5db78
+DinoGirls Themes/lightseagreen-limegreen-contrasttext 46 eacd8fb2
+DinoGirls Themes/lightseagreen-limegreen-greytext 60 7a8d69ff
+DinoGirls Themes/prehistoricamber-peachorange-contrasttext 47 f0a1e9b5
+DinoGirls Themes/prehistoricamber-peachorange-greytext 63 f80697f7
+DinoGirls Themes/twilightlavender-neon-contrasttext 59 7abd426a
+DinoGirls Themes/twilightlavender-neon-greytext 75 78b5db78
+DinoGirls Themes/winered-icedstrawberry-contrasttext 57 56bea306
+DinoGirls Themes/winered-icedstrawberry-greytext 71 fbb537ce
+Everforest/everforest 76 b9e8bdd7
+JabRef/jabref-theme 50 3bdb9ba2
+Nord/nord 26 2f96402c
+Papers/papers 2 2615d589
+Primer/primer 26 d5ebe459

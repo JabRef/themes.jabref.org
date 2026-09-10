@@ -6,6 +6,7 @@ A theme that only overrides tokens is measured on top of the JabRef theme, the w
 it at runtime. contrast-baseline.txt says how much each theme still carries, so the check stops
 new shortfalls instead of demanding that every theme be fixed at once.
 """
+import hashlib
 import pathlib
 import re
 import sys
@@ -121,14 +122,15 @@ def failures(theme, base):
 
 base_palette = palettes(BASE_THEME)
 
-# How many shortfalls a theme still carries. A theme that is not listed has to have none, so a
-# new theme starts clean and an existing one can only get better.
+# How many shortfalls a theme still carries, and a fingerprint of which ones they are: swapping
+# one shortfall for another keeps the count and has to be caught as well. A theme that is not
+# listed has to have none, so a new theme starts clean and an existing one can only get better.
 allowed = {}
 for line in BASELINE.read_text().splitlines():
     line = line.split("#")[0].strip()
     if line:
-        theme, count = line.rsplit(" ", 1)
-        allowed[theme] = int(count)
+        theme, count, fingerprint = line.rsplit(" ", 2)
+        allowed[theme] = (int(count), fingerprint)
 
 worse, better, measured_themes = [], [], set()
 # The DarkTheme/ and LightTheme/ folders hold the themes that were never ported to the token
@@ -139,11 +141,17 @@ for css in sorted(pathlib.Path(REPO, "themes").glob("*/*.css")):
     found = list(failures(palettes(css), base_palette))
     for scheme, foreground, background, measured, target in found:
         print(f"  {theme} {scheme}: {foreground} on {background} {measured:.2f} < {target}")
-    if len(found) > allowed.get(theme, 0):
-        worse.append(f"{theme}: {len(found)} shortfall(s), {allowed.get(theme, 0)} allowed")
-    elif len(found) < allowed.get(theme, 0):
-        better.append(f"{theme}: {len(found)} shortfall(s) left, lower the number in "
-                      f"contrast-baseline.txt from {allowed[theme]}")
+    pairs = sorted(f"{scheme} {foreground} {background}" for scheme, foreground, background, _, _ in found)
+    fingerprint = hashlib.sha1(" ".join(pairs).encode()).hexdigest()[:8]
+    count, baselined = allowed.get(theme, (0, fingerprint))
+    if len(found) > count:
+        worse.append(f"{theme}: {len(found)} shortfall(s), {count} allowed")
+    elif len(found) < count:
+        better.append(f"{theme}: {len(found)} shortfall(s) left, write "
+                      f"\"{theme} {len(found)} {fingerprint}\" into contrast-baseline.txt")
+    elif fingerprint != baselined:
+        worse.append(f"{theme}: same number of shortfalls, but other ones -- see the list above; "
+                     f"if that is intended, write \"{theme} {len(found)} {fingerprint}\"")
 
 print()
 for line in worse:
