@@ -47,6 +47,8 @@ jobs:
         uses: jbangdev/setup-jbang@2b1b465a7b75f4222b81426f23a01e013aa7b95c # v0.1.1
       - name: Parse themes
         run: jbang .github/CheckThemes.java themes
+      - name: Check foregrounds against the style guide
+        run: python3 .github/check-foregrounds.py
       - name: Audit against the pre-port themes
         run: python3 .github/audit-migration.py
 
