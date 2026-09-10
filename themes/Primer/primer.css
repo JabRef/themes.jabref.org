@@ -70,7 +70,7 @@
         -color-bg-overlay: #ffffff;
         -color-bg-subtle: #f6f8fa;
         -color-bg-inset: #f6f8fa;
-        -color-border-default: #d0d7de;
+        -color-border-light: #d0d7de;
         -color-border-muted: #d0d7de;
         -color-border-subtle: rgb(221, 221, 222);
         -color-shadow-default: #d0d7de;
@@ -140,7 +140,7 @@
         -color-button: -color-bg-subtle;
         -color-button-hover: -color-base-6;
         -color-button-pressed: -color-base-5;
-        -color-button-border: -color-border-default;
+        -color-button-border: -color-border-light;
         -color-button-default: -color-accent-emphasis;
 
         /* Selection and interaction overlays */
@@ -253,7 +253,7 @@
         -color-bg-overlay: #0d1117;
         -color-bg-subtle: #161b22;
         -color-bg-inset: #010409;
-        -color-border-default: #30363d;
+        -color-border-light: #30363d;
         -color-border-muted: #21262d;
         -color-border-subtle: rgb(36, 40, 46);
         -color-shadow-default: #010409;
@@ -323,7 +323,7 @@
         -color-button: -color-bg-subtle;
         -color-button-hover: -color-base-6;
         -color-button-pressed: -color-base-5;
-        -color-button-border: -color-border-default;
+        -color-button-border: -color-border-light;
         -color-button-default: -color-accent-emphasis;
 
         /* Selection and interaction overlays */
@@ -392,7 +392,7 @@
     -fx-mid-text-color: -color-fg-muted;
     -fx-light-text-color: -color-fg-emphasis;
 
-    -fx-outer-border: -color-border-default;
+    -fx-outer-border: -color-border-light;
 
     -fx-focus-color: -color-accent-subtle;
     -fx-faint-focus-color: derive(-color-accent-subtle, 50%);
@@ -455,7 +455,7 @@ Text {
 .button {
     -color-button-bg: -color-bg-subtle;
     -color-button-fg: -color-fg-default;
-    -color-button-border: -color-border-default;
+    -color-button-border: -color-border-light;
     -color-button-bg-hover: -color-base-6;
     -color-button-fg-hover: -color-button-fg;
     -color-button-border-hover: -color-button-border;
@@ -568,7 +568,7 @@ Text {
     -fx-padding: 6px;
 }
 .chart .axis {
-    -fx-axis-color: -color-border-default;
+    -fx-axis-color: -color-border-light;
     -fx-tick-label-font-size: 0.8em;
     -fx-tick-label-fill: -color-fg-default;
 }
@@ -1020,7 +1020,7 @@ Text {
     -fx-alignment: TOP-LEFT;
 }
 .check-box > .box {
-    -fx-background-color: -color-border-default, -color-bg-default;
+    -fx-background-color: -color-border-light, -color-bg-default;
     -fx-background-insets: 0, 1.5px;
     -fx-background-radius: 4px, 3px;
     -fx-padding: 3px 4px 3px 4px;
@@ -1039,7 +1039,7 @@ Text {
     -fx-background-color: -color-fg-subtle, -color-bg-subtle;
 }
 .check-box:indeterminate > .box {
-    -fx-background-color: -color-border-default, -color-bg-default;
+    -fx-background-color: -color-border-light, -color-bg-default;
 }
 .check-box:indeterminate > .box > .mark {
     -fx-background-color: -color-fg-subtle;
@@ -1069,14 +1069,14 @@ Text {
     -fx-text-fill: -color-fg-default;
 }
 .color-picker > .color-picker-label > .picker-color > .picker-color-rect {
-    -fx-stroke: -color-border-default;
+    -fx-stroke: -color-border-light;
 }
 .color-picker.button > .color-picker-label {
     -fx-padding: 0;
 }
 
 .color-palette {
-    -fx-background-color: -color-border-default, -color-bg-default;
+    -fx-background-color: -color-border-light, -color-bg-default;
     -fx-background-insets: 0, 1px;
     -fx-background-radius: 4px, 3px;
     -fx-spacing: 10px;
@@ -1121,7 +1121,7 @@ Text {
     -fx-min-height: 16em;
 }
 .custom-color-dialog > .color-rect-pane > .color-rect .color-rect-border {
-    -fx-border-color: -color-border-default;
+    -fx-border-color: -color-border-light;
 }
 .custom-color-dialog > .color-rect-pane > .color-rect #color-rect-indicator {
     -fx-background-color: none;
@@ -1137,7 +1137,7 @@ Text {
     -fx-min-width: 1.666667em;
     -fx-min-height: 16.666667em;
     -fx-max-width: 1.666667em;
-    -fx-border-color: -color-border-default;
+    -fx-border-color: -color-border-light;
 }
 .custom-color-dialog > .color-rect-pane > .color-bar #color-bar-indicator {
     -fx-border-radius: 0.333333em;
@@ -1152,7 +1152,7 @@ Text {
     -fx-padding: 0 0 0 2px;
 }
 .custom-color-dialog > .controls-pane > .current-new-color-grid > #current-new-color-border {
-    -fx-border-color: -color-border-default;
+    -fx-border-color: -color-border-light;
     -fx-border-width: 1px;
 }
 .custom-color-dialog > .controls-pane > .current-new-color-grid > .color-rect {
@@ -1176,7 +1176,7 @@ Text {
     -fx-vgap: 6px;
 }
 .custom-color-dialog > .controls-pane #settings-pane > .customcolor-controls-background {
-    -fx-background-color: -color-border-default, -color-bg-default;
+    -fx-background-color: -color-border-light, -color-bg-default;
     -fx-background-insets: 13px 0 5px 0, 14px 1px 6px 1px;
     -fx-background-radius: 4px, 3px;
 }
@@ -1224,7 +1224,7 @@ Text {
 }
 
 .combo-box-base {
-    -fx-background-color: -color-border-default, -color-bg-default;
+    -fx-background-color: -color-border-light, -color-bg-default;
     -fx-background-insets: 0, 1px;
     -fx-background-radius: 4px, 3px;
     -fx-text-fill: -color-fg-default;
@@ -1299,7 +1299,7 @@ Text {
 }
 
 .combo-box-popup > .list-view {
-    -fx-background-color: -color-border-default, -color-bg-default;
+    -fx-background-color: -color-border-light, -color-bg-default;
     -fx-background-insets: 0, 1;
     -fx-border-radius: 4px, 3px;
     -fx-background-radius: 4px, 3px;
@@ -1327,7 +1327,7 @@ Text {
 }
 
 .choice-box {
-    -fx-background-color: -color-border-default, -color-bg-default;
+    -fx-background-color: -color-border-light, -color-bg-default;
     -fx-background-insets: 0, 1px;
     -fx-background-radius: 4px, 3px;
     -fx-text-fill: -color-fg-default;
@@ -1478,7 +1478,7 @@ Text {
     -color-cell-bg-selected-focused: -color-base-6;
     -color-cell-fg-selected-focused: -color-fg-default;
     -color-cell-bg-odd: -color-bg-subtle;
-    -color-cell-border: -color-border-default;
+    -color-cell-border: -color-border-light;
     -color-disclosure: -color-fg-muted;
     -fx-border-color: -color-cell-border;
     -fx-border-width: 1px;
@@ -1526,7 +1526,7 @@ Text {
     -color-cell-bg-selected-focused: -color-base-6;
     -color-cell-fg-selected-focused: -color-fg-default;
     -color-cell-bg-odd: -color-bg-subtle;
-    -color-cell-border: -color-border-default;
+    -color-cell-border: -color-border-light;
     -color-disclosure: -color-fg-muted;
     -fx-border-color: -color-cell-border;
     -fx-border-width: 1px;
@@ -1688,7 +1688,7 @@ Text {
     -color-cell-bg-selected-focused: -color-base-6;
     -color-cell-fg-selected-focused: -color-fg-default;
     -color-cell-bg-odd: -color-bg-subtle;
-    -color-cell-border: -color-border-default;
+    -color-cell-border: -color-border-light;
     -color-disclosure: -color-fg-muted;
     -fx-border-color: -color-cell-border;
     -fx-border-width: 1px;
@@ -1754,7 +1754,7 @@ Text {
     -color-cell-bg-selected-focused: -color-base-6;
     -color-cell-fg-selected-focused: -color-fg-default;
     -color-cell-bg-odd: -color-bg-subtle;
-    -color-cell-border: -color-border-default;
+    -color-cell-border: -color-border-light;
     -color-disclosure: -color-fg-muted;
     -fx-border-color: -color-cell-border;
     -fx-border-width: 1px;
@@ -1942,7 +1942,7 @@ Text {
 
 .date-picker-popup {
     -color-date-bg: -color-bg-default;
-    -color-date-border: -color-border-default;
+    -color-date-border: -color-border-light;
     -color-date-month-year-bg: -color-bg-default;
     -color-date-month-year-fg: -color-fg-default;
     -color-date-day-bg: -color-bg-default;
@@ -2114,7 +2114,7 @@ Text {
 }
 .dialog-pane:header > .header-panel {
     -fx-padding: 1em 1em 1em 1em;
-    -fx-background-color: -color-border-default, -color-bg-inset;
+    -fx-background-color: -color-border-light, -color-bg-inset;
     -fx-background-insets: 0, 0 0 1px 0;
 }
 .dialog-pane:header > .header-panel > .label {
@@ -2148,7 +2148,7 @@ Text {
 }
 
 .html-editor {
-    -fx-background-color: -color-border-default, -color-bg-default;
+    -fx-background-color: -color-border-light, -color-bg-default;
     -fx-background-insets: 0, 1px;
     -fx-padding: 2px;
 }
@@ -2218,7 +2218,7 @@ Text {
 }
 .label.left-pill, .label.center-pill, .label.right-pill {
     -fx-padding: 8px 12px 8px 12px;
-    -fx-background-color: -color-border-default, -color-bg-subtle;
+    -fx-background-color: -color-border-light, -color-bg-subtle;
     -fx-background-insets: 0, 1px;
 }
 .label.left-pill {
@@ -2367,7 +2367,7 @@ Text {
 .split-menu-button {
     -color-button-bg: -color-bg-subtle;
     -color-button-fg: -color-fg-default;
-    -color-button-border: -color-border-default;
+    -color-button-border: -color-border-light;
     -color-button-bg-hover: -color-base-6;
     -color-button-fg-hover: -color-button-fg;
     -color-button-border-hover: -color-button-border;
@@ -2580,7 +2580,7 @@ Text {
     -color-message-fg-secondary: -color-fg-default;
     -color-message-border: -color-border-muted;
     -color-message-button-hover: -color-bg-default;
-    -color-message-border-interactive: -color-border-default;
+    -color-message-border-interactive: -color-border-light;
 }
 .message.accent {
     -color-message-bg: -color-accent-subtle;
@@ -2681,7 +2681,7 @@ Text {
     -color-notify-fg: -color-fg-default;
     -color-notify-bg-hover: -color-bg-default;
     -color-notify-fg-hover: -color-fg-default;
-    -color-notify-border: -color-border-default;
+    -color-notify-border: -color-border-light;
 }
 .notification > .container {
     -fx-background-color: -color-notify-border, -color-notify-bg;
@@ -2713,7 +2713,7 @@ Text {
     -fx-padding: 0.3em 0.1em 0.3em 0.1em;
 }
 .notification > .container > .header > .actions > .secondary-menu-button:hover {
-    -fx-background-color: -color-border-default, -color-notify-bg-hover;
+    -fx-background-color: -color-border-light, -color-notify-bg-hover;
     -fx-background-insets: 0, 1;
 }
 .notification > .container > .header > .actions > .secondary-menu-button:hover > .icon {
@@ -2730,7 +2730,7 @@ Text {
     -fx-padding: 0.3em;
 }
 .notification > .container > .header > .actions > .close-button:hover {
-    -fx-background-color: -color-border-default, -color-notify-bg-hover;
+    -fx-background-color: -color-border-light, -color-notify-bg-hover;
     -fx-background-insets: 0, 1;
 }
 .notification > .container > .header > .actions > .close-button:hover > .icon {
@@ -2791,7 +2791,7 @@ Text {
 }
 .pagination.bullet > .pagination-control > .control-box > .bullet-button {
     -fx-background-radius: 0, 10em, 10em;
-    -fx-background-color: transparent, -color-border-default, -color-bg-subtle;
+    -fx-background-color: transparent, -color-border-light, -color-bg-subtle;
     -fx-background-insets: 0, 5, 6;
 }
 .pagination.bullet > .pagination-control > .control-box > .bullet-button:selected {
@@ -2803,7 +2803,7 @@ Text {
     -fx-effect: dropshadow(three-pass-box, -color-shadow-default, 8px, 0.6, 0, 2);
 }
 .popover > .border {
-    -fx-stroke: -color-border-default;
+    -fx-stroke: -color-border-light;
     -fx-stroke-width: 1px;
     -fx-fill: -color-bg-overlay;
 }
@@ -2863,7 +2863,7 @@ Text {
     -fx-spin-enabled: true;
 }
 .progress-indicator > .determinate-indicator > .indicator {
-    -fx-background-color: -color-border-default, -color-bg-default;
+    -fx-background-color: -color-border-light, -color-bg-default;
     -fx-background-insets: 0, 1;
 }
 .progress-indicator > .determinate-indicator > .progress {
@@ -2966,7 +2966,7 @@ Text {
     -fx-alignment: TOP-LEFT;
 }
 .radio-button > .radio {
-    -fx-background-color: -color-border-default, -color-bg-default;
+    -fx-background-color: -color-border-light, -color-bg-default;
     -fx-background-insets: 0, 1.5px;
     -fx-background-radius: 1em;
     -fx-padding: 3px;
@@ -3059,7 +3059,7 @@ Text {
 .segmented-control {
     -color-segment-bg: -color-bg-subtle;
     -color-segment-fg: -color-fg-muted;
-    -color-segment-border: -color-border-default;
+    -color-segment-border: -color-border-light;
     -color-segment-fg-hover: -color-fg-default;
     -color-segment-bg-selected: -color-bg-default;
     -color-segment-fg-selected: -color-fg-default;
@@ -3251,7 +3251,7 @@ Text {
 .spinner {
     -fx-background-color: -color-bg-default;
     -fx-background-radius: 4px;
-    -fx-border-color: -color-border-default;
+    -fx-border-color: -color-border-light;
     -fx-border-radius: 4px;
     -fx-border-width: 1px;
 }
@@ -3433,7 +3433,7 @@ Text {
     -color-tab-bg-selected: -color-bg-default;
     -color-tab-fg-selected: -color-fg-default;
     -color-tab-border-selected: -color-accent-emphasis;
-    -fx-background-color: -color-border-default, -color-bg-default;
+    -fx-background-color: -color-border-light, -color-bg-default;
     -fx-background-insets: 0, 0 0 1px 0;
 }
 .tab-line > .root-container {
@@ -3444,7 +3444,7 @@ Text {
     -fx-background-color: transparent;
 }
 .tab-line > .root-container > .tabs > .tab {
-    -fx-background-color: -color-border-default, -color-bg-default;
+    -fx-background-color: -color-border-light, -color-bg-default;
     -fx-background-insets: 0, 0 0 1px 0;
     -fx-padding: 10px 6px 10px 6px;
 }
@@ -3477,7 +3477,7 @@ Text {
     -fx-opacity: 0.4;
 }
 .tab-line > .root-container > .tabs > .tab:hover {
-    -fx-background-color: -color-border-default, -color-bg-subtle;
+    -fx-background-color: -color-border-light, -color-bg-subtle;
 }
 .tab-line > .root-container > .tabs > .tab:hover > .label {
     -fx-fill: -color-fg-default;
@@ -3541,7 +3541,7 @@ Text {
     -fx-padding: 0 0 1px 0;
 }
 .tab-line.border-top > .root-container > .tabs > .tab {
-    -fx-background-color: -color-bg-default, -color-border-default, -color-bg-default;
+    -fx-background-color: -color-bg-default, -color-border-light, -color-bg-default;
     -fx-background-insets: 0, 0, 1 0 0 0;
 }
 .tab-line.border-top > .root-container > .tabs > .tab:first {
@@ -3551,7 +3551,7 @@ Text {
     -fx-background-insets: 0, 0, 1 1 0 0;
 }
 .tab-line.border-top > .root-container > .tabs > .tab:selected {
-    -fx-background-color: -color-tab-border-selected, -color-border-default, -color-tab-bg-selected;
+    -fx-background-color: -color-tab-border-selected, -color-border-light, -color-tab-bg-selected;
     -fx-background-insets: 0, 3px 0 0 0, 3px 1 0 1;
 }
 .tab-line.dense > .root-container > .tabs > .tab {
@@ -3560,8 +3560,8 @@ Text {
 .tab-line.floating {
     -color-tab-bg-selected: -color-bg-default;
     -color-tab-fg-selected: -color-fg-default;
-    -color-tab-border-selected: -color-border-default;
-    -fx-background-color: -color-border-default, -color-bg-inset;
+    -color-tab-border-selected: -color-border-light;
+    -fx-background-color: -color-border-light, -color-bg-inset;
 }
 .tab-line.floating > .root-container {
     -fx-padding: 3px;
@@ -3573,7 +3573,7 @@ Text {
     -fx-background-radius: 4px;
 }
 .tab-line.floating > .root-container > .tabs > .tab:hover {
-    -fx-background-color: transparent, -color-border-default, -color-bg-subtle;
+    -fx-background-color: transparent, -color-border-light, -color-bg-subtle;
 }
 .tab-line.floating > .root-container > .tabs > .tab:hover > .label {
     -fx-fill: -color-fg-default;
@@ -3614,7 +3614,7 @@ Text {
 }
 .tab-pane > .tab-header-area > .tab-header-background {
     -fx-background-insets: 0 0 0 0, 0 0 2px 0;
-    -fx-background-color: -color-border-default, -color-bg-default;
+    -fx-background-color: -color-border-light, -color-bg-default;
 }
 .tab-pane > .tab-header-area > .headers-region > .tab {
     -fx-background-insets: 0 0 0 0, 0 0 2px 0;
@@ -3641,7 +3641,7 @@ Text {
     -fx-scale-y: 1.1;
 }
 .tab-pane > .tab-header-area > .headers-region > .tab:hover {
-    -fx-background-color: -color-border-default, -color-bg-subtle;
+    -fx-background-color: -color-border-light, -color-bg-subtle;
 }
 .tab-pane > .tab-header-area > .headers-region > .tab:top:selected, .tab-pane > .tab-header-area > .headers-region > .tab:bottom:selected {
     -fx-background-color: -color-tab-border-selected, -color-tab-bg-selected;
@@ -3658,7 +3658,7 @@ Text {
     -fx-background-color: -color-tab-fg-selected;
 }
 .tab-pane > .tab-header-area > .headers-region > .tab:disabled {
-    -fx-background-color: -color-border-default, -color-bg-default;
+    -fx-background-color: -color-border-light, -color-bg-default;
 }
 .tab-pane > .tab-header-area > .headers-region > .tab:disabled > .tab-container {
     -fx-opacity: 0.4;
@@ -3667,7 +3667,7 @@ Text {
     -fx-padding: 0.2em 0.4em 0.2em 0.4em;
 }
 .tab-pane > .tab-header-area > .headers-region > .tab:left:hover, .tab-pane > .tab-header-area > .headers-region > .tab:right:hover {
-    -fx-background-color: -color-border-default, -color-bg-subtle;
+    -fx-background-color: -color-border-light, -color-bg-subtle;
 }
 .tab-pane > .tab-header-area > .headers-region > .tab:left:hover > .tab-container > .tab-label, .tab-pane > .tab-header-area > .headers-region > .tab:right:hover > .tab-container > .tab-label {
     -fx-text-fill: -color-fg-default;
@@ -3706,10 +3706,10 @@ Text {
 .tab-pane.floating {
     -color-tab-bg-selected: -color-bg-default;
     -color-tab-fg-selected: -color-fg-default;
-    -color-tab-border-selected: -color-border-default;
+    -color-tab-border-selected: -color-border-light;
 }
 .tab-pane.floating > .tab-header-area {
-    -fx-background-color: -color-border-default, -color-bg-inset;
+    -fx-background-color: -color-border-light, -color-bg-inset;
     -fx-background-insets: 0, 0 0 1px 0;
 }
 .tab-pane.floating > .tab-header-area > .headers-region > .tab {
@@ -3786,7 +3786,7 @@ Text {
 .text-input {
     -color-input-bg: -color-bg-default;
     -color-input-fg: -color-fg-default;
-    -color-input-border: -color-border-default;
+    -color-input-border: -color-border-light;
     -color-input-bg-focused: -color-bg-default;
     -color-input-border-focused: -color-accent-emphasis;
     -color-input-bg-readonly: -color-bg-subtle;
@@ -3915,7 +3915,7 @@ Text {
     -fx-effect: none;
 }
 .titled-pane > .title {
-    -fx-background-color: -color-border-default, -color-bg-default;
+    -fx-background-color: -color-border-light, -color-bg-default;
     -fx-padding: 10px 20px 10px 20px;
 }
 .titled-pane > .title > .text {
@@ -3934,7 +3934,7 @@ Text {
     -fx-padding: 4px 5px 4px 5px;
 }
 .titled-pane > .content {
-    -fx-border-color: -color-border-default;
+    -fx-border-color: -color-border-light;
     -fx-border-width: 0 1px 1px 1px;
     -fx-border-radius: 0 0 4px 4px;
     -fx-background-radius: 0 0 4px 4px;
@@ -3968,7 +3968,7 @@ Text {
 .toggle-button {
     -color-button-bg: -color-bg-subtle;
     -color-button-fg: -color-fg-default;
-    -color-button-border: -color-border-default;
+    -color-button-border: -color-border-light;
     -color-button-bg-hover: -color-base-6;
     -color-button-fg-hover: -color-button-fg;
     -color-button-border-hover: -color-button-border;
@@ -4078,7 +4078,7 @@ Text {
     -fx-padding: 0 6px 2px 0;
 }
 .toggle-switch > .thumb {
-    -fx-background-color: -color-border-default, -color-fg-emphasis;
+    -fx-background-color: -color-border-light, -color-fg-emphasis;
     -fx-background-insets: 0, 2px;
     -fx-background-radius: 10em;
     -fx-padding: 0.85em;
@@ -4088,7 +4088,7 @@ Text {
 }
 .toggle-switch > .thumb-area {
     -fx-background-radius: 1em;
-    -fx-background-color: -color-border-default, -color-bg-subtle;
+    -fx-background-color: -color-border-light, -color-bg-subtle;
     -fx-background-insets: 0, 1px;
     -fx-padding: 0.85em 1.4em 0.85em 1.4em;
 }
@@ -4149,7 +4149,7 @@ Text {
     -fx-background-color: -color-button-border-hover, -color-base-6;
 }
 .tool-bar > .container .breadcrumbs {
-    -fx-background-color: -color-border-default, -color-bg-default;
+    -fx-background-color: -color-border-light, -color-bg-default;
     -fx-background-insets: 0, 1px;
     -fx-background-radius: 4px, 3px;
     -fx-padding: 6px 1em 6px 1em;
@@ -4196,7 +4196,7 @@ Text {
 }
 
 .tooltip {
-    -fx-background-color: -color-border-default, -color-bg-overlay;
+    -fx-background-color: -color-border-light, -color-bg-overlay;
     -fx-background-insets: 0, 1px;
     -fx-background-radius: 4px, 3px;
     -fx-text-fill: -color-fg-default;

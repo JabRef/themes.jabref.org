@@ -33,7 +33,7 @@
         -color-fg-subtle: #6E6E6E;
         -color-fg-emphasis: #1A1A1A;
 
-        -color-border-default: #CFCFCF;
+        -color-border-light: #CFCFCF;
         -color-border-muted: #E3E3E3;
 
         -color-accent: #0B62CE;
@@ -110,7 +110,7 @@
         -color-fg-subtle: #8B8B92;
         -color-fg-emphasis: #FFFFFF;
 
-        -color-border-default: #3C3C42;
+        -color-border-light: #3C3C42;
         -color-border-muted: #303035;
 
         -color-accent: #5FA3FF;

@@ -9,7 +9,8 @@
     -color-fg-default: #bbbbbb;
     -color-fg-muted: #888888;
     -color-fg-emphasis: #bbbbbb;
-    -color-border-default: #888888;
+    -color-border-light: #888888;
+    -color-border-muted: #888888;
     -color-accent: #cccccc;
     -color-link: #cccccc;
     -color-accent-subtle: #555555;
