@@ -301,10 +301,13 @@
     -fx-background-color: -color-overlay-armed;
 }
 
+/* The label takes the accent, not -color-selection: selection colors are fills, and a pale
+   or dark one is unreadable here -- the label sits on the plain surface, only tinted by
+   -color-overlay-hover. */
 .toggle-button:selected {
     -fx-background-color: -color-overlay-hover;
-    -fx-text-fill: -color-selection;
-    -fx-fill: -color-selection;
+    -fx-text-fill: -color-accent;
+    -fx-fill: -color-accent;
 }
 
 /* JavaFX CheckBox */
@@ -417,9 +420,11 @@ TextFlow > Text {
     -fx-border-color: -color-accent;
 }
 
+/* A followed link is quieter than a fresh one, but still text: -color-fg-muted is the only
+   dimmed color a theme guarantees to be readable. -color-accent-subtle is a fill. */
 .hyperlink:visited {
-    -fx-text-fill: -color-accent-subtle;
-    -fx-fill: -color-accent-subtle;
+    -fx-text-fill: -color-fg-muted;
+    -fx-fill: -color-fg-muted;
 }
 
 .hyperlink:hover {
