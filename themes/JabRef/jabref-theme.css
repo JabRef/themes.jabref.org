@@ -303,8 +303,8 @@
 
 .toggle-button:selected {
     -fx-background-color: -color-overlay-hover;
-    -fx-text-fill: -color-selection;
-    -fx-fill: -color-selection;
+    -fx-text-fill: -color-accent;
+    -fx-fill: -color-accent;
 }
 
 /* JavaFX CheckBox */
@@ -418,8 +418,8 @@ TextFlow > Text {
 }
 
 .hyperlink:visited {
-    -fx-text-fill: -color-accent-subtle;
-    -fx-fill: -color-accent-subtle;
+    -fx-text-fill: -color-fg-muted;
+    -fx-fill: -color-fg-muted;
 }
 
 .hyperlink:hover {
@@ -832,7 +832,7 @@ TextFlow > Text {
     -fx-background-color: -color-border-light, -color-bg-secondary;
     -fx-background-insets: 0, 1;
     -fx-background-radius: 0.25em;
-    -fx-prompt-text-fill: -color-scrollbar-thumb;
+    -fx-prompt-text-fill: -color-fg-subtle;
 }
 
 .text-input:focused {
