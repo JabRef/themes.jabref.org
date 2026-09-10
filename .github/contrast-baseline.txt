@@ -1,25 +1,25 @@
 # How many contrast shortfalls each theme still carries, as reported by check-contrast.py, and
 # a fingerprint of which ones they are. A theme that is not listed has to have none, so a new
 # theme starts clean and an existing one can only improve. The check prints the line to write.
-ChocolateHoney/chocolate-honey 2 7dcd5a11
-DinoGirls Themes/chocolatebrown-darksalmon-contrasttext 58 2fd474ec
-DinoGirls Themes/chocolatebrown-darksalmon-greytext 71 1a39f48f
-DinoGirls Themes/fuchsiapurple-japanesesakura-contrasttext 59 f890f391
-DinoGirls Themes/fuchsiapurple-japanesesakura-greytext 76 1192bc25
-DinoGirls Themes/jabrefdark-jabreflight-contrasttext 45 8b2f0cca
-DinoGirls Themes/jabrefdark-jabreflight-greytext 62 22184d0a
-DinoGirls Themes/lightblue-iceage-contrasttext 59 7abd426a
-DinoGirls Themes/lightblue-iceage-greytext 75 78b5db78
-DinoGirls Themes/lightseagreen-limegreen-contrasttext 46 eacd8fb2
-DinoGirls Themes/lightseagreen-limegreen-greytext 60 7a8d69ff
-DinoGirls Themes/prehistoricamber-peachorange-contrasttext 47 f0a1e9b5
-DinoGirls Themes/prehistoricamber-peachorange-greytext 63 f80697f7
-DinoGirls Themes/twilightlavender-neon-contrasttext 59 7abd426a
-DinoGirls Themes/twilightlavender-neon-greytext 75 78b5db78
-DinoGirls Themes/winered-icedstrawberry-contrasttext 57 56bea306
-DinoGirls Themes/winered-icedstrawberry-greytext 71 fbb537ce
-Everforest/everforest 76 b9e8bdd7
-JabRef/jabref-theme 50 3bdb9ba2
-Nord/nord 26 2f96402c
+ChocolateHoney/chocolate-honey 3 060b473e
+DinoGirls Themes/chocolatebrown-darksalmon-contrasttext 66 4cb5d816
+DinoGirls Themes/chocolatebrown-darksalmon-greytext 80 e842a3bf
+DinoGirls Themes/fuchsiapurple-japanesesakura-contrasttext 69 6dd9aab2
+DinoGirls Themes/fuchsiapurple-japanesesakura-greytext 86 8175e7c8
+DinoGirls Themes/jabrefdark-jabreflight-contrasttext 54 95b2deec
+DinoGirls Themes/jabrefdark-jabreflight-greytext 72 7b77fb89
+DinoGirls Themes/lightblue-iceage-contrasttext 68 9191362e
+DinoGirls Themes/lightblue-iceage-greytext 85 60095d09
+DinoGirls Themes/lightseagreen-limegreen-contrasttext 59 bd698578
+DinoGirls Themes/lightseagreen-limegreen-greytext 63 e950a8e7
+DinoGirls Themes/prehistoricamber-peachorange-contrasttext 60 cd081460
+DinoGirls Themes/prehistoricamber-peachorange-greytext 73 bd2bffef
+DinoGirls Themes/twilightlavender-neon-contrasttext 68 9191362e
+DinoGirls Themes/twilightlavender-neon-greytext 85 60095d09
+DinoGirls Themes/winered-icedstrawberry-contrasttext 65 6e0790d3
+DinoGirls Themes/winered-icedstrawberry-greytext 74 bb5578f5
+Everforest/everforest 84 330b2527
+JabRef/jabref-theme 58 a9b5812c
+Nord/nord 27 f0a01fa4
 Papers/papers 2 2615d589
-Primer/primer 26 d5ebe459
+Primer/primer 43 4e29b13b

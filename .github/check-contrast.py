@@ -37,8 +37,14 @@ ON_SURFACE = {"-color-fg-default": (4.5, EVERYWHERE), "-color-fg-muted": (4.5, E
               "-color-syntax-attribute": (4.5, EDITOR), "-color-syntax-string": (4.5, EDITOR),
               "-color-syntax-comment": (3.0, EDITOR), "-color-syntax-punctuation": (4.5, EDITOR)}
 
-ON_FILL = {"-color-fg-emphasis": ["-color-selection", "-color-badge-bg", "-color-button-default"],
-           "-color-badge-selected-fg": ["-color-success"]}
+# Text on a fill. A group that is only partly selected gets a much paler green than
+# -color-success, and a selected icon button is the emphasis color on the hover overlay, which
+# is translucent -- such a fill is measured over each surface it can lie on.
+ON_FILL = {"-color-fg-emphasis": ["-color-selection", "-color-badge-bg", "-color-button-default",
+                                  "-color-overlay-hover"],
+           "-color-badge-selected-fg": ["-color-success", "derive(-color-success, 70%)"]}
+
+NAMED = {"white": (255, 255, 255), "black": (0, 0, 0)}
 
 
 def luminance(color):
@@ -54,26 +60,43 @@ def ratio(foreground, background):
     return (lighter + 0.05) / (darker + 0.05)
 
 
-def color(value, tokens, depth=0):
-    """The value as RGB, or None for anything a ratio cannot be computed from -- a translucent
-    color, whose result depends on what is behind it. Token references and derive() are
-    followed, so a theme cannot hide a shortfall behind an indirection."""
+def color(value, tokens, backdrop=None, depth=0):
+    """The value as RGB, or None for anything a ratio cannot be computed from. Token references
+    and derive() are followed, so a theme cannot hide a shortfall behind an indirection. A
+    translucent color needs a backdrop to lie on; without one it has no ratio of its own."""
     value = value.strip()
     if depth > 10:
         return None
-    hex_color = re.fullmatch(r"#([0-9a-fA-F]{3}|[0-9a-fA-F]{6})", value)
+    if value in NAMED:
+        return NAMED[value]
+    if value in tokens:
+        return color(tokens[value], tokens, backdrop, depth + 1)
+    hex_color = re.fullmatch(r"#([0-9a-fA-F]{3,8})", value)
     if hex_color:
         digits = hex_color.group(1)
-        if len(digits) == 3:
+        if len(digits) in (3, 4):
             digits = "".join(digit * 2 for digit in digits)
-        return tuple(int(digits[index:index + 2], 16) for index in (0, 2, 4))
-    if value in tokens:
-        return color(tokens[value], tokens, depth + 1)
+        parts = [int(digits[index:index + 2], 16) for index in range(0, len(digits), 2)]
+        return blend(parts[:3], parts[3] / 255 if len(parts) == 4 else 1.0, backdrop)
+    translucent = re.fullmatch(r"rgba?\(([^)]*)\)", value)
+    if translucent:
+        parts = [part.strip() for part in translucent.group(1).split(",")]
+        return blend([int(part) for part in parts[:3]],
+                     float(parts[3]) if len(parts) == 4 else 1.0, backdrop)
     derived = re.fullmatch(r"derive\(\s*(.+?)\s*,\s*(-?[0-9.]+)%\s*\)", value)
     if derived:
-        base = color(derived.group(1), tokens, depth + 1)
+        base = color(derived.group(1), tokens, backdrop, depth + 1)
         return derive(base, float(derived.group(2))) if base else None
     return None
+
+
+def blend(rgb, alpha, backdrop):
+    """The color as it is seen: opaque colors as they are, translucent ones over the backdrop."""
+    if alpha >= 1:
+        return tuple(rgb)
+    if backdrop is None:
+        return None
+    return tuple(round(alpha * part + (1 - alpha) * behind) for part, behind in zip(rgb, backdrop))
 
 
 def derive(rgb, percent):
@@ -111,11 +134,20 @@ def failures(theme, base):
         tokens = dict(base[scheme])
         tokens.update(theme[scheme])
         resolved = {name: color(value, tokens) for name, value in tokens.items()}
-        pairs = [(fg, bg, target) for fg, (target, surfaces) in ON_SURFACE.items() for bg in surfaces]
-        pairs += [(fg, bg, 4.5) for fg, fills in ON_FILL.items() for bg in fills]
-        for foreground, background, target in pairs:
-            if resolved.get(foreground) and resolved.get(background):
-                measured = ratio(resolved[foreground], resolved[background])
+        pairs = [(fg, bg, resolved.get(bg), target)
+                 for fg, (target, surfaces) in ON_SURFACE.items() for bg in surfaces]
+        for foreground, fills in ON_FILL.items():
+            for fill in fills:
+                if color(fill, tokens):
+                    pairs.append((foreground, fill, color(fill, tokens), 4.5))
+                    continue
+                # Translucent: what shows through decides, so measure it on each surface.
+                for surface in EVERYWHERE:
+                    over = color(fill, tokens, resolved.get(surface))
+                    pairs.append((foreground, f"{fill} over {surface}", over, 4.5))
+        for foreground, background, behind, target in pairs:
+            if resolved.get(foreground) and behind:
+                measured = ratio(resolved[foreground], behind)
                 if measured < target:
                     yield scheme, foreground, background, measured, target
 
