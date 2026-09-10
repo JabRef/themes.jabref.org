@@ -1,6 +1,6 @@
 # Primer
 
-JabRef's second built-in look, based on [AtlantaFX](https://mkpaz.github.io/atlantafx/)'s Primer theme, which in turn follows GitHub's [Primer](https://primer.style/) design system. One CSS file covers both color schemes: select it as custom theme and pick _Dark_, _Light_, or _Follow system_ in `File > Preferences > General > Appearance`.
+Based on [AtlantaFX](https://mkpaz.github.io/atlantafx/)'s Primer theme, which in turn follows GitHub's [Primer](https://primer.style/) design system. One CSS file covers both color schemes: select it as custom theme and pick _Dark_, _Light_, or _Follow system_ in `File > Preferences > General > Appearance`.
 
 ![Dark](primer-dark.png)
 
