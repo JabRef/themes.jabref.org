@@ -70,3 +70,4 @@ $RECYCLE.BIN/
 *.lnk
 
 # End of https://www.toptal.com/developers/gitignore/api/jekyll,macos,windows
+__pycache__/
