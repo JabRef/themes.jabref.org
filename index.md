@@ -22,6 +22,7 @@ All screenshots were taken with JabRef 6 and the theme's CSS file selected as cu
 
 | Theme                              | Dark                                          | Light                                           |
 | ---------------------------------- | --------------------------------------------- | ----------------------------------------------- |
+| [Cala][cala]                       | ![Cala dark][cala-dark]                       | ![Cala light][cala-light]                       |
 | [Chocolate Honey][chocolate-honey] | ![Chocolate Honey dark][chocolate-honey-dark] | ![Chocolate Honey light][chocolate-honey-light] |
 | [Everforest][everforest]           | ![Everforest dark][everforest-dark]           | ![Everforest light][everforest-light]           |
 | [JabRef][jabref]                   | ![JabRef dark][jabref-dark]                   | ![JabRef light][jabref-light]                   |
@@ -29,6 +30,9 @@ All screenshots were taken with JabRef 6 and the theme's CSS file selected as cu
 | [Papers][papers]                   | ![Papers dark][papers-dark]                   | ![Papers light][papers-light]                   |
 | [Primer][primer]                   | ![Primer dark][primer-dark]                   | ![Primer light][primer-light]                   |
 
+[cala]: themes/Cala/README.md
+[cala-dark]: themes/Cala/cala-dark.png
+[cala-light]: themes/Cala/cala-light.png
 [chocolate-honey]: themes/ChocolateHoney/README.md
 [chocolate-honey-dark]: themes/ChocolateHoney/chocolate-honey-dark.png
 [chocolate-honey-light]: themes/ChocolateHoney/chocolate-honey-light.png

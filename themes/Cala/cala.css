@@ -1,0 +1,150 @@
+/*
+ * Cala theme for JabRef.
+ * Supports both color schemes: select "Follow system", "Light", or "Dark" in JabRef.
+ */
+
+@media (prefers-color-scheme: light) {
+    .root {
+        -color-bg-primary: #F6F1E6;
+        -color-bg-secondary: #FFFCF6;
+        -color-bg-tertiary: #F0E9DB;
+        -color-bg-overlay: #FFFCF6;
+        -color-bg-alt: #F2ECE0;
+        -color-bg-search: #FFFFFF;
+        -color-bg-sidepane: #E8DFCD;
+
+        -color-fg-default: #12303F;
+        -color-fg-muted: #3D5C6B;
+        -color-fg-subtle: #62808E;
+        -color-fg-emphasis: #0E2836;
+
+        -color-border-light: #D9CFBB;
+        -color-border-muted: #E6DECD;
+
+        -color-accent: #0A6079;
+        -color-accent-subtle: #BFE2EB;
+
+        -color-button: transparent;
+        -color-button-hover: rgba(18, 48, 63, 0.08);
+        -color-button-pressed: rgba(18, 48, 63, 0.16);
+        -color-button-default: #F2CA62;
+
+        -color-selection: #B2DBE8;
+        -color-selection-inactive: #E2DBCA;
+
+        -color-overlay-hover: rgba(18, 48, 63, 0.06);
+        -color-overlay-armed: rgba(18, 48, 63, 0.12);
+
+        -color-success: #438E48;
+        -color-success-emphasis: #3F8A46;
+        -color-warning: #A9660C;
+        -color-warning-subtle: rgba(169, 102, 12, 0.3);
+        -color-danger: #AF2430;
+        -color-danger-emphasis: #8A1922;
+        -color-danger-subtle: rgba(175, 36, 48, 0.25);
+        -color-info: rgba(10, 96, 121, 0.66);
+        -color-info-subtle: rgba(191, 226, 235, 0.5);
+
+        -color-link: #0A6079;
+        -color-link-hover: #06485C;
+
+        -color-syntax-keyword: #7A3E9D;
+        -color-syntax-tag: #AF2430;
+        -color-syntax-attribute: #0A6079;
+        -color-syntax-string: #35702B;
+        -color-syntax-comment: #62808E;
+        -color-syntax-punctuation: #3D5C6B;
+
+        -color-scrollbar-thumb: #C6BBA3;
+        -color-scrollbar-track: #F6F1E6;
+
+        -color-tooltip-bg: #DFF0F5;
+
+        -color-drag-target: #7BC3D6;
+        -color-drag-target-hover: #B2DBE8;
+
+        -color-badge-bg: #A9D8E6;
+        -color-badge-selected-fg: #05161C;
+
+        -color-scrim: rgba(9, 26, 35, 0.6);
+        -color-shadow: rgba(9, 26, 35, 0.35);
+        -color-shadow-subtle: rgba(9, 26, 35, 0.12);
+    }
+
+    .walkthrough-continue-button {
+        -fx-text-fill: #FFFCF6;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    .root {
+        -color-bg-primary: #0D1C24;
+        -color-bg-secondary: #17303B;
+        -color-bg-tertiary: #122730;
+        -color-bg-overlay: #17303B;
+        -color-bg-alt: #132A34;
+        -color-bg-search: #16303B;
+        -color-bg-sidepane: #0A171E;
+
+        -color-fg-default: #EFE5D3;
+        -color-fg-muted: #BCB4A3;
+        -color-fg-subtle: #92A0A6;
+        -color-fg-emphasis: #F8F2E6;
+
+        -color-border-light: #2E4C58;
+        -color-border-muted: #24404B;
+
+        -color-accent: #59C6DC;
+        -color-accent-subtle: #1E4B58;
+
+        -color-button: transparent;
+        -color-button-hover: rgba(239, 229, 211, 0.10);
+        -color-button-pressed: rgba(239, 229, 211, 0.20);
+        -color-button-default: #1E4B58;
+
+        -color-selection: #235567;
+        -color-selection-inactive: #27393F;
+
+        -color-overlay-hover: rgba(239, 229, 211, 0.07);
+        -color-overlay-armed: rgba(239, 229, 211, 0.14);
+
+        -color-success: #4A9245;
+        -color-success-emphasis: #52A24C;
+        -color-warning: #B4741E;
+        -color-warning-subtle: rgba(180, 116, 30, 0.35);
+        -color-danger: #EE7C6E;
+        -color-danger-emphasis: #F59A90;
+        -color-danger-subtle: rgba(238, 124, 110, 0.3);
+        -color-info: rgba(89, 198, 220, 0.66);
+        -color-info-subtle: rgba(30, 75, 88, 0.4);
+
+        -color-link: #59C6DC;
+        -color-link-hover: #8FDDEC;
+
+        -color-syntax-keyword: #CE93D8;
+        -color-syntax-tag: #F0918A;
+        -color-syntax-attribute: #59C6DC;
+        -color-syntax-string: #9AD46F;
+        -color-syntax-comment: #92A0A6;
+        -color-syntax-punctuation: #BCB4A3;
+
+        -color-scrollbar-thumb: #3E6473;
+        -color-scrollbar-track: #0D1C24;
+
+        -color-tooltip-bg: #152E39;
+
+        -color-drag-target: #1E4B58;
+        -color-drag-target-hover: #59C6DC;
+
+        -color-badge-bg: #234350;
+        -color-badge-selected-fg: #05161C;
+
+        -color-scrim: rgba(6, 16, 21, 0.8);
+        -color-shadow: rgba(0, 0, 0, 0.7);
+        -color-shadow-subtle: rgba(0, 0, 0, 0.35);
+    }
+
+    .walkthrough-continue-button {
+        -fx-text-fill: #0D1C24;
+    }
+}
