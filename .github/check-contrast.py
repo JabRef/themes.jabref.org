@@ -1,0 +1,158 @@
+"""Measure every theme's palette against the contrast floor of the style guide: text has to be
+readable on each surface it can appear on, and the few foregrounds that are drawn on a fill have
+to be readable on that fill.
+
+A theme that only overrides tokens is measured on top of the JabRef theme, the way JabRef layers
+it at runtime. contrast-baseline.txt says how much each theme still carries, so the check stops
+new shortfalls instead of demanding that every theme be fixed at once.
+"""
+import pathlib
+import re
+import sys
+
+REPO = pathlib.Path(__file__).resolve().parent.parent
+BASELINE = pathlib.Path(__file__).with_name("contrast-baseline.txt")
+BASE_THEME = REPO / "themes" / "JabRef" / "jabref-theme.css"
+
+# Where a foreground can actually appear. Body text lands on every surface; links and status
+# colors on the surfaces that carry content; syntax colors only in the source editor and the
+# search field. A tooltip carries -color-fg-default only, hence its narrow entry.
+EVERYWHERE = ["-color-bg-primary", "-color-bg-secondary", "-color-bg-tertiary", "-color-bg-alt",
+              "-color-bg-search", "-color-bg-sidepane", "-color-bg-overlay", "-color-tooltip-bg"]
+CONTENT = ["-color-bg-primary", "-color-bg-secondary", "-color-bg-tertiary", "-color-bg-alt",
+           "-color-bg-sidepane", "-color-bg-overlay"]
+EDITOR = ["-color-bg-secondary", "-color-bg-search"]
+
+# Text on a surface, at the WCAG 2 minimum for that kind of text: 4.5:1 for body text and
+# for anything a reader has to spell out, 3:1 where the color only has to be distinguishable.
+# The themes aim higher in their own contracts; CI holds the floor.
+ON_SURFACE = {"-color-fg-default": (4.5, EVERYWHERE), "-color-fg-muted": (4.5, EVERYWHERE),
+              "-color-fg-subtle": (3.0, EVERYWHERE),
+              "-color-accent": (4.5, CONTENT), "-color-link": (4.5, CONTENT),
+              "-color-link-hover": (4.5, CONTENT),
+              "-color-success": (3.0, CONTENT), "-color-warning": (3.0, CONTENT),
+              "-color-danger": (3.0, CONTENT),
+              "-color-syntax-keyword": (4.5, EDITOR), "-color-syntax-tag": (4.5, EDITOR),
+              "-color-syntax-attribute": (4.5, EDITOR), "-color-syntax-string": (4.5, EDITOR),
+              "-color-syntax-comment": (3.0, EDITOR), "-color-syntax-punctuation": (4.5, EDITOR)}
+
+ON_FILL = {"-color-fg-emphasis": ["-color-selection", "-color-badge-bg", "-color-button-default"],
+           "-color-badge-selected-fg": ["-color-success"]}
+
+
+def luminance(color):
+    def channel(value):
+        value /= 255
+        return value / 12.92 if value <= 0.03928 else ((value + 0.055) / 1.055) ** 2.4
+    red, green, blue = (channel(part) for part in color)
+    return 0.2126 * red + 0.7152 * green + 0.0722 * blue
+
+
+def ratio(foreground, background):
+    lighter, darker = sorted((luminance(foreground), luminance(background)), reverse=True)
+    return (lighter + 0.05) / (darker + 0.05)
+
+
+def color(value, tokens, depth=0):
+    """The value as RGB, or None for anything a ratio cannot be computed from -- a translucent
+    color, whose result depends on what is behind it. Token references and derive() are
+    followed, so a theme cannot hide a shortfall behind an indirection."""
+    value = value.strip()
+    if depth > 10:
+        return None
+    hex_color = re.fullmatch(r"#([0-9a-fA-F]{3}|[0-9a-fA-F]{6})", value)
+    if hex_color:
+        digits = hex_color.group(1)
+        if len(digits) == 3:
+            digits = "".join(digit * 2 for digit in digits)
+        return tuple(int(digits[index:index + 2], 16) for index in (0, 2, 4))
+    if value in tokens:
+        return color(tokens[value], tokens, depth + 1)
+    derived = re.fullmatch(r"derive\(\s*(.+?)\s*,\s*(-?[0-9.]+)%\s*\)", value)
+    if derived:
+        base = color(derived.group(1), tokens, depth + 1)
+        return derive(base, float(derived.group(2))) if base else None
+    return None
+
+
+def derive(rgb, percent):
+    """JavaFX's derive(): the HSB brightness is scaled by the percentage, towards black for a
+    negative one and towards white for a positive one."""
+    factor = 1 + percent / 100
+    brightness = max(rgb) / 255
+    if factor <= 1:
+        target = brightness * factor
+    else:
+        target = brightness + (1 - brightness) * (factor - 1)
+    scale = target / brightness if brightness else 0
+    return tuple(min(255, round(part * scale)) if brightness else round(255 * target)
+                 for part in rgb)
+
+
+def palettes(css):
+    """The theme's tokens per color scheme. A declaration outside a media query counts for
+    both schemes, which is how a single-scheme theme and Primer declare theirs."""
+    text = re.sub(r"(?s)/\*.*?\*/", " ", css.read_text())
+    schemes = {}
+    for scheme in ("light", "dark"):
+        blocks = re.findall(r"prefers-color-scheme:\s*" + scheme + r"\s*\)\s*\{(.*?\n\s*\})\s*\}",
+                            text, re.S)
+        shared = re.sub(r"(?s)@media.*?\n\}", " ", text)
+        tokens = {}
+        for block in [shared] + blocks:
+            tokens.update(re.findall(r"(-color-[a-z0-9-]+)\s*:\s*([^;]+);", block))
+        schemes[scheme] = tokens
+    return schemes
+
+
+def failures(theme, base):
+    for scheme in ("light", "dark"):
+        tokens = dict(base[scheme])
+        tokens.update(theme[scheme])
+        resolved = {name: color(value, tokens) for name, value in tokens.items()}
+        pairs = [(fg, bg, target) for fg, (target, surfaces) in ON_SURFACE.items() for bg in surfaces]
+        pairs += [(fg, bg, 4.5) for fg, fills in ON_FILL.items() for bg in fills]
+        for foreground, background, target in pairs:
+            if resolved.get(foreground) and resolved.get(background):
+                measured = ratio(resolved[foreground], resolved[background])
+                if measured < target:
+                    yield scheme, foreground, background, measured, target
+
+
+base_palette = palettes(BASE_THEME)
+
+# How many shortfalls a theme still carries. A theme that is not listed has to have none, so a
+# new theme starts clean and an existing one can only get better.
+allowed = {}
+for line in BASELINE.read_text().splitlines():
+    line = line.split("#")[0].strip()
+    if line:
+        theme, count = line.rsplit(" ", 1)
+        allowed[theme] = int(count)
+
+worse, better, measured_themes = [], [], set()
+# The DarkTheme/ and LightTheme/ folders hold the themes that were never ported to the token
+# contract; the migration audit covers those.
+for css in sorted(pathlib.Path(REPO, "themes").glob("*/*.css")):
+    theme = css.relative_to(REPO / "themes").with_suffix("").as_posix()
+    measured_themes.add(theme)
+    found = list(failures(palettes(css), base_palette))
+    for scheme, foreground, background, measured, target in found:
+        print(f"  {theme} {scheme}: {foreground} on {background} {measured:.2f} < {target}")
+    if len(found) > allowed.get(theme, 0):
+        worse.append(f"{theme}: {len(found)} shortfall(s), {allowed.get(theme, 0)} allowed")
+    elif len(found) < allowed.get(theme, 0):
+        better.append(f"{theme}: {len(found)} shortfall(s) left, lower the number in "
+                      f"contrast-baseline.txt from {allowed[theme]}")
+
+print()
+for line in worse:
+    print("FAIL " + line)
+for line in better:
+    print("note " + line)
+for theme in sorted(allowed.keys() - measured_themes):
+    print(f"note {theme} is baselined but no longer exists; drop the line")
+
+print(f"\n{len(worse)} theme(s) below the contrast floor." if worse
+      else "\nNo theme is worse than its baseline.")
+sys.exit(1 if worse else 0)

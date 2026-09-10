@@ -49,6 +49,8 @@ jobs:
         run: jbang .github/CheckThemes.java themes
       - name: Check foregrounds against the style guide
         run: python3 .github/check-foregrounds.py
+      - name: Check contrast against the baseline
+        run: python3 .github/check-contrast.py
       - name: Audit against the pre-port themes
         run: python3 .github/audit-migration.py
 

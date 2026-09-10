@@ -1,0 +1,25 @@
+# How many contrast shortfalls each theme still carries, as reported by check-contrast.py.
+# A theme that is not listed has to have none, so a new theme starts clean and an existing
+# one can only improve. Lower a number when a theme gets better; the check says when.
+ChocolateHoney/chocolate-honey 2
+DinoGirls Themes/chocolatebrown-darksalmon-contrasttext 58
+DinoGirls Themes/chocolatebrown-darksalmon-greytext 71
+DinoGirls Themes/fuchsiapurple-japanesesakura-contrasttext 59
+DinoGirls Themes/fuchsiapurple-japanesesakura-greytext 76
+DinoGirls Themes/jabrefdark-jabreflight-contrasttext 45
+DinoGirls Themes/jabrefdark-jabreflight-greytext 62
+DinoGirls Themes/lightblue-iceage-contrasttext 59
+DinoGirls Themes/lightblue-iceage-greytext 75
+DinoGirls Themes/lightseagreen-limegreen-contrasttext 46
+DinoGirls Themes/lightseagreen-limegreen-greytext 60
+DinoGirls Themes/prehistoricamber-peachorange-contrasttext 47
+DinoGirls Themes/prehistoricamber-peachorange-greytext 63
+DinoGirls Themes/twilightlavender-neon-contrasttext 59
+DinoGirls Themes/twilightlavender-neon-greytext 75
+DinoGirls Themes/winered-icedstrawberry-contrasttext 57
+DinoGirls Themes/winered-icedstrawberry-greytext 71
+Everforest/everforest 76
+JabRef/jabref-theme 50
+Nord/nord 26
+Papers/papers 2
+Primer/primer 26

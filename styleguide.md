@@ -22,3 +22,14 @@ A color that a theme picks as a *fill* must never be used as a foreground. `-col
 fills, so the themes tune them for text drawn *on* them, not for reading against a surface. Text
 and icons take `-color-fg-*`, `-color-accent` or `-color-link`, whose contrast every theme states in its own
 contract.
+
+## Contrast
+
+Text is readable on every surface it can appear on. The floor is WCAG 2: 4.5:1 for anything a
+reader spells out, 3:1 where a color only has to be distinguishable. A theme may aim higher in
+its README, and most do.
+
+`check-contrast.py` measures every palette against that floor, layering a theme that only
+overrides tokens on top of the JabRef theme the way JabRef does at runtime.
+`contrast-baseline.txt` records how much each theme still carries, so a theme can only get
+better and a new one starts clean.
