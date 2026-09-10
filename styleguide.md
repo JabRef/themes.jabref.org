@@ -18,7 +18,7 @@ One color. An icon takes the color of the text next to it; no color coding by ki
 ## Foregrounds
 
 A color that a theme picks as a *fill* must never be used as a foreground. `-color-selection`,
-`-color-accent-subtle`, `-color-badge-bg` and `-color-drag-target` are fills, so the themes tune
-them for text drawn *on* them, not for reading against a surface. Text and icons take
-`-color-fg-*`, `-color-accent` or `-color-link`, whose contrast every theme states in its own
+`-color-accent-subtle`, `-color-badge-bg`, `-color-drag-target` and `-color-scrollbar-thumb` are
+fills, so the themes tune them for text drawn *on* them, not for reading against a surface. Text
+and icons take `-color-fg-*`, `-color-accent` or `-color-link`, whose contrast every theme states in its own
 contract.
