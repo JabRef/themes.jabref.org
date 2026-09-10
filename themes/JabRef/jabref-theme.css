@@ -832,7 +832,7 @@ TextFlow > Text {
     -fx-background-color: -color-border-light, -color-bg-secondary;
     -fx-background-insets: 0, 1;
     -fx-background-radius: 0.25em;
-    -fx-prompt-text-fill: -color-scrollbar-thumb;
+    -fx-prompt-text-fill: -color-fg-subtle;
 }
 
 .text-input:focused {
