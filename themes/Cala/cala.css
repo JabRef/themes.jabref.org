@@ -84,6 +84,12 @@
         -color-shadow: rgba(9, 26, 35, 0.35);
         -color-shadow-subtle: rgba(9, 26, 35, 0.12);
     }
+
+    /* The only place -color-fg-emphasis lands on the accent fill itself, and the light
+       -color-fg-emphasis is dark because it is also drawn on the plain surface. */
+    .walkthrough-continue-button {
+        -fx-text-fill: #FFFCF6;
+    }
 }
 
 @media (prefers-color-scheme: dark) {
@@ -155,5 +161,10 @@
         -color-scrim: rgba(6, 16, 21, 0.8);
         -color-shadow: rgba(0, 0, 0, 0.7);
         -color-shadow-subtle: rgba(0, 0, 0, 0.35);
+    }
+
+    /* Sand text is unreadable on the turquoise accent fill. */
+    .walkthrough-continue-button {
+        -fx-text-fill: #0D1C24;
     }
 }
