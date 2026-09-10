@@ -90,6 +90,20 @@
     .walkthrough-continue-button {
         -fx-text-fill: #FFFCF6;
     }
+
+    /* -color-selection is a pale fill here, but it also labels a selected toggle button,
+       which sits on the plain surface. */
+    .toggle-button:selected {
+        -fx-text-fill: -color-accent;
+        -fx-fill: -color-accent;
+    }
+
+    /* Likewise -color-accent-subtle is a fill, and the visited-link color: a dimmed cove blue
+       that still reads on every surface. */
+    .hyperlink:visited {
+        -fx-text-fill: #3D5C6B;
+        -fx-fill: #3D5C6B;
+    }
 }
 
 @media (prefers-color-scheme: dark) {
@@ -166,5 +180,15 @@
     /* Sand text is unreadable on the turquoise accent fill. */
     .walkthrough-continue-button {
         -fx-text-fill: #0D1C24;
+    }
+
+    .toggle-button:selected {
+        -fx-text-fill: -color-accent;
+        -fx-fill: -color-accent;
+    }
+
+    .hyperlink:visited {
+        -fx-text-fill: #93B9C2;
+        -fx-fill: #93B9C2;
     }
 }
