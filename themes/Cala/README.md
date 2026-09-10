@@ -21,6 +21,6 @@ Every text/surface pair is checked against WCAG 2 contrast ratios, in both schem
 
 Cove blue and sun yellow are too light to read as text on sand, so the light scheme uses a darkened cove blue for accent and links and keeps the sun for fills (default button, drag target). `-color-fg-emphasis` is dark in the light scheme because JabRef also draws it on the plain surface, and the group badge text is near-black in both schemes because a partially selected group gets a much paler green than `-color-success`.
 
-Three foregrounds are set per scheme instead of through a token, because JabRef paints them with a color this theme uses as a fill: the walkthrough _Continue_ label, the label of a selected toggle button and the visited-link color.
+The walkthrough _Continue_ label is set per scheme: it is the one place JabRef draws `-color-fg-emphasis` on the accent fill itself.
 
 `-color-warning` and `-color-success-emphasis` stay mid tones: they are status text and, at the same time, the fill behind default-colored text (invalid table cell, duplicate marker), and 4.5:1 on the fill cannot hold together with 3:1 as text. Both values match JabRef's own themes.

@@ -74,16 +74,6 @@
     .walkthrough-continue-button {
         -fx-text-fill: #FFFCF6;
     }
-
-    .toggle-button:selected {
-        -fx-text-fill: -color-accent;
-        -fx-fill: -color-accent;
-    }
-
-    .hyperlink:visited {
-        -fx-text-fill: #3D5C6B;
-        -fx-fill: #3D5C6B;
-    }
 }
 
 @media (prefers-color-scheme: dark) {
@@ -156,15 +146,5 @@
 
     .walkthrough-continue-button {
         -fx-text-fill: #0D1C24;
-    }
-
-    .toggle-button:selected {
-        -fx-text-fill: -color-accent;
-        -fx-fill: -color-accent;
-    }
-
-    .hyperlink:visited {
-        -fx-text-fill: #93B9C2;
-        -fx-fill: #93B9C2;
     }
 }
