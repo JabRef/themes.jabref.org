@@ -1,16 +1,6 @@
 /*
  * Cala theme for JabRef.
- * A Balearic palette: whitewashed sand and cove water, with pine, terracotta and sun.
- * Light: sand paper, deep-sea ink, cove-blue accents, a sun-yellow default button.
- * Dark: night sea surfaces, sand ink, turquoise accents.
- * One file covers both color schemes: select "Follow system", "Light", or "Dark" in JabRef.
- *
- * Contrast contract (WCAG 2 ratios, both schemes, every surface):
- *   -color-fg-default >= 7:1, -color-fg-muted >= 4.5:1, -color-fg-subtle >= 3:1,
- *   -color-accent / -color-link as text >= 4.5:1, status colors as text >= 3:1,
- *   -color-fg-emphasis >= 4.5:1 on selection, badge and default button.
- * Cove blue and sun yellow are too light to read as text on sand, so the light accent is a
- * darkened cove blue (#0A6079); the sun only appears as a fill (default button, drag target).
+ * Supports both color schemes: select "Follow system", "Light", or "Dark" in JabRef.
  */
 
 @media (prefers-color-scheme: light) {
@@ -26,7 +16,6 @@
         -color-fg-default: #12303F;
         -color-fg-muted: #3D5C6B;
         -color-fg-subtle: #62808E;
-        /* Dark, not white: it is also drawn on -color-overlay-hover, i.e. on the plain surface. */
         -color-fg-emphasis: #0E2836;
 
         -color-border-light: #D9CFBB;
@@ -46,9 +35,6 @@
         -color-overlay-hover: rgba(18, 48, 63, 0.06);
         -color-overlay-armed: rgba(18, 48, 63, 0.12);
 
-        /* Pine. Also the pill behind -color-badge-selected-fg (a group with selected entries),
-           and JabRef derives a much paler green from it for a partially selected group -- so the
-           badge text is near-black in both schemes, as in JabRef's own themes. */
         -color-success: #438E48;
         -color-success-emphasis: #3F8A46;
         -color-warning: #A9660C;
@@ -85,21 +71,15 @@
         -color-shadow-subtle: rgba(9, 26, 35, 0.12);
     }
 
-    /* The only place -color-fg-emphasis lands on the accent fill itself, and the light
-       -color-fg-emphasis is dark because it is also drawn on the plain surface. */
     .walkthrough-continue-button {
         -fx-text-fill: #FFFCF6;
     }
 
-    /* -color-selection is a pale fill here, but it also labels a selected toggle button,
-       which sits on the plain surface. */
     .toggle-button:selected {
         -fx-text-fill: -color-accent;
         -fx-fill: -color-accent;
     }
 
-    /* Likewise -color-accent-subtle is a fill, and the visited-link color: a dimmed cove blue
-       that still reads on every surface. */
     .hyperlink:visited {
         -fx-text-fill: #3D5C6B;
         -fx-fill: #3D5C6B;
@@ -138,11 +118,8 @@
         -color-overlay-hover: rgba(239, 229, 211, 0.07);
         -color-overlay-armed: rgba(239, 229, 211, 0.14);
 
-        /* Light enough for the near-black badge text, on the pill and on the paler green
-           JabRef derives from it for a partially selected group. */
         -color-success: #4A9245;
         -color-success-emphasis: #52A24C;
-        /* Also the fill behind sand text in invalid cells, hence darker than a pure icon amber. */
         -color-warning: #B4741E;
         -color-warning-subtle: rgba(180, 116, 30, 0.35);
         -color-danger: #EE7C6E;
@@ -177,7 +154,6 @@
         -color-shadow-subtle: rgba(0, 0, 0, 0.35);
     }
 
-    /* Sand text is unreadable on the turquoise accent fill. */
     .walkthrough-continue-button {
         -fx-text-fill: #0D1C24;
     }
