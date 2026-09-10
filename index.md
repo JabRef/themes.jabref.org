@@ -2,7 +2,7 @@
 
 > Customize the look of JabRef using CSS!
 
-JabRef bundles every theme in this repository that covers both color schemes, its own _JabRef_ theme included; they appear in the theme selection without downloading anything. On top of the theme you can load a custom CSS file that overrides only what you want to change. This page and the [themes](https://github.com/JabRef/themes.jabref.org/tree/main/themes) target the theme model introduced with JabRef 6 ([JabRef/jabref#15798](https://github.com/JabRef/jabref/pull/15798)).
+JabRef bundles every theme in this repository that covers both color schemes, its own _JabRef_ theme included; they appear in the theme selection without downloading anything. On top of the theme you can load a custom CSS file that overrides only what you want to change. This page and the [themes](themes/) target the theme model introduced with JabRef 6 ([JabRef/jabref#15798](https://github.com/JabRef/jabref/pull/15798)).
 
 **JabRef 5.x:** the previous versions of the themes, based on the old `-jr-*` variables, are available [in the repository history](https://github.com/JabRef/themes.jabref.org/tree/0a139ff7da4ae356b293f81bd6a38659a7d7fc39/themes).
 
@@ -10,7 +10,7 @@ The [style guide](styleguide.md) states the few rules behind the tokens.
 
 ## Themes
 
-All themes, JabRef's own and the contributed ones, are located in the subfolder [themes](https://github.com/JabRef/themes.jabref.org/tree/main/themes). Themes that cover both color schemes in one file (via `@media (prefers-color-scheme: …)`) live directly in `themes/` and work with any color scheme. The _Dark_ and _Light_ subfolders hold the themes that only cover one scheme; select the matching color scheme in JabRef when using those.
+All themes, JabRef's own and the contributed ones, are located in the subfolder [themes](themes/). Themes that cover both color schemes in one file (via `@media (prefers-color-scheme: …)`) live directly in `themes/` and work with any color scheme. The _Dark_ and _Light_ subfolders hold the themes that only cover one scheme; select the matching color scheme in JabRef when using those.
 
 ## Gallery
 
