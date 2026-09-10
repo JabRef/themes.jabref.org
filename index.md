@@ -8,9 +8,9 @@ JabRef ships two themes, _JabRef_ and _Primer_, each with a light and a dark var
 
 The [style guide](styleguide.md) states the few rules behind the tokens.
 
-## User contributed themes
+## Themes
 
-Themes submitted by users are located in the subfolder [themes](https://github.com/JabRef/themes.jabref.org/tree/main/themes). Themes that cover both color schemes in one file (via `@media (prefers-color-scheme: …)`) live directly in `themes/` and work with any color scheme. The _Dark_ and _Light_ subfolders hold the themes that only cover one scheme; select the matching color scheme in JabRef when using those.
+All themes, JabRef's own and the contributed ones, are located in the subfolder [themes](https://github.com/JabRef/themes.jabref.org/tree/main/themes). Themes that cover both color schemes in one file (via `@media (prefers-color-scheme: …)`) live directly in `themes/` and work with any color scheme. The _Dark_ and _Light_ subfolders hold the themes that only cover one scheme; select the matching color scheme in JabRef when using those.
 
 ## Gallery
 
