@@ -16,6 +16,7 @@
         -color-fg-muted: #7d8591;
         -color-fg-emphasis: #9aa3af;
         -color-border-light: #333744;
+        -color-border-muted: #333744;
         -color-accent: #8A496B;
         -color-link: #8A496B;
         -color-accent-subtle: #8A496B;
@@ -53,6 +54,7 @@
         -color-fg-muted: #7d8591;
         -color-fg-emphasis: #ffffff;
         -color-border-light: derive(#ebebeb, -5%);
+        -color-border-muted: derive(-fx-color, -5%);
         -color-accent: #9457EB;
         -color-link: #9457EB;
         -color-accent-subtle: #39FF14;
