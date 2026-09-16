@@ -77,6 +77,7 @@
         -color-syntax-string: #008000;
         -color-syntax-comment: #008080;
         -color-syntax-punctuation: #808080;
+        -color-bibtex-keyword: #29A6EC;
 
         /* Scrollbars */
         -color-scrollbar-thumb: #999999;
@@ -166,6 +167,7 @@
         -color-syntax-string: #7EE787;
         -color-syntax-comment: #6FD8D2;
         -color-syntax-punctuation: #8B949E;
+        -color-bibtex-keyword: #29A6EC;
 
         /* Scrollbars */
         -color-scrollbar-thumb: #E5E7EA;

@@ -167,6 +167,7 @@
         -color-syntax-string: -color-chart-3;
         -color-syntax-comment: -color-chart-4;
         -color-syntax-punctuation: -color-fg-subtle;
+        -color-bibtex-keyword: -color-accent-fg;
 
         /* Scrollbars */
         -color-scrollbar-thumb: -color-base-6;
@@ -350,6 +351,7 @@
         -color-syntax-string: -color-chart-3;
         -color-syntax-comment: -color-chart-4;
         -color-syntax-punctuation: -color-fg-subtle;
+        -color-bibtex-keyword: -color-accent-fg;
 
         /* Scrollbars */
         -color-scrollbar-thumb: -color-base-6;
