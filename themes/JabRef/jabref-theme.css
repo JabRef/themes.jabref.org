@@ -896,14 +896,6 @@ TextFlow > Text {
     -fx-background-insets: 0;
 }
 
-.table-cell,
-.tree-table-cell {
-    -fx-cell-size: 4.0em;
-    -fx-padding: 0.5em 1em 0.5em 1em;
-    -fx-fill: -fx-text-background-color;
-    -fx-text-fill: -fx-text-background-color;
-}
-
 .table-row-cell:filled:hover,
 .tree-table-row-cell:filled:hover {
     -fx-background-color: -color-overlay-hover;
@@ -922,8 +914,8 @@ TextFlow > Text {
     -fx-fill: -fx-text-background-color;
     -fx-text-fill: -fx-text-background-color;
     -fx-padding: 0 0.5em 0 0.5em;
+    -fx-alignment: CENTER_LEFT;
 }
-
 
 /* Selected rows */
 .list-view:focused > .virtual-flow > .clipped-container > .sheet > .list-cell:filled:selected,
