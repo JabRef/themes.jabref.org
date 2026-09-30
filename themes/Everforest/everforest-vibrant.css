@@ -1,40 +1,40 @@
 /*
- * Everforest theme for JabRef.
- * Port of Everforest Pro Dark / Light: balanced contrast
+ * Everforest Vibrant theme for JabRef.
+ * Port of Everforest Pro Dark Vibrant / Light Vibrant: hard backgrounds
  * (https://github.com/AndreiLucaci/everforest-vscode, MIT license), itself based on sainnhe's Everforest.
  * Supports both color schemes: select "Follow system", "Light", or "Dark" in JabRef.
- * The comments name the palette entries of the VS Code theme (medium background).
+ * The comments name the palette entries of the VS Code theme (hard background).
  */
 
 @media (prefers-color-scheme: dark) {
     .root {
-        -color-bg-primary: #272E33;             /* bg1 */
-        -color-bg-secondary: #2D353B;           /* bg */
-        -color-bg-tertiary: #343F44;            /* bg2 */
-        -color-bg-overlay: #2D353B;             /* bg */
-        -color-bg-alt: #2A3237;                 /* between bg and bg1 */
-        -color-bg-search: #343F44;              /* bg2 */
-        -color-bg-sidepane: #2D353B;            /* bg */
+        -color-bg-primary: #21272B;             /* bg1 */
+        -color-bg-secondary: #272E33;           /* bg */
+        -color-bg-tertiary: #2E383C;            /* bg2 */
+        -color-bg-overlay: #272E33;             /* bg */
+        -color-bg-alt: #242A2F;                 /* between bg and bg1 */
+        -color-bg-search: #2E383C;              /* bg2 */
+        -color-bg-sidepane: #272E33;            /* bg */
 
         -color-fg-default: #D3C6AA;             /* fg */
         -color-fg-muted: #9AA79D;               /* grey2 */
         -color-fg-subtle: #859289;              /* grey1 */
         -color-fg-emphasis: #D3C6AA;            /* fg */
 
-        -color-border-light: #4F585E;           /* bg5 */
+        -color-border-light: #495156;           /* bg5 */
         -color-border-strong: #7F897D;          /* grey0 */
-        -color-border-muted: #3D484D;           /* bg3 */
+        -color-border-muted: #374145;           /* bg3 */
 
         -color-accent: #A7C080;                 /* green */
-        -color-accent-subtle: #455149;          /* badge over bg */
+        -color-accent-subtle: #414B42;          /* badge over bg */
 
         -color-button: transparent;
         -color-button-hover: rgba(211, 198, 170, 0.1);
         -color-button-pressed: rgba(211, 198, 170, 0.2);
-        -color-button-default: #455149;         /* badge over bg */
+        -color-button-default: #414B42;         /* badge over bg */
 
-        -color-selection: #475258;              /* bg4 */
-        -color-selection-inactive: #3D484D;     /* bg3 */
+        -color-selection: #414B50;              /* bg4 */
+        -color-selection-inactive: #374145;     /* bg3 */
 
         -color-overlay-hover: rgba(211, 198, 170, 0.08);
         -color-overlay-armed: rgba(211, 198, 170, 0.16);
@@ -61,17 +61,17 @@
         -color-bibtex-keyword: #E67E80;         /* red */
 
         -color-scrollbar-thumb: #7F897D;        /* grey0 */
-        -color-scrollbar-track: #21272B;        /* bg0 */
+        -color-scrollbar-track: #1B2024;        /* bg0 */
 
-        -color-tooltip-bg: #343F44;             /* bg2 */
+        -color-tooltip-bg: #2E383C;             /* bg2 */
 
         -color-drag-target: #7FBBB3;            /* blue */
-        -color-drag-target-hover: #425659;      /* blue over bg */
+        -color-drag-target-hover: #3D5153;      /* blue over bg */
 
-        -color-badge-bg: #475258;               /* bg4 */
+        -color-badge-bg: #414B50;               /* bg4 */
         -color-badge-selected-fg: #2D353B;      /* dark bg, on the green badge */
 
-        -color-scrim: rgba(33, 39, 43, 0.8);
+        -color-scrim: rgba(27, 32, 36, 0.8);
         -color-shadow: rgba(0, 0, 0, 0.44);     /* shadow */
         -color-shadow-subtle: rgba(0, 0, 0, 0.22);
     }
@@ -79,33 +79,33 @@
 
 @media (prefers-color-scheme: light) {
     .root {
-        -color-bg-primary: #F4F0D9;             /* bg1 */
-        -color-bg-secondary: #FDF6E3;           /* bg */
-        -color-bg-tertiary: #F4F0D9;            /* bg2 */
-        -color-bg-overlay: #FDF6E3;             /* bg */
-        -color-bg-alt: #F8F3DE;                 /* between bg and bg1 */
-        -color-bg-search: #F4F0D9;              /* bg2 */
-        -color-bg-sidepane: #FDF6E3;            /* bg */
+        -color-bg-primary: #F8F5E4;             /* bg1 */
+        -color-bg-secondary: #FFFBEF;           /* bg */
+        -color-bg-tertiary: #F8F5E4;            /* bg2 */
+        -color-bg-overlay: #FFFBEF;             /* bg */
+        -color-bg-alt: #FCF8EA;                 /* between bg and bg1 */
+        -color-bg-search: #F8F5E4;              /* bg2 */
+        -color-bg-sidepane: #FFFBEF;            /* bg */
 
         -color-fg-default: #5C6A72;             /* fg */
         -color-fg-muted: #879686;               /* grey2 */
         -color-fg-subtle: #939F91;              /* grey1 */
         -color-fg-emphasis: #5C6A72;            /* fg */
 
-        -color-border-light: #E0DCC7;           /* bg5 */
+        -color-border-light: #E8E5D5;           /* bg5 */
         -color-border-strong: #A4AD9E;          /* grey0 */
-        -color-border-muted: #E6E2CC;           /* bg4 */
+        -color-border-muted: #EDEADA;           /* bg4 */
 
         -color-accent: #8DA101;                 /* green */
-        -color-accent-subtle: #E2E5C0;          /* badge over bg */
+        -color-accent-subtle: #E4E9CA;          /* badge over bg */
 
         -color-button: transparent;
         -color-button-hover: rgba(92, 106, 114, 0.1);
         -color-button-pressed: rgba(92, 106, 114, 0.2);
-        -color-button-default: #E2E5C0;         /* badge over bg */
+        -color-button-default: #E4E9CA;         /* badge over bg */
 
-        -color-selection: #E0DCC7;              /* bg5 */
-        -color-selection-inactive: #E6E2CC;     /* bg4 */
+        -color-selection: #E8E5D5;              /* bg5 */
+        -color-selection-inactive: #EDEADA;     /* bg4 */
 
         -color-overlay-hover: rgba(92, 106, 114, 0.08);
         -color-overlay-armed: rgba(92, 106, 114, 0.16);
@@ -132,14 +132,14 @@
         -color-bibtex-keyword: #F85552;         /* red */
 
         -color-scrollbar-thumb: #A4AD9E;        /* grey0 */
-        -color-scrollbar-track: #EFEBD4;        /* bg0 */
+        -color-scrollbar-track: #F2EFDF;        /* bg0 */
 
-        -color-tooltip-bg: #F4F0D9;             /* bg2 */
+        -color-tooltip-bg: #F8F5E4;             /* bg2 */
 
         -color-drag-target: #3A94C5;            /* blue */
-        -color-drag-target-hover: #CCDEDC;      /* blue over bg */
+        -color-drag-target-hover: #CEE1E4;      /* blue over bg */
 
-        -color-badge-bg: #E0DCC7;               /* bg5 */
+        -color-badge-bg: #E8E5D5;               /* bg5 */
         -color-badge-selected-fg: #2D353B;      /* dark bg, on the green badge */
 
         -color-scrim: rgba(92, 106, 114, 0.6);
