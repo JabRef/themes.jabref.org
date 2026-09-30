@@ -1,0 +1,25 @@
+# How many contrast shortfalls each theme still carries, as reported by check-contrast.py, and
+# a fingerprint of which ones they are. A theme that is not listed has to have none, so a new
+# theme starts clean and an existing one can only improve. The check prints the line to write.
+ChocolateHoney/chocolate-honey 3 060b473e
+DinoGirls Themes/chocolatebrown-darksalmon-contrasttext 66 4cb5d816
+DinoGirls Themes/chocolatebrown-darksalmon-greytext 80 e842a3bf
+DinoGirls Themes/fuchsiapurple-japanesesakura-contrasttext 69 6dd9aab2
+DinoGirls Themes/fuchsiapurple-japanesesakura-greytext 86 8175e7c8
+DinoGirls Themes/jabrefdark-jabreflight-contrasttext 54 95b2deec
+DinoGirls Themes/jabrefdark-jabreflight-greytext 72 7b77fb89
+DinoGirls Themes/lightblue-iceage-contrasttext 68 9191362e
+DinoGirls Themes/lightblue-iceage-greytext 85 60095d09
+DinoGirls Themes/lightseagreen-limegreen-contrasttext 59 bd698578
+DinoGirls Themes/lightseagreen-limegreen-greytext 63 e950a8e7
+DinoGirls Themes/prehistoricamber-peachorange-contrasttext 60 cd081460
+DinoGirls Themes/prehistoricamber-peachorange-greytext 73 bd2bffef
+DinoGirls Themes/twilightlavender-neon-contrasttext 68 9191362e
+DinoGirls Themes/twilightlavender-neon-greytext 85 60095d09
+DinoGirls Themes/winered-icedstrawberry-contrasttext 65 6e0790d3
+DinoGirls Themes/winered-icedstrawberry-greytext 74 bb5578f5
+Everforest/everforest 84 330b2527
+JabRef/jabref-theme 58 a9b5812c
+Nord/nord 27 f0a01fa4
+Papers/papers 2 2615d589
+Primer/primer 43 4e29b13b
