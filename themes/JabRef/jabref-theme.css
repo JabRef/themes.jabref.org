@@ -964,7 +964,7 @@ TextFlow > Text {
 }
 
 .column-header > .label {
-    -fx-padding: 0 1em 0 1em;
+    -fx-padding: 0 0.5em 0 0.5em;
     -fx-alignment: center-left;
     -fx-text-fill: -fx-text-inner-color;
 }
