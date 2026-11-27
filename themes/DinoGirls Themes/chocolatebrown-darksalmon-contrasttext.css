@@ -19,9 +19,9 @@
         -color-border-muted: #333744;
         -color-accent: #7B3F00;
         -color-link: #7B3F00;
-        -color-accent-subtle: #95623B;
-        -color-selection: #95623B;
-        -color-button-default: derive(#95623B, 50%);
+        -color-accent-subtle: #4F2900;
+        -color-selection: #4F2900;
+        -color-button-default: derive(#4F2900, 50%);
         -color-button-hover: #fff1;
         -color-button-pressed: #fff2;
         -color-overlay-hover: #fff1;
@@ -34,9 +34,9 @@
         -color-syntax-keyword: #b72486;
         -color-scrollbar-thumb: white;
         -color-scrollbar-track: derive(#272b38, -90%);
-        -color-tooltip-bg: #95623B;
-        -color-drag-target: #95623B;
-        -color-drag-target-hover: #95623B;
+        -color-tooltip-bg: #4F2900;
+        -color-drag-target: #4F2900;
+        -color-drag-target-hover: #4F2900;
         -color-badge-bg: #151924;
     }
 }
