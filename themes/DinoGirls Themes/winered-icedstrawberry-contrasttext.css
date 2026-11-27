@@ -57,10 +57,10 @@
         -color-border-muted: derive(-fx-color, -5%);
         -color-accent: #C83F49;
         -color-link: #C83F49;
-        -color-accent-subtle: #D76769;
-        -color-selection: #D76769;
+        -color-accent-subtle: #E0626B;
+        -color-selection: #E0626B;
         -color-button: transparent;
-        -color-button-default: derive(#D76769, 50%);
+        -color-button-default: derive(#E0626B, 50%);
         -color-button-hover: #FCCEDC;
         -color-button-pressed: #0002;
         -color-overlay-hover: #0001;
@@ -74,9 +74,9 @@
         -color-syntax-keyword: #7559C2;
         -color-scrollbar-thumb: derive(derive(#ebebeb, -5%), -30%);
         -color-scrollbar-track: derive(derive(#ebebeb, 95%), -10%);
-        -color-tooltip-bg: #D76769;
-        -color-drag-target: #D76769;
-        -color-drag-target-hover: derive(#D76769, 80%);
+        -color-tooltip-bg: #E0626B;
+        -color-drag-target: #E0626B;
+        -color-drag-target-hover: derive(#E0626B, 80%);
         -color-badge-bg: derive(#dddddd, -50%);
     }
 }
