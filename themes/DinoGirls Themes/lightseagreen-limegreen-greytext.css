@@ -76,7 +76,7 @@
         -color-scrollbar-track: derive(derive(#ebebeb, 95%), -10%);
         -color-tooltip-bg: #9BE59B;
         -color-drag-target: #7559C2;
-        -color-drag-target-hover: derive(#32CD32, 80%);
+        -color-drag-target-hover: derive(#7559C2, 80%);
         -color-badge-bg: derive(#dddddd, -50%);
     }
 }
