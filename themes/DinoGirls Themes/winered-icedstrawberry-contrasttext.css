@@ -57,8 +57,8 @@
         -color-border-muted: derive(-fx-color, -5%);
         -color-accent: #C83F49;
         -color-link: #C83F49;
-        -color-accent-subtle: #FC5A8D;
-        -color-selection: #FC5A8D;
+        -color-accent-subtle: #D76769;
+        -color-selection: #D76769;
         -color-button: transparent;
         -color-button-default: derive(#FC5A8D, 50%);
         -color-button-hover: #FCCEDC;
@@ -70,13 +70,13 @@
         -color-warning: #ff9f43;
         -color-danger: #ff6b6b;
         -color-danger-emphasis: #ee5253;
-        -color-info-subtle: rgba(163, 183, 230, 0.16);
+        -color-info-subtle: rgba(215, 103, 105, 0.16);
         -color-syntax-keyword: #7559C2;
         -color-scrollbar-thumb: derive(derive(#ebebeb, -5%), -30%);
         -color-scrollbar-track: derive(derive(#ebebeb, 95%), -10%);
-        -color-tooltip-bg: #FC5A8D;
-        -color-drag-target: #7559C2;
-        -color-drag-target-hover: derive(#7559C2, 80%);
+        -color-tooltip-bg: #D76769;
+        -color-drag-target: #D76769;
+        -color-drag-target-hover: derive(#D76769, 80%);
         -color-badge-bg: derive(#dddddd, -50%);
     }
 }
