@@ -70,7 +70,7 @@
         -color-warning: #ff9f43;
         -color-danger: #ff6b6b;
         -color-danger-emphasis: #ee5253;
-        -color-info-subtle: rgba(166, 122, 241, 0.16);
+        -color-info-subtle: rgba(163, 183, 230, 0.16);
         -color-syntax-keyword: #7559C2;
         -color-scrollbar-thumb: derive(derive(#ebebeb, -5%), -30%);
         -color-scrollbar-track: derive(derive(#ebebeb, 95%), -10%);
