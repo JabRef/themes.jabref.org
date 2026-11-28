@@ -29,7 +29,7 @@
         -color-button-pressed: rgba(211, 198, 170, 0.20);
         -color-button-default: #425047;
 
-        -color-selection: #543A48;       /* bg_visual */
+        -color-selection: #425047;       /* bg_visual */
         -color-selection-inactive: #3D484D;
 
         -color-overlay-hover: rgba(211, 198, 170, 0.08);
